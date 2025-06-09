@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Module 2: Data Visualization with IGV | High Throughout Genomics Analysis 2021</title>
+  <meta name="description" content="Workshop website for the 2021 High Throughput Genomics Analysis Canadian Bioinformatics Workshop" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Module 2: Data Visualization with IGV | High Throughout Genomics Analysis 2021" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="https://github.com/cbw-dev/HTG-2021/blob/main/index.Rmd/img/bioinformatics_logo.png" />
+  <meta property="og:description" content="Workshop website for the 2021 High Throughput Genomics Analysis Canadian Bioinformatics Workshop" />
+  <meta name="github-repo" content="cbw-dev/HTG-2021" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Module 2: Data Visualization with IGV | High Throughout Genomics Analysis 2021" />
+  
+  <meta name="twitter:description" content="Workshop website for the 2021 High Throughput Genomics Analysis Canadian Bioinformatics Workshop" />
+  <meta name="twitter:image" content="https://github.com/cbw-dev/HTG-2021/blob/main/index.Rmd/img/bioinformatics_logo.png" />
+
+<meta name="author" content="Faculty: Mathieu Bourgey, Jared Simpson, Robert Syme, Daniel Poppleton, BF Francis Ouellette, Rachade Hmamouchi" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+<link rel="prev" href="module-1-introduction.html"/>
+<link rel="next" href="module-3.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<a href="https://bioinformaticsdotca.github.io/">
+ <img src="img/bioinformatics_logo.png" width="90%" alt="bioinformatics.ca logo" style="display:block; margin-left:auto; margin-right:auto; margin-top:15px;">
+ </a>
+<li><center><strong><a href="./"><br>High Throughput Genomics Analysis<br><br></a></strong></center></li>
+<a href="./">
+ <img src="img/CBW-HTG-icon.png" width="70%" alt="High Throughput Genomics Analysis logo" style="display:block; margin-left:auto; margin-right:auto; ">
+ </a>
+<br>
+
+<li class="divider"></li>
+<li class="part"><span><b>I Introduction</b></span></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Workshop Info</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#schedule"><i class="fa fa-check"></i>Schedule</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#pre-work"><i class="fa fa-check"></i>Pre-work</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="meet-your-faculty.html"><a href="meet-your-faculty.html"><i class="fa fa-check"></i>Meet Your Faculty</a></li>
+<li class="chapter" data-level="" data-path="data-and-compute-setup.html"><a href="data-and-compute-setup.html"><i class="fa fa-check"></i>Data and Compute Setup</a>
+<ul>
+<li class="chapter" data-level="" data-path="data-and-compute-setup.html"><a href="data-and-compute-setup.html#course-data-downloads"><i class="fa fa-check"></i>Course data downloads</a></li>
+<li class="chapter" data-level="" data-path="data-and-compute-setup.html"><a href="data-and-compute-setup.html#compute-setup"><i class="fa fa-check"></i>Compute setup</a>
+<ul>
+<li class="chapter" data-level="" data-path="data-and-compute-setup.html"><a href="data-and-compute-setup.html#aws-and-unix-intro"><i class="fa fa-check"></i>AWS and Unix Intro</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>II Modules</b></span></li>
+<li class="chapter" data-level="" data-path="module-1-introduction.html"><a href="module-1-introduction.html"><i class="fa fa-check"></i>Module 1: Introduction</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-1-introduction.html"><a href="module-1-introduction.html#lecture"><i class="fa fa-check"></i>Lecture</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-1-introduction.html"><a href="module-1-introduction.html#introduction-to-sequencing-technologies"><i class="fa fa-check"></i>Introduction to Sequencing Technologies</a></li>
+<li class="chapter" data-level="" data-path="module-1-introduction.html"><a href="module-1-introduction.html#introduction-to-hts-file-formats"><i class="fa fa-check"></i>Introduction to HTS File Formats</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html"><i class="fa fa-check"></i>Module 2: Data Visualization with IGV</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html#lecture-1"><i class="fa fa-check"></i>Lecture</a></li>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html#lab"><i class="fa fa-check"></i>Lab</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html#visualization-part-1-getting-familiar-with-igv"><i class="fa fa-check"></i>Visualization Part 1: Getting Familiar with IGV</a></li>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html#visualization-part-2-inspecting-snps-snvs-and-svs"><i class="fa fa-check"></i>Visualization Part 2: Inspecting SNPs, SNVs, and SVs</a></li>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html#visualization-part-3-automating-tasks-in-igv-optional"><i class="fa fa-check"></i>Visualization Part 3: Automating Tasks in IGV (Optional)</a></li>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html#visualization-part-4-visualizing-long-reads"><i class="fa fa-check"></i>Visualization Part 4: Visualizing Long Reads</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html#lab-answers"><i class="fa fa-check"></i>Lab Answers</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html#visualization-part-2-inspecting-snps-snvs-and-svs-1"><i class="fa fa-check"></i>Visualization Part 2: Inspecting SNPs, SNVs, and SVs</a></li>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html#visualization-part-4-visualizing-long-reads-1"><i class="fa fa-check"></i>Visualization Part 4: Visualizing Long Reads</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="module-3.html"><a href="module-3.html"><i class="fa fa-check"></i>Module 3</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-3.html"><a href="module-3.html#lecture-2"><i class="fa fa-check"></i>Lecture</a></li>
+<li class="chapter" data-level="" data-path="module-3.html"><a href="module-3.html#lab-1"><i class="fa fa-check"></i>Lab</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="module-4.html"><a href="module-4.html"><i class="fa fa-check"></i>Module 4</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-4.html"><a href="module-4.html#lecture-3"><i class="fa fa-check"></i>Lecture</a></li>
+<li class="chapter" data-level="" data-path="module-4.html"><a href="module-4.html#lab-2"><i class="fa fa-check"></i>Lab</a></li>
+</ul></li>
+<li class="divider"></li>
+<h1 id="sponsors">Sponsors</h1>
+
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding-bottom: 20px;">
+  <a href="https://aws.amazon.com/fr/education/awseducate/">
+    <img src="img/sponsors/AWS-educate-logo.png" style="height: 70px;" alt="AWS Educate logo.">
+  </a>
+  <a href="https://www.mcgill.ca/micm/">
+    <img src="img/sponsors/MICM-logo.png" style="height: 70px;" alt="McGill Initiative in Computation Medicine logo.">
+  </a>
+  <a href="https://computationalgenomics.ca/">
+    <img src="img/sponsors/c3g-logo.png" style="height: 70px;" alt="Canadian Centre for Computational Genomics.">
+  </a>
+  <a href="https://www.mcgill.ca/neuro/">
+    <img src="img/sponsors/neuro-logo.png" style="height: 70px;" alt="The Neuro logo.">
+  </a>
+  <a href="https://oicr.on.ca/">
+    <img src="img/sponsors/oicr.png" style="height: 70px;" alt="Ontario Institute for Cancer Research logo.">
+  </a>
+  <a href="https://www.hpcforhealth.ca/">
+    <img src="img/sponsors/hpc4health.png" style="height: 70px;" alt="HPC4Health logo.">
+  </a>
+  <a href="https://www.impactt-microbiome.ca/">
+    <img src="img/sponsors/IMPACTT-logo.png" style="height: 70px;" alt="IMPACTT logo.">
+  </a>
+</div>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">High Throughout Genomics Analysis 2021</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="module-2-data-visualization-with-igv" class="section level1 hasAnchor">
+<h1>Module 2: Data Visualization with IGV<a href="module-2-data-visualization-with-igv.html#module-2-data-visualization-with-igv" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="lecture-1" class="section level2 hasAnchor">
+<h2>Lecture<a href="module-2-data-visualization-with-igv.html#lecture-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<iframe src="https://drive.google.com/file/d/1RYdDaTxf9FXZS9RMZfPo85QsXDT5fRrB/preview" width="640" height="480" allow="autoplay">
+</iframe>
+</div>
+<div id="lab" class="section level2 hasAnchor">
+<h2>Lab<a href="module-2-data-visualization-with-igv.html#lab" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><em>This lab was created by Sorana Morrissy, then modified by Florence Cavalli, Heather Gibling, and Rob Syme.</em></p>
+<div id="introduction" class="section level4 hasAnchor">
+<h4>Introduction<a href="module-2-data-visualization-with-igv.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="description-of-the-lab" class="section level5 hasAnchor">
+<h5>Description of the lab<a href="module-2-data-visualization-with-igv.html#description-of-the-lab" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Welcome to the lab for <strong>Genome Visualization</strong>! This lab will introduce you to the <a href="https://igv.org/doc/desktop/">Integrative Genomics Viewer</a>, a powerful desktop application for viewing many kinds of genomic data, including data for DNA sequencing, RNA sequencing, microarrays, epigenetics, and copy number alteration. It is one of the most popular visualization tools for <strong>high throughput sequencing (HTS)</strong> data.</p>
+<p>After this lab, you will be able to:</p>
+<ul>
+<li>Visualize a variety of genomic data</li>
+<li>Very quickly navigate around the genome</li>
+<li>Visualize HTS read alignments</li>
+<li>Validate SNP calls and structural re-arrangements by eye</li>
+</ul>
+<p>Things to know before you start:</p>
+<ul>
+<li>The lab may take between <strong>1-2 hours</strong>, depending on your familiarity with genome browsing. Don’t worry if you don’t complete the lab! It is available for you to complete later.</li>
+<li>There are a few thought-provoking <strong>Questions</strong> or <strong>Notes</strong> pertaining to sections of the lab. These are <strong>optional</strong>, and may take more time, but are meant to help you better understand the visualizations you are seeing.</li>
+</ul>
+</div>
+<div id="requirements" class="section level5 hasAnchor">
+<h5>Requirements<a href="module-2-data-visualization-with-igv.html#requirements" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li><a href="https://igv.org/doc/desktop/">Integrative Genomics Viewer</a></li>
+<li>Ability to run Java</li>
+</ul>
+</div>
+<div id="compatibility" class="section level5 hasAnchor">
+<h5>Compatibility<a href="module-2-data-visualization-with-igv.html#compatibility" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>This tutorial was intended for <strong>IGV v2.3 or higher</strong>, which is available on the <a href="https://igv.org/doc/desktop/#DownloadPage/">Download</a> page. It is <em>strongly</em> recommended that you use one of these versions, as older versions may not be compatible. If you have installed a former version, please uninstall it and install the latest version.</p>
+</div>
+<div id="data-set-for-igv" class="section level5 hasAnchor">
+<h5>Data Set for IGV<a href="module-2-data-visualization-with-igv.html#data-set-for-igv" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li>Chromosome 21:19,000,000-20,000,000</li>
+<li><a href="content-files/HCC1143.normal.21.19M-20M.bam">HCC1143.normal.21.19M-20M.bam</a></li>
+<li><a href="content-files/HCC1143.normal.21.19M-20M.bam.bai">HCC1143.normal.21.19M-20M.bam.bai</a></li>
+</ul>
+</div>
+</div>
+<div id="visualization-part-1-getting-familiar-with-igv" class="section level3 hasAnchor">
+<h3>Visualization Part 1: Getting Familiar with IGV<a href="module-2-data-visualization-with-igv.html#visualization-part-1-getting-familiar-with-igv" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We will be visualizing read alignments using the <a href="https://igv.org/doc/desktop/">Integrative Genomics Viewer</a>.</p>
+<p>First, lets familiarize ourselves with it.</p>
+<div id="the-igv-interface" class="section level4 hasAnchor">
+<h4>The IGV Interface<a href="module-2-data-visualization-with-igv.html#the-igv-interface" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="img/IGV-layout.png" width="1000" alt="IGV layout."></p>
+<div id="load-a-genome-and-data-tracks" class="section level5 hasAnchor">
+<h5>Load a Genome and Data Tracks<a href="module-2-data-visualization-with-igv.html#load-a-genome-and-data-tracks" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>By default, IGV loads Human hg19 as the reference genome. If you work with another version of the human genome, or another organism altogether, you can change the genome by clicking the drop down menu in the upper-left. For this lab, we’ll be using Human hg19.</p>
+<p>We will also load additional tracks from <strong>Server</strong> <em>(File -&gt; Load from Server)</em>:</p>
+<ul>
+<li>Ensembl genes (or your favourite source of gene annotations)</li>
+<li>GC Percentage</li>
+<li>dbSNP 1.4.7</li>
+</ul>
+<div class="callout-blue">
+<span class="callout-icon"><i class="fas fa-circle-info" aria-hidden="true"></i></span>
+<div class="callout-content">
+<div class="callout-title-static" style="margin-bottom: 0.5em;">
+<p>Note</p>
+</div>
+<p>If you are using a computer with low memory, only load the gene annotations.</p>
+</div>
+</div>
+<p><img src="img/igv_genome1.png" width="1000" alt="IGV genome."></p>
+<p><img src="img/igv_server_load.png" width="1000" alt="IGV server load."></p>
+</div>
+<div id="navigation" class="section level5 hasAnchor">
+<h5>Navigation<a href="module-2-data-visualization-with-igv.html#navigation" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>You should see listing of chromosomes in this reference genome. Click on <strong>1</strong>, for chromosome 1.</p>
+<p><img src="./img/Ivg-chromosomes.png" width="1000" alt="IGV chromosomes."></p>
+<p>Navigate to <strong>chr1:10,000-11,000</strong> by entering this into the location field (in the top-left corner of the interface) and clicking <strong>Go</strong> or pressing Enter/Return on your keyboard. This shows a window of chromosome 1 that is 1,000 base pairs wide and beginning at position 10,000.</p>
+<p><img src="img/navigation-chr1.png" width="1000" alt="Navigating chromosome 1."></p>
+<p>IGV displays the sequence of letters in a genome as a sequence of colours (e.g. A = green). This makes repetitive sequences, like the ones found at the start of this region, easy to identify.</p>
+<p>You can navigate to a gene of interest by typing it in the same box the genomic coordinates are in and pressing Enter/Return. Try it for your favourite gene, or BRCA1 if you can’t decide.</p>
+<p><img src="img/navigation-BRCA1.png" width="1000" alt="Navigating BRACA1."></p>
+<p>Genes are represented as lines and boxes. Lines represent intronic regions, and boxes represent exonic regions. The arrows indicate the strand on which the gene lies.</p>
+<p>When loaded, tracks are stacked on top of each other. You can identify which track is which by consulting the label to the left of each track.</p>
+</div>
+<div id="region-lists" class="section level5 hasAnchor">
+<h5>Region Lists<a href="module-2-data-visualization-with-igv.html#region-lists" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Sometimes it’s really useful to save where you are, or to load regions of interest. For this purpose, there is a <strong>Region Navigator</strong> in IGV. To access it, click <em>Regions &gt; Region Navigator</em>. While you browse around the genome, you can save some bookmarks by pressing the <strong>Add</strong> button at any time.</p>
+<p><img src="img/regions-BRCA1.png" width="1000" alt="Using region navigator on BRCA1."></p>
+</div>
+<div id="loading-read-alignments" class="section level5 hasAnchor">
+<h5>Loading Read Alignments<a href="module-2-data-visualization-with-igv.html#loading-read-alignments" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>We will visualize alignments from the breast cancer cell line HCC1143. For speed, only a small portion of chr21 will be loaded (19M:20M).</p>
+<p><em>HCC1143 Alignments to hg19:</em></p>
+<ul>
+<li><a href="content-files/HCC1143.normal.21.19M-20M.bam">HCC1143.normal.21.19M-20M.bam</a></li>
+<li><a href="content-files/HCC1143.normal.21.19M-20M.bam.bai">HCC1143.normal.21.19M-20M.bam.bai</a></li>
+</ul>
+<div class="callout-blue">
+<span class="callout-icon"><i class="fas fa-circle-info" aria-hidden="true"></i></span>
+<div class="callout-content">
+<div class="callout-title-static" style="margin-bottom: 0.5em;">
+<p>Note</p>
+</div>
+<p>These are the same files listed at the top of tutorial.</p>
+</div>
+</div>
+<p>Copy the files to your local drive, and in IGV choose <em>File &gt; Load from File</em>, select the bam file, and click <strong>OK</strong>. Note that the bam and index files must be in the same directory for IGV to load these properly, but only the bam file (not the bam.bai file) needs to be loaded into IGV.</p>
+<p><img src="img/IGV-load-bam.png" width="1000" alt="Loading BAM file in IGV."></p>
+</div>
+<div id="visualizing-read-alignments" class="section level5 hasAnchor">
+<h5>Visualizing Read Alignments<a href="module-2-data-visualization-with-igv.html#visualizing-read-alignments" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Navigate to a narrow window on chromosome 21: “chr21:19,480,041-19,480,386”.</p>
+<p>IGV lets you group, sort, and color alignments to better visualize the data. To start our exploration, right click on the track name, and select the following options:</p>
+<ul>
+<li>Sort alignments by “start location”</li>
+<li>Group alignments by “pair orientation”</li>
+</ul>
+<p>Experiment with the various settings by right clicking the read alignment track and toggling the options. Think about which would be best for specific tasks (e.g. quality control, SNP calling, CNV finding).</p>
+<p><img src="img/IGV_sort_and_group.png" width="1000" alt="Sorting and grouping data in IGV."></p>
+<p>You will see reads represented by grey or white bars stacked on top of each other, where they were aligned to the reference genome. The reads are pointed to indicate their orientation (i.e. the strand on which they are mapped). Individual bases are only colored if they are a <strong>mismatch</strong> to the reference. The transparacy of the mismatched bases corresponds to the <strong>base quality</strong>.</p>
+<p><img src="img/mismatches.png" width="1000" alt="Mismatch data in IGV."></p>
+<p>Mouse over any read and notice that a lot of information is available. To toggle read display from “hover” to “click”, select the yellow box at the top of the window and change the setting.</p>
+<p><img src="img/IGV_show_details_on_click.png" width="1000" alt="Click to show details on read in IGV."></p>
+<p>Once you select a read, a pop-up window shows quality metrics and other information about that read.</p>
+<p><img src="img/IGV_click_read.png" width="1000" alt="Pop up window showing quality metrics and other information on read in IGV."></p>
+</div>
+</div>
+</div>
+<div id="visualization-part-2-inspecting-snps-snvs-and-svs" class="section level3 hasAnchor">
+<h3>Visualization Part 2: Inspecting SNPs, SNVs, and SVs<a href="module-2-data-visualization-with-igv.html#visualization-part-2-inspecting-snps-snvs-and-svs" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In this section we will be looking in detail at 8 positions in the genome, and determining whether they represent real events or artifacts.</p>
+<div id="neighbouring-somatic-snv-and-germline-snp" class="section level5 hasAnchor">
+<h5>Neighbouring Somatic SNV and Germline SNP<a href="module-2-data-visualization-with-igv.html#neighbouring-somatic-snv-and-germline-snp" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Navigate to position “chr21:19,479,237-19,479,814”</p>
+<ul>
+<li>Center on the SNV indicated by the red and blue coloring in the coverage track. You can center by clicking on the alignments and dragging them left or right until the SNV lines up with the black center line. (If the center line isn’t visible, turn it on by going to View -&gt; Preferences -&gt; Alignments -&gt; Show center line). You can also type “chr21:19,478,749-19,479,891” into the navigation bar to center on the SNV.</li>
+<li>Sort alignments by “base”</li>
+<li>Color alignments by “read strand”. <strong>Red</strong> reads are in the <strong>forward</strong> orientation, and <strong>blue</strong> reads are in the <strong>reverse orientation</strong>.</li>
+</ul>
+<p><img src="img/IGV_example1_color.png" width="1000" alt="Colour alignments in IGV."></p>
+<div class="callout-blue">
+<span class="callout-icon"><i class="fas fa-circle-info" aria-hidden="true"></i></span>
+<div class="callout-content">
+<div class="callout-title-static" style="margin-bottom: 0.5em;">
+<p>Note</p>
+</div>
+<ul>
+<li>High base qualities in all reads except one (where the alt allele is the last base of the read)</li>
+<li>Good mapping quality of reads, no strand bias, allele frequency consistent with heterozygous mutation</li>
+</ul>
+</div>
+</div>
+<div id="questions" class="section level6 hasAnchor">
+<h6>Questions:<a href="module-2-data-visualization-with-igv.html#questions" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<ol style="list-style-type: decimal">
+<li>What does “Shade base by quality” do? How might this be helpful?</li>
+<li>How does “Color by read strand” help?</li>
+</ol>
+</div>
+</div>
+<div id="homopolymer-repeat-with-indel" class="section level5 hasAnchor">
+<h5>Homopolymer Repeat with Indel<a href="module-2-data-visualization-with-igv.html#homopolymer-repeat-with-indel" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Navigate to position “chr21:19,518,412-19,518,497”</p>
+<ul>
+<li>Group alignments by “read strand”</li>
+<li>Drag and center on the second set of “T”s</li>
+<li>Sort alignments by “base”</li>
+</ul>
+<div id="questions-1" class="section level6 hasAnchor">
+<h6>Questions:<a href="module-2-data-visualization-with-igv.html#questions-1" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<ol style="list-style-type: decimal">
+<li>Is the “T” likely a valid SNV? What evidence suggests it is or isn’t?</li>
+</ol>
+<p><img src="img/IGV_example2a.png" width="1000" alt="IGV example 2a."></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Now center on the one base deletion indicated by broken reads with black lines. You may have to scroll down to find these reads.</li>
+<li>Sort alignments by “base”</li>
+</ol>
+<p><img src="img/IGV_example2b.png" width="1000" alt="IGV example 2b."></p>
+<div class="callout-blue">
+<span class="callout-icon"><i class="fas fa-circle-info" aria-hidden="true"></i></span>
+<div class="callout-content">
+<div class="callout-title-static" style="margin-bottom: 0.5em;">
+<p>Note</p>
+</div>
+<ul>
+<li>The alt allele is either a deletion or insertion of one or two “T”s</li>
+<li>You can see the inserted “T”s by clicking on or hovering over (depending on your settings) the purple “I”s that indicate insertions</li>
+<li>The remaining bases are mismatched, because the alignment is now out of sync</li>
+<li>(Using an older version of dbSNP (1.3.1) the entry at this location (rs74604068) is an A-&gt;T, and in all likelihood an artifact i.e. the common variants included some cases that are actually common misalignments caused by repeats. This is getting better; this entry is not present anymore in dbSNP 1.4.7!)</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="coverage-by-gc" class="section level5 hasAnchor">
+<h5>Coverage by GC<a href="module-2-data-visualization-with-igv.html#coverage-by-gc" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Navigate to position “chr21:19,611,925-19,631,555” Note that the range contains areas where coverage drops to zero in a few places.</p>
+<ul>
+<li>Use Collapsed view</li>
+<li>Color alignments by “insert size”</li>
+<li>Load GC track (if not loaded already; File -&gt; Load from Server -&gt; Annotations -&gt; Sequence and Regulations -&gt; GC Percentage)</li>
+</ul>
+<p><img src="img/IGV_example3.png" width="1000" alt="IGV example 3."></p>
+<div id="question" class="section level6 hasAnchor">
+<h6>Question:<a href="module-2-data-visualization-with-igv.html#question" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<ol style="list-style-type: decimal">
+<li>Does the coverage correspond to the GC content</li>
+</ol>
+</div>
+</div>
+<div id="heterozygous-snps-on-different-alleles" class="section level5 hasAnchor">
+<h5>Heterozygous SNPs on Different Alleles<a href="module-2-data-visualization-with-igv.html#heterozygous-snps-on-different-alleles" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Navigate to region “chr21:19,666,833-19,667,007”</p>
+<ul>
+<li>Center on the first SNV (green)</li>
+<li>Remove grouping by read strand and set to “none”</li>
+<li>Sort by base</li>
+</ul>
+<p><img src="img/IGV_example4.png" width="1000" alt="IGV example 4."></p>
+<div class="callout-blue">
+<span class="callout-icon"><i class="fas fa-circle-info" aria-hidden="true"></i></span>
+<div class="callout-content">
+<div class="callout-title-static" style="margin-bottom: 0.5em;">
+<p>Note</p>
+</div>
+<ul>
+<li>Both SNV positions are spanned by single reads, but reads only have either one or the other, indicating that they are on different haplotypes</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="low-mapping-quality" class="section level5 hasAnchor">
+<h5>Low Mapping Quality<a href="module-2-data-visualization-with-igv.html#low-mapping-quality" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Navigate to region “chr21:19,800,320-19,818,162”</p>
+<p>Use Collapsed view
+Load repeat track (from Load from Server)</p>
+<p><img src="img/IGV_RepeatMasker_load.png" width="1000" alt="IGV Repeat Masker load."></p>
+<p><img src="img/IGV_example5.png" width="1000" alt="IGV example 5."></p>
+<div class="callout-blue">
+<span class="callout-icon"><i class="fas fa-circle-info" aria-hidden="true"></i></span>
+<div class="callout-content">
+<div class="callout-title-static" style="margin-bottom: 0.5em;">
+<p>Note</p>
+</div>
+<ul>
+<li>Mapping quality plunges in several reads (white instead of grey). Once we load repeat elements, we see that these reads align with two LINE elements</li>
+</ul>
+</div>
+</div>
+<div id="question-1" class="section level6 hasAnchor">
+<h6>Question<a href="module-2-data-visualization-with-igv.html#question-1" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<ol style="list-style-type: decimal">
+<li>Why do LINE elements affect mapping quality</li>
+</ol>
+</div>
+</div>
+<div id="homozygous-deletion" class="section level5 hasAnchor">
+<h5>Homozygous Deletion<a href="module-2-data-visualization-with-igv.html#homozygous-deletion" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Navigate to region “chr21:19,324,469-19,331,468”</p>
+<ul>
+<li>Sort reads by insert size
+<ul>
+<li>Some read pairs are colored red and blue. This is different from “Color by read strand”. <strong>Red</strong> read pairs correspond to insert sizes that are <strong>larger</strong> than expected, and <strong>blue</strong> read pairs correspond to insert sizes that are <strong>smaller</strong> than expected.</li>
+<li><strong>Larger (red) insert sizes</strong> can be indicative of a <strong>deletion</strong></li>
+<li><strong>Smaller (blue) insert sizes</strong> can be indicative of an <strong>insertion</strong></li>
+<li>This is well explained <a href="https://igv.org/doc/desktop/">here</a></li>
+</ul></li>
+<li>Turn on “View as Pairs” and “Expanded” view</li>
+<li>Click on a red read pair to pull up information on alignments</li>
+</ul>
+<p><img src="img/IGV_example6.png" width="1000" alt="IGV example 6."></p>
+<div class="callout-blue">
+<span class="callout-icon"><i class="fas fa-circle-info" aria-hidden="true"></i></span>
+<div class="callout-content">
+<div class="callout-title-static" style="margin-bottom: 0.5em;">
+<p>Note</p>
+</div>
+<ul>
+<li>Typical insert size of read pair in the vicinity: 350bp</li>
+<li>New insert size of red read pairs: 2,875bp</li>
+<li>This corresponds to a homozygous deletion of 2.5kb</li>
+</ul>
+</div>
+</div>
+<div id="question-2" class="section level6 hasAnchor">
+<h6>Question<a href="module-2-data-visualization-with-igv.html#question-2" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<ol style="list-style-type: decimal">
+<li>What other track provides evidence of a deletion at this location?</li>
+</ol>
+</div>
+</div>
+<div id="mis-alignment" class="section level5 hasAnchor">
+<h5>Mis-Alignment<a href="module-2-data-visualization-with-igv.html#mis-alignment" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Navigate to region “chr21:19,102,154-19,103,108”</p>
+<ul>
+<li>Turn on “View as Pairs” and “Expanded” view</li>
+<li>Group alignments by “Pair orientation”</li>
+<li>Color alignments by “Insert size and pair orientation”
+<ul>
+<li>“Insert size” also colors reads when a mate is mapped to a different chromosome. Each chromosome has its own color, as described <a href="https://igv.org/doc/desktop/">here</a></li>
+</ul></li>
+</ul>
+<p><img src="img/IGV_example7.png" width="1000" alt="IGV example 7."></p>
+<div class="callout-blue">
+<span class="callout-icon"><i class="fas fa-circle-info" aria-hidden="true"></i></span>
+<div class="callout-content">
+<div class="callout-title-static" style="margin-bottom: 0.5em;">
+<p>Note</p>
+</div>
+<ul>
+<li>This is a position where an AluY element causes mis-alignment</li>
+<li>Misaligned reads have several mismatches to the reference and</li>
+<li>Well-aligned reads have partners on other chromosomes where additional AluY elements are encoded. You may need to scroll down to see this reads</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="translocation" class="section level5 hasAnchor">
+<h5>Translocation<a href="module-2-data-visualization-with-igv.html#translocation" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Navigate to region “chr21:19,089,694-19,095,362”</p>
+<ul>
+<li>Expanded view</li>
+<li>Group by “Pair orientation”</li>
+<li>Color alignments by “Insert size and pair orientation”
+<ul>
+<li>“Pair orientation” colors read pairs when they are not in the expected left-right (LR) orientation. This is well explained <a href="https://igv.org/doc/desktop/">here</a></li>
+</ul></li>
+</ul>
+<p><img src="img/IGV_example8.png" width="1000" alt="IGV example 8."></p>
+<div class="callout-blue">
+<span class="callout-icon"><i class="fas fa-circle-info" aria-hidden="true"></i></span>
+<div class="callout-content">
+<div class="callout-title-static" style="margin-bottom: 0.5em;">
+<p>Note</p>
+</div>
+<ul>
+<li>Many reads with mismatches to reference</li>
+<li>Read pairs in RL pattern (instead of LR pattern)</li>
+<li>Region is flanked by reads with poor mapping quality (white instead of grey)</li>
+<li>Presence of reads with pairs on other chromosomes (coloured reads at the bottom when scrolling down)</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="visualization-part-3-automating-tasks-in-igv-optional" class="section level3 hasAnchor">
+<h3>Visualization Part 3: Automating Tasks in IGV (Optional)<a href="module-2-data-visualization-with-igv.html#visualization-part-3-automating-tasks-in-igv-optional" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We can use the Tools menu to invoke running a batch script. Using a batch script, you can automatically load your data, go to a particular location, set some display options and take a snapshot. This can be useful when you want to inspect many variant calls.</p>
+<p>Batch scripts are described on the IGV website:</p>
+<ul>
+<li><a href="https://igv.org/doc/desktop/#UserGuide/tools/batch/">Batch file requirements</a></li>
+<li><a href="https://igv.org/doc/desktop/#UserGuide/tools/batch/#script-commands">Commands recognized in a batch script</a></li>
+</ul>
+<p>We also need to provide a sample attribute file as described <a href="https://igv.org/doc/desktop/#UserGuide/sample_attributes/">here</a>.</p>
+<p>Download the batch script and the attribute file for our dataset:</p>
+<p>Batch script: <a href="content-files/Run-batch-IGV-snapshots_example.txt">Run_batch_IGV_snapshots_example.txt</a>
+Attribute file: <a href="content-files/igv_HCC1143_attributes.txt">igv_HCC1143_attributes.txt</a></p>
+<p>After downloading those two files, open Run_batch_IGV_snapshots_example.txt in a text editor and <strong>update the paths for the bam file and the output directory</strong> (indicated as **** in the file) to your directories. The batch script will not run if these paths are not updated because these default directories do not exist on your computer.</p>
+<p>Now run the file from the Tools menu:</p>
+<ul>
+<li><em>Tools -&gt; Run Batch Script</em></li>
+<li>Select <em>Run_batch_IGV_snapshots_example.txt</em> and click Open.</li>
+<li>IGV will automatically switch to thse regions specified in the batch script. Wait until the cursor returns to an arrow to use IGV again.</li>
+</ul>
+<p>The IGV screenshots are in the screenshots output directory you set. Have a look!</p>
+</div>
+<div id="visualization-part-4-visualizing-long-reads" class="section level3 hasAnchor">
+<h3>Visualization Part 4: Visualizing Long Reads<a href="module-2-data-visualization-with-igv.html#visualization-part-4-visualizing-long-reads" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Long reads aligned to a reference genome can be visualized like short reads, but true variants might be hard to find among the noise from increased sequencing error rates in long-read sequencing technologies. We will view some reads obtained from Oxford Nanopore sequencing provided by <a href="https://github.com/mitenjain/NA12878/blob/master/nanopore-human-genome/rel_3_4.md">Miten Jain</a> from the recent publication <a href="https://www.nature.com/articles/nbt.4060">Nanopore sequencing and assembly of a human genome with ultra-long reads</a>.</p>
+<p>Before getting started, <strong>remove the tracks for HCC1143.normal.21.19M-20M.bam (both the alignment track and the coverage track)</strong>. We will be using a different reference genome, so these reads will no longer be properly aligned. Change the reference genome in the top left corner to <strong>Human (hg38)</strong>. If this option isn’t available you will need to download it. Selct <em>More</em>, then scroll down and select <em>Human hg38</em>.</p>
+<div id="data-for-long-reads" class="section level5 hasAnchor">
+<h5>Data for long reads:<a href="module-2-data-visualization-with-igv.html#data-for-long-reads" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li>Chromosome 21: 19,000,000-20,000,000</li>
+<li><a href="content-files/NA12878.21.19M-20M.bam">NA12878.21.19M-20M.bam</a></li>
+<li><a href="content-files/NA12878.21.19M-20M.bam.bai">NA12878.21.19M-20M.bam.bai</a></li>
+</ul>
+<p>Copy the files to your local drive, and in IGV choose <em>File &gt; Load from File</em>, select the bam file, and click OK. Note that the bam and index files must be in the same directory for IGV to load these properly, but only the bam file (not the bam.bai file) needs to be loaded into IGV.</p>
+</div>
+<div id="cleaning-up-sequencing-error-noise" class="section level5 hasAnchor">
+<h5>Cleaning up Sequencing Error Noise<a href="module-2-data-visualization-with-igv.html#cleaning-up-sequencing-error-noise" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Navigate to position “chr21:19,479,237-19,479,814”</p>
+<ul>
+<li>Load the Common SNPs track from server (<em>File -&gt; Load from Server -&gt; Annotations -&gt; Common Snps 1.4.2</em>)</li>
+</ul>
+<p><img src="img/IGV-GRCh38-SNPs.png" width="1000" alt="IGV GRCh38 SNPs."></p>
+<div id="question-3" class="section level6 hasAnchor">
+<h6>Question:<a href="module-2-data-visualization-with-igv.html#question-3" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<ol style="list-style-type: decimal">
+<li>What does the abundance of dashed lines and purple “I”s tell us about the types of errors produced by nanopore sequencing?</li>
+</ol>
+<p>Hide small indels to better view the alignments:</p>
+<ul>
+<li>Go to <em>View -&gt; Preferences -&gt; Alignments</em> and enter a small number for <em>Hide indels</em> &lt; (e.g., 20)</li>
+<li>Most of the indels should now be removed.</li>
+</ul>
+<p><img src="img/IGV-long-reads-hide-indels.png" width="1000" alt="IGV long reads hide indels."></p>
+<p>Generate a consensus sequence to hide substitution errors:</p>
+<ul>
+<li>Go <em>View -&gt; Preferences -&gt; Alignments</em> and select <em>Quick consensus mode</em></li>
+</ul>
+<p><img src="img/IGV-long-reads-consensus.png" width="1000" alt="IGV long reads consensus."></p>
+</div>
+</div>
+<div id="viewing-variants" class="section level5 hasAnchor">
+<h5>Viewing Variants<a href="module-2-data-visualization-with-igv.html#viewing-variants" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Scroll around and see if you can find a plausible SNV.</p>
+<ul>
+<li>What information are you using as evidence for this SNV?</li>
+</ul>
+<p>Now navigate to position “chr21:19,790,758-19,790,965”</p>
+<p><img src="img/IGV-nanopore-homopolymer-deletion.png" width="1000" alt="IGV nanopore homopolymer deletion."></p>
+<div class="callout-blue">
+<span class="callout-icon"><i class="fas fa-circle-info" aria-hidden="true"></i></span>
+<div class="callout-content">
+<div class="callout-title-static" style="margin-bottom: 0.5em;">
+<p>Note</p>
+</div>
+<ul>
+<li>The reads here all have a deletion indicated by thin black bars splitting up parts of the reads. It would seem as though this is evidence for a deletion in this sample at this position</li>
+<li>However, look at the reference sequence at the deletion–it is all red, indicating “T”s! You can zoom in to confirm</li>
+<li>Nanopore sequencing is prone to deletions at homopolymer repeats, or stretches of a single base, as seen here. Therefore this is likely a sequencing artifact and not a true deletion</li>
+</ul>
+</div>
+</div>
+<div id="question-4" class="section level6 hasAnchor">
+<h6>Question:<a href="module-2-data-visualization-with-igv.html#question-4" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<ol style="list-style-type: decimal">
+<li>Some of the coloring options we used for viewing the previous sample (HCC1143) are not available for this NA12878 bam, such as View as pairs and Color alignments by insert size and pair orientation. Why is this?</li>
+</ol>
+<div class="callout-green">
+<span class="callout-icon"><i class="fas fa-party-horn" aria-hidden="true"></i></span>
+<div class="callout-content">
+<div class="callout-title-static center" style="margin-bottom: 0.5em;">
+<p>Lab Complete!</p>
+</div>
+<p>You’re done! We hope that you enjoyed the lab and that you continue to enjoy IGV.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="resources" class="section level4 hasAnchor">
+<h4>Resources<a href="module-2-data-visualization-with-igv.html#resources" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li><a href="">Suggested answers to the questions from this lab</a></li>
+<li><a href="https://igv.org/doc/desktop/">IGV user manual</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="lab-answers" class="section level2 hasAnchor">
+<h2>Lab Answers<a href="module-2-data-visualization-with-igv.html#lab-answers" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="suggested-answers" class="section level4 hasAnchor">
+<h4>Suggested Answers<a href="module-2-data-visualization-with-igv.html#suggested-answers" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Below are suggested answers to the questions from lab 2. You might have thought of additional reasons and answers!</p>
+</div>
+<div id="visualization-part-2-inspecting-snps-snvs-and-svs-1" class="section level3 hasAnchor">
+<h3>Visualization Part 2: Inspecting SNPs, SNVs, and SVs<a href="module-2-data-visualization-with-igv.html#visualization-part-2-inspecting-snps-snvs-and-svs-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="neighbouring-somatic-snv-and-germline-snp-1" class="section level5 hasAnchor">
+<h5>Neighbouring Somatic SNV and Germline SNP<a href="module-2-data-visualization-with-igv.html#neighbouring-somatic-snv-and-germline-snp-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div id="questions-2" class="section level6 hasAnchor">
+<h6>Questions:<a href="module-2-data-visualization-with-igv.html#questions-2" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<ol style="list-style-type: decimal">
+<li>What does “Shade base by quality” do? How might this be helpful?
+<ul>
+<li>Distinguishes high-quality bases from lower quality bases. If the T alternate allele was predominantly light/transparent, we wouldn’t be very confident that it is a probable SNV. The only light-colored T in this example is at the very end of a read, where base quality is generally lower.</li>
+</ul></li>
+<li>How does “Color by read strand” help?
+<ul>
+<li>Lets us see that the T alternate allele is present on both forward and reverse sequencing reads. If it was present on only forward reads or only reverse reads, that could indicate a sequencing artifact as opposed to a probable SNV.</li>
+</ul></li>
+</ol>
+</div>
+</div>
+<div id="homopolymer-repeat-with-indel-1" class="section level5 hasAnchor">
+<h5>Homopolymer Repeat with Indel<a href="module-2-data-visualization-with-igv.html#homopolymer-repeat-with-indel-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div id="question-5" class="section level6 hasAnchor">
+<h6>Question:<a href="module-2-data-visualization-with-igv.html#question-5" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<ol style="list-style-type: decimal">
+<li>Is the “T” likely a valid SNV? What evidence suggests it is or isn’t?
+<ul>
+<li>Probably not. 6/36 reads show a T at this positition (numbers obtained by clicking/hovering on the coverage track block at this position), and 4 of those 6 are light colored (low quality). Additionally, only forward (red) reads have the T alternate allele, indicating a strand bias sequencing error.</li>
+</ul></li>
+</ol>
+</div>
+</div>
+<div id="coverage-by-gc-1" class="section level5 hasAnchor">
+<h5>Coverage by GC<a href="module-2-data-visualization-with-igv.html#coverage-by-gc-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div id="question-6" class="section level6 hasAnchor">
+<h6>Question:<a href="module-2-data-visualization-with-igv.html#question-6" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<ol style="list-style-type: decimal">
+<li>Does the coverage correspond to the GC content?
+<ul>
+<li>Yes! Read coverage is low where GC content of the reference genome is very low (and also very high, but in these data the low coverage effect is easier to see). Seqeuencing technologies are not perfect and have biases, meaning not all regions of the genome are covered equally. You can read more about the effect of GC content on short-read sequencing coverage here.</li>
+</ul></li>
+</ol>
+</div>
+</div>
+<div id="low-mapping-quality-1" class="section level5 hasAnchor">
+<h5>Low Mapping Quality<a href="module-2-data-visualization-with-igv.html#low-mapping-quality-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div id="question-7" class="section level6 hasAnchor">
+<h6>Question:<a href="module-2-data-visualization-with-igv.html#question-7" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<ol style="list-style-type: decimal">
+<li>Why do LINE elements affect mapping quality?
+<ul>
+<li>LINEs (long interspersed nuclear elements) are retrotransposons found throughout the genome. Because these sequences are repeated in many different locations, when a read aligns to part of this sequence, it can often map equally well to multiple locations in the genome. This is not helpful, so aligners generally give low mapping quality scores reads that do not map uniquely to one location (i.e. 0; the reads will also be white instead of grey in IGV).</li>
+</ul></li>
+</ol>
+</div>
+</div>
+<div id="homozygous-deletion-1" class="section level5 hasAnchor">
+<h5>Homozygous Deletion<a href="module-2-data-visualization-with-igv.html#homozygous-deletion-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div id="question-8" class="section level6 hasAnchor">
+<h6>Question:<a href="module-2-data-visualization-with-igv.html#question-8" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<ol style="list-style-type: decimal">
+<li>What other track provides evidence of a deletion at this location?
+<ul>
+<li>The coverage track drops down to zero at the same location as the gap in sequencing reads.</li>
+</ul></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="visualization-part-4-visualizing-long-reads-1" class="section level3 hasAnchor">
+<h3>Visualization Part 4: Visualizing Long Reads<a href="module-2-data-visualization-with-igv.html#visualization-part-4-visualizing-long-reads-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="cleaning-up-sequencing-error-noise-1" class="section level5 hasAnchor">
+<h5>Cleaning up Sequencing Error Noise<a href="module-2-data-visualization-with-igv.html#cleaning-up-sequencing-error-noise-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div id="question-9" class="section level6 hasAnchor">
+<h6>Question:<a href="module-2-data-visualization-with-igv.html#question-9" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<ol style="list-style-type: decimal">
+<li>What does the abundance of dashed lines and purple “I”s tell us about the types of errors produced by nanopore sequencing?
+<ul>
+<li>Nanopore sequencing is prone to insertions and deletions. “I”s are insertions and the dashed lines are deletions, relative to the reference genome.</li>
+</ul></li>
+</ol>
+</div>
+</div>
+<div id="viewing-variants-1" class="section level5 hasAnchor">
+<h5>Viewing Variants<a href="module-2-data-visualization-with-igv.html#viewing-variants-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div id="question-10" class="section level6 hasAnchor">
+<h6>Question:<a href="module-2-data-visualization-with-igv.html#question-10" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<ol style="list-style-type: decimal">
+<li>Some of the coloring options we used for viewing the previous sample (HCC1143) are not available for this NA12878 bam, such as <em>View as pairs and Color alignments</em> by insert size and pair orientation. Why is this?
+<ul>
+<li>Nanopore sequencing doesn’t do paired read sequencing! Instead, long fragments of DNA are pulled through pores and are sequenced until the end of the fragment (or until the pore wears out). Reads are considered to be independent from each other in this regard. This is different from short-read sequencing platforms like Illumina that sequence both ends of a DNA fragment but are usually unable to sequence the middle segment.</li>
+</ul></li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="module-1-introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="module-3.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/cbw-dev/HTG-2021/blob/main/020-module-2.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["_main.pdf", "_main.epub"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>

@@ -1,16 +1,16 @@
 --- 
-title: "NAME OF WORKSHOP YEAR"
-author: "Faculty: INSTRUCTOR AND TA NAMES"
-date: "DATES"
+title: "High Throughout Genomics Analysis 2021"
+author: "Faculty: Mathieu Bourgey, Jared Simpson, Robert Syme, Daniel Poppleton, BF Francis Ouellette, Rachade Hmamouchi"
+date: "Sep 27, 2021 - Sep 29, 2021"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
-url: https://cbw-dev.github.io/bookdown-template/ # CHANGE THIS LINK TO YOUR LANDING PAGE LINK
+url: https://github.com/cbw-dev/HTG-2021/blob/main/index.Rmd # CHANGE THIS LINK TO YOUR LANDING PAGE LINK
 cover-image: img/bioinformatics_logo.png
 description: |
-  Workshop website for the YEAR WORKSHOP Canadian Bioinformatics Workshop
+  Workshop website for the 2021 High Throughput Genomics Analysis Canadian Bioinformatics Workshop
 link-citations: yes
-github-repo: cbw-dev/bookdown-template # CHANGE THIS TO YOUR OWN REPO
+github-repo: cbw-dev/HTG-2021 # CHANGE THIS TO YOUR OWN REPO
 favicon: img/favicon.ico
 ---
 
@@ -18,18 +18,23 @@ favicon: img/favicon.ico
 
 # Workshop Info
 
-Welcome to the YEAR WORKSHOP Canadian Bioinformatics Workshop webpage!  
-
-<!--## Class Photo
-
-After workshop concludes, YOUR EMBED CODE HERE-->
+Welcome to the 2021 High Throughput Genomics Analysis Canadian Bioinformatics Workshop webpage!  
 
 ## Schedule
 
-<!--Copy paste a table into https://www.tablesgenerator.com/markdown_tables (select convert to markdown) to create a table in markdown.   
--->
+|       |                         Monday, September 27                         |       |            Tuesday, September 28            |       |        Wednesday, September 29       |
+|:-----:|:--------------------------------------------------------------------:|:-----:|:-------------------------------------------:|:-----:|:------------------------------------:|
+| 10:00 |                                Welcome                               | 10:00 |                Module 3: Lab                | 10:00 | Module 5: Structural Variant Calling |
+| 10:15 | Module 1: Introduction to Sequencing Technologies & HTS file formats |       |                                             | 11:00 |             Module 5 lab             |
+| 12:15 |                                 Break                                | 12:00 |                    Break                    | 12:00 |                 Break                |
+| 12:45 |                 Module 2: data vizualization with IGV                | 12:30 | Module 4: Single nucleotide variant Calling | 12:30 |             Module 5 lab             |
+| 13:45 |                                 Break                                | 13:30 |                    Break                    | 13:30 |                 Break                |
+| 14:45 |                             Module 2 lab                             | 14:30 |                 Module 4 lab                | 14:30 |       Module 6: Genome Assembly      |
+| 15:45 |                      Module 3: Genome Alignment                      |       |                                             | 15:30 |             Module 6 Lab             |
+| 16:45 |                                 Break                                | 16:30 |                    Break                    | 16:30 |                 Break                |
+| 17:15 |                             Module 3: Lab                            | 17:00 |                 Module 4 lab                | 17:00 |             Module 6 Lab             |
+| 18:15 |                                                                      | 17:30 |                                             | 18:00 |       Survey & Closing Remarks       |
 
 ## Pre-work
 
-<!--[You can find your pre-work here.](LINK TO PREWORK)
--->
+[You can find your pre-work here.](https://docs.google.com/forms/d/e/1FAIpQLSduaUtrxwV4OQPWXMhFD9TP6GqUlRGy7B3wTa3JB34KJBakUQ/closedform)

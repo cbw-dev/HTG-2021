@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Module 1: Introduction | High Throughout Genomics Analysis 2021</title>
+  <meta name="description" content="Workshop website for the 2021 High Throughput Genomics Analysis Canadian Bioinformatics Workshop" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Module 1: Introduction | High Throughout Genomics Analysis 2021" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="https://github.com/cbw-dev/HTG-2021/blob/main/index.Rmd/img/bioinformatics_logo.png" />
+  <meta property="og:description" content="Workshop website for the 2021 High Throughput Genomics Analysis Canadian Bioinformatics Workshop" />
+  <meta name="github-repo" content="cbw-dev/HTG-2021" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Module 1: Introduction | High Throughout Genomics Analysis 2021" />
+  
+  <meta name="twitter:description" content="Workshop website for the 2021 High Throughput Genomics Analysis Canadian Bioinformatics Workshop" />
+  <meta name="twitter:image" content="https://github.com/cbw-dev/HTG-2021/blob/main/index.Rmd/img/bioinformatics_logo.png" />
+
+<meta name="author" content="Faculty: Mathieu Bourgey, Jared Simpson, Robert Syme, Daniel Poppleton, BF Francis Ouellette, Rachade Hmamouchi" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+<link rel="prev" href="data-and-compute-setup.html"/>
+<link rel="next" href="module-2-data-visualization-with-igv.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<a href="https://bioinformaticsdotca.github.io/">
+ <img src="img/bioinformatics_logo.png" width="90%" alt="bioinformatics.ca logo" style="display:block; margin-left:auto; margin-right:auto; margin-top:15px;">
+ </a>
+<li><center><strong><a href="./"><br>High Throughput Genomics Analysis<br><br></a></strong></center></li>
+<a href="./">
+ <img src="img/CBW-HTG-icon.png" width="70%" alt="High Throughput Genomics Analysis logo" style="display:block; margin-left:auto; margin-right:auto; ">
+ </a>
+<br>
+
+<li class="divider"></li>
+<li class="part"><span><b>I Introduction</b></span></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Workshop Info</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#schedule"><i class="fa fa-check"></i>Schedule</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#pre-work"><i class="fa fa-check"></i>Pre-work</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="meet-your-faculty.html"><a href="meet-your-faculty.html"><i class="fa fa-check"></i>Meet Your Faculty</a></li>
+<li class="chapter" data-level="" data-path="data-and-compute-setup.html"><a href="data-and-compute-setup.html"><i class="fa fa-check"></i>Data and Compute Setup</a>
+<ul>
+<li class="chapter" data-level="" data-path="data-and-compute-setup.html"><a href="data-and-compute-setup.html#course-data-downloads"><i class="fa fa-check"></i>Course data downloads</a></li>
+<li class="chapter" data-level="" data-path="data-and-compute-setup.html"><a href="data-and-compute-setup.html#compute-setup"><i class="fa fa-check"></i>Compute setup</a>
+<ul>
+<li class="chapter" data-level="" data-path="data-and-compute-setup.html"><a href="data-and-compute-setup.html#aws-and-unix-intro"><i class="fa fa-check"></i>AWS and Unix Intro</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>II Modules</b></span></li>
+<li class="chapter" data-level="" data-path="module-1-introduction.html"><a href="module-1-introduction.html"><i class="fa fa-check"></i>Module 1: Introduction</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-1-introduction.html"><a href="module-1-introduction.html#lecture"><i class="fa fa-check"></i>Lecture</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-1-introduction.html"><a href="module-1-introduction.html#introduction-to-sequencing-technologies"><i class="fa fa-check"></i>Introduction to Sequencing Technologies</a></li>
+<li class="chapter" data-level="" data-path="module-1-introduction.html"><a href="module-1-introduction.html#introduction-to-hts-file-formats"><i class="fa fa-check"></i>Introduction to HTS File Formats</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html"><i class="fa fa-check"></i>Module 2: Data Visualization with IGV</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html#lecture-1"><i class="fa fa-check"></i>Lecture</a></li>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html#lab"><i class="fa fa-check"></i>Lab</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html#visualization-part-1-getting-familiar-with-igv"><i class="fa fa-check"></i>Visualization Part 1: Getting Familiar with IGV</a></li>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html#visualization-part-2-inspecting-snps-snvs-and-svs"><i class="fa fa-check"></i>Visualization Part 2: Inspecting SNPs, SNVs, and SVs</a></li>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html#visualization-part-3-automating-tasks-in-igv-optional"><i class="fa fa-check"></i>Visualization Part 3: Automating Tasks in IGV (Optional)</a></li>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html#visualization-part-4-visualizing-long-reads"><i class="fa fa-check"></i>Visualization Part 4: Visualizing Long Reads</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html#lab-answers"><i class="fa fa-check"></i>Lab Answers</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html#visualization-part-2-inspecting-snps-snvs-and-svs-1"><i class="fa fa-check"></i>Visualization Part 2: Inspecting SNPs, SNVs, and SVs</a></li>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html#visualization-part-4-visualizing-long-reads-1"><i class="fa fa-check"></i>Visualization Part 4: Visualizing Long Reads</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="module-3.html"><a href="module-3.html"><i class="fa fa-check"></i>Module 3</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-3.html"><a href="module-3.html#lecture-2"><i class="fa fa-check"></i>Lecture</a></li>
+<li class="chapter" data-level="" data-path="module-3.html"><a href="module-3.html#lab-1"><i class="fa fa-check"></i>Lab</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="module-4.html"><a href="module-4.html"><i class="fa fa-check"></i>Module 4</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-4.html"><a href="module-4.html#lecture-3"><i class="fa fa-check"></i>Lecture</a></li>
+<li class="chapter" data-level="" data-path="module-4.html"><a href="module-4.html#lab-2"><i class="fa fa-check"></i>Lab</a></li>
+</ul></li>
+<li class="divider"></li>
+<h1 id="sponsors">Sponsors</h1>
+
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding-bottom: 20px;">
+  <a href="https://aws.amazon.com/fr/education/awseducate/">
+    <img src="img/sponsors/AWS-educate-logo.png" style="height: 70px;" alt="AWS Educate logo.">
+  </a>
+  <a href="https://www.mcgill.ca/micm/">
+    <img src="img/sponsors/MICM-logo.png" style="height: 70px;" alt="McGill Initiative in Computation Medicine logo.">
+  </a>
+  <a href="https://computationalgenomics.ca/">
+    <img src="img/sponsors/c3g-logo.png" style="height: 70px;" alt="Canadian Centre for Computational Genomics.">
+  </a>
+  <a href="https://www.mcgill.ca/neuro/">
+    <img src="img/sponsors/neuro-logo.png" style="height: 70px;" alt="The Neuro logo.">
+  </a>
+  <a href="https://oicr.on.ca/">
+    <img src="img/sponsors/oicr.png" style="height: 70px;" alt="Ontario Institute for Cancer Research logo.">
+  </a>
+  <a href="https://www.hpcforhealth.ca/">
+    <img src="img/sponsors/hpc4health.png" style="height: 70px;" alt="HPC4Health logo.">
+  </a>
+  <a href="https://www.impactt-microbiome.ca/">
+    <img src="img/sponsors/IMPACTT-logo.png" style="height: 70px;" alt="IMPACTT logo.">
+  </a>
+</div>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">High Throughout Genomics Analysis 2021</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="module-1-introduction" class="section level1 hasAnchor">
+<h1>Module 1: Introduction<a href="module-1-introduction.html#module-1-introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="lecture" class="section level2 hasAnchor">
+<h2>Lecture<a href="module-1-introduction.html#lecture" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="introduction-to-sequencing-technologies" class="section level3 hasAnchor">
+<h3>Introduction to Sequencing Technologies<a href="module-1-introduction.html#introduction-to-sequencing-technologies" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<iframe src="https://drive.google.com/file/d/1MJipArV8SUc_7arXiXkNbQ1QTidLfqf4/preview" width="640" height="480" allow="autoplay">
+</iframe>
+</div>
+<div id="introduction-to-hts-file-formats" class="section level3 hasAnchor">
+<h3>Introduction to HTS File Formats<a href="module-1-introduction.html#introduction-to-hts-file-formats" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<iframe src="https://drive.google.com/file/d/1Q0rPo53ICrNhkKsPMJVawmPgevC7Eh63/preview" width="640" height="480" allow="autoplay">
+</iframe>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="data-and-compute-setup.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="module-2-data-visualization-with-igv.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/cbw-dev/HTG-2021/blob/main/010-module-1.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["_main.pdf", "_main.epub"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>

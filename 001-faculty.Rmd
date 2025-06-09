@@ -1,14 +1,94 @@
 # Meet Your Faculty
 
-<!--#### NAME
+#### Mathieu Bourgey
 
-<img src="./img/faculty/MISSINGHEADSHOT.PNG" width="200" alt="Photo of NAME">
+<img src="./img/faculty/MISSINGHEADSHOT.PNG" width="200" alt="Photo of Mathieu Bourgey">
 
->JOB TITLE <br>
-INSTITUTION <br>
-LOCATION
+>Bioinformatics Manager <br>
+Canadian Center for Computational Genomic <br>
 >
-> --- CONTACT INFO, IF PROVIDED
 
-BIO GOES HERE-->
+As a Bioinformatics manager of the TechDev unit, Mathieu ensures the
+integration and the support of new genomics technologies in the platform, and
+he leads the software development. Prior to joining C3G, Mathieu was the
+team leader of the Bioinformatics service unit at Genome Quebec. He holds a
+PhD in Statistical Genetics from University Paris-Sud XI and a Master degree
+in Genetics from University Pierre-et-Marie-Currie (Paris VI).
 
+#### Jared Simpson
+
+<img src="./img/faculty/MISSINGHEADSHOT.PNG" width="200" alt="Photo of Jared Simpson">
+
+>Principal Investigator, Ontario Institute for Cancer Research <br>
+Assistant Prof. Department of Computer Science, University of Toronto <br>
+>
+
+Dr. Simpson develops algorithms and software for the analysis of
+high-throughput sequencing data. He is interested in de novo assembly and
+the detection of sequence variation in individuals, cancers and populations,
+with a focus on long read sequencing technologies. Dr. Simpson developed
+the ABYSS, SGA and nanopolish software packages.
+
+#### Robert Syme
+
+<img src="./img/faculty/MISSINGHEADSHOT.PNG" width="200" alt="Photo of Robert Syme">
+
+>Bioinformatics Specialist <br>
+Canadian Center for Computational Genomics <br>
+>
+
+After completing a postdoctoral position in Australia, Rob joins the team as a
+Bioinformatics consultant specialising in fungal/plant genetics and developing
+omics resources, strategies, and infrastructure for laboratories working with
+non-model organisms. He has more than a decade of experience working in
+genomics, and holds a PhD in bioinformatics from Curtin University.
+
+#### Daniel Poppleton
+
+<img src="./img/faculty/MISSINGHEADSHOT.PNG" width="200" alt="Photo of Daniel Poppleton">
+
+>Bioinformatics Consultant <br>
+Canadian Center for Computational Genomic <br>
+>
+
+Daniel recently joined the C3G after completion of a post-doctoral
+fellowship on mammalian genomics at the Royal Veterinary College in
+London. He previously worked on bacterial genetics and microbiomes
+during his doctorate at the Pasteur Institute in Paris. Currently, he
+contributes through the development of pipelines and the processing of
+raw data with the team.
+
+#### BF Francis Ouellette
+
+<img src="./img/faculty/MISSINGHEADSHOT.PNG" width="200" alt="Photo of BF Francis Ouellette">
+
+>Scientific Director <br>
+Canadian Bioinformatics Workshops (CBW) <br>
+Montreal, QC, CA
+>
+> francis@bioinformatics.ca
+
+Francis was one of the co-founders of the CBW in 1998. His teams over
+the years have been involved in the development of DNA, RNA and
+protein sequences analysis methods, as well as the development of
+platforms to integrate data from various open databases. Since July 2021 Francis is the
+Executive Director of the Neuro Bioinformatics Core Facility and the TOSI Open Science Officer,
+both positions at McGill University.
+
+#### Rachade Hmamouchi
+
+<img src="./img/faculty/MISSINGHEADSHOT.PNG" width="200" alt="Photo of Rachade Hmamouchi">
+
+>Program Manager <br>
+Canadian Bioinformatics Workshops (CBW) <br>
+Montreal, QC, CA
+>
+> rachade@bioinformatics.ca
+
+As a Program Manager, Rachade is leading the organization of current
+workshop series as well as the development of new ones. She
+contributes to the development and implementation of promotional
+strategies too. Rachade has a background in bioinformatics and project
+management, working in academic and industrial research. She holds an
+M.Sc. degree in bioinformatics and data analysis from the University of
+Geneva.

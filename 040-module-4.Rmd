@@ -86,7 +86,7 @@ Our starting data set consists of 100 bp paired-end Illumina reads from the chil
 
 **1. Do you know what are the `.bai` files?** solution
 
-#### Calling Variants with GATK
+### Calling Variants with GATK
 
 If you recall from the previous module, we first mapped the reads to GRCh37 and then we removed duplicate reads and realigned the reads around the indels.
 
@@ -117,7 +117,7 @@ java -Xmx2g -jar $GATK_JAR HaplotypeCaller \
 
 `-L` indicates the reference region where SNP calling should take place
 
-#### Investigating the SNP Calls
+### Investigating the SNP Calls
 
 Use less to take a look at the vcf files:
 
@@ -220,7 +220,7 @@ You can find a slightly more advanced awk script that separates the SNPs from th
 
 **9. Can you find the largest INDEL?** solution
 
-#### Filter the Variants
+### Filter the Variants
 
 Typically variant callers will only perform a minimal amount of filtering when presenting variant calls.
 
@@ -259,7 +259,7 @@ java -Xmx2g -jar $GATK_JAR VariantFiltration \
 
 **1. What is QD, FS, and MQ?** solution
 
-#### Adding Functional Consequence
+### Adding Functional Consequence
 
 The next step in trying to make sense of the variant calls is to assign functional consequence to each variant.
 
@@ -289,7 +289,7 @@ java -Xmx4G -jar $SNPEFF_HOME/snpEff.jar eff \
 
 `variants/NA12878.rmdup.realign.hc.filter.snpeff.vcf` specifies our output vcf filename
 
-#### Investigating the Functional Consequence of Variants
+### Investigating the Functional Consequence of Variants
 
 You can learn more about the meaning of snpEff annotations [here](https://pcingola.github.io/SnpEff/).
 
@@ -331,7 +331,7 @@ One nice feature in snpEff is that it tries to assess the impact of each variant
 
 **5. Open that position in IGV, what do you see?** solution
 
-#### Adding dbSNP Annotations
+### Adding dbSNP Annotations
 
 Go back to looking at your last vcf file:
 
@@ -378,7 +378,7 @@ module load  mugqic/GenomeAnalysisTK/4.1.0.0
 
 **3. Can you find a variant that passed and wasn’t in dbSNP?** solution
 
-#### Investigating the Trio (Optional)
+### Investigating the Trio (Optional)
 
 At this point we have aligned and called variants in one individual. However, we actually have FASTQ and BAM files for three family members!
 

@@ -401,7 +401,7 @@ Now navigate to position “chr21:19,790,758-19,790,965”
 
 :::: {.callout type="green" title="Lab Complete!" icon="fas fa-party-horn" center_title="true"}
 
-You’re done! We hope that you enjoyed the lab and that you continue to enjoy IGV.
+You’re done Module 2! We hope that you enjoyed the lab and that you continue to enjoy IGV.
 
 ::::
 

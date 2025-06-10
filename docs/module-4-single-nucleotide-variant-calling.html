@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Module 4: Single Nucleotide Variant Calling | High Throughout Genomics Analysis 2021</title>
+  <meta name="description" content="Workshop website for the 2021 High Throughput Genomics Analysis Canadian Bioinformatics Workshop" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Module 4: Single Nucleotide Variant Calling | High Throughout Genomics Analysis 2021" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="https://github.com/cbw-dev/HTG-2021/blob/main/index.Rmd/img/bioinformatics_logo.png" />
+  <meta property="og:description" content="Workshop website for the 2021 High Throughput Genomics Analysis Canadian Bioinformatics Workshop" />
+  <meta name="github-repo" content="cbw-dev/HTG-2021" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Module 4: Single Nucleotide Variant Calling | High Throughout Genomics Analysis 2021" />
+  
+  <meta name="twitter:description" content="Workshop website for the 2021 High Throughput Genomics Analysis Canadian Bioinformatics Workshop" />
+  <meta name="twitter:image" content="https://github.com/cbw-dev/HTG-2021/blob/main/index.Rmd/img/bioinformatics_logo.png" />
+
+<meta name="author" content="Faculty: Mathieu Bourgey, Jared Simpson, Robert Syme, Daniel Poppleton, BF Francis Ouellette, Rachade Hmamouchi" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+<link rel="prev" href="module-3.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<a href="https://bioinformaticsdotca.github.io/">
+ <img src="img/bioinformatics_logo.png" width="90%" alt="bioinformatics.ca logo" style="display:block; margin-left:auto; margin-right:auto; margin-top:15px;">
+ </a>
+<li><center><strong><a href="./"><br>High Throughput Genomics Analysis<br><br></a></strong></center></li>
+<a href="./">
+ <img src="img/CBW-HTG-icon.png" width="70%" alt="High Throughput Genomics Analysis logo" style="display:block; margin-left:auto; margin-right:auto; ">
+ </a>
+<br>
+
+<li class="divider"></li>
+<li class="part"><span><b>I Introduction</b></span></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Workshop Info</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#schedule"><i class="fa fa-check"></i>Schedule</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#pre-work"><i class="fa fa-check"></i>Pre-work</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="meet-your-faculty.html"><a href="meet-your-faculty.html"><i class="fa fa-check"></i>Meet Your Faculty</a></li>
+<li class="chapter" data-level="" data-path="data-and-compute-setup.html"><a href="data-and-compute-setup.html"><i class="fa fa-check"></i>Data and Compute Setup</a>
+<ul>
+<li class="chapter" data-level="" data-path="data-and-compute-setup.html"><a href="data-and-compute-setup.html#course-data-downloads"><i class="fa fa-check"></i>Course data downloads</a></li>
+<li class="chapter" data-level="" data-path="data-and-compute-setup.html"><a href="data-and-compute-setup.html#compute-setup"><i class="fa fa-check"></i>Compute setup</a>
+<ul>
+<li class="chapter" data-level="" data-path="data-and-compute-setup.html"><a href="data-and-compute-setup.html#aws-and-unix-intro"><i class="fa fa-check"></i>AWS and Unix Intro</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>II Modules</b></span></li>
+<li class="chapter" data-level="" data-path="module-1-introduction.html"><a href="module-1-introduction.html"><i class="fa fa-check"></i>Module 1: Introduction</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-1-introduction.html"><a href="module-1-introduction.html#lecture"><i class="fa fa-check"></i>Lecture</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-1-introduction.html"><a href="module-1-introduction.html#introduction-to-sequencing-technologies"><i class="fa fa-check"></i>Introduction to Sequencing Technologies</a></li>
+<li class="chapter" data-level="" data-path="module-1-introduction.html"><a href="module-1-introduction.html#introduction-to-hts-file-formats"><i class="fa fa-check"></i>Introduction to HTS File Formats</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html"><i class="fa fa-check"></i>Module 2: Data Visualization with IGV</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html#lecture-1"><i class="fa fa-check"></i>Lecture</a></li>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html#lab"><i class="fa fa-check"></i>Lab</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html#visualization-part-1-getting-familiar-with-igv"><i class="fa fa-check"></i>Visualization Part 1: Getting Familiar with IGV</a></li>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html#visualization-part-2-inspecting-snps-snvs-and-svs"><i class="fa fa-check"></i>Visualization Part 2: Inspecting SNPs, SNVs, and SVs</a></li>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html#visualization-part-3-automating-tasks-in-igv-optional"><i class="fa fa-check"></i>Visualization Part 3: Automating Tasks in IGV (Optional)</a></li>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html#visualization-part-4-visualizing-long-reads"><i class="fa fa-check"></i>Visualization Part 4: Visualizing Long Reads</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html#lab-answers"><i class="fa fa-check"></i>Lab Answers</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html#visualization-part-2-inspecting-snps-snvs-and-svs-1"><i class="fa fa-check"></i>Visualization Part 2: Inspecting SNPs, SNVs, and SVs</a></li>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html#visualization-part-4-visualizing-long-reads-1"><i class="fa fa-check"></i>Visualization Part 4: Visualizing Long Reads</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="module-3.html"><a href="module-3.html"><i class="fa fa-check"></i>Module 3</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-3.html"><a href="module-3.html#lecture-2"><i class="fa fa-check"></i>Lecture</a></li>
+<li class="chapter" data-level="" data-path="module-3.html"><a href="module-3.html#lab-1"><i class="fa fa-check"></i>Lab</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="module-4-single-nucleotide-variant-calling.html"><a href="module-4-single-nucleotide-variant-calling.html"><i class="fa fa-check"></i>Module 4: Single Nucleotide Variant Calling</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-4-single-nucleotide-variant-calling.html"><a href="module-4-single-nucleotide-variant-calling.html#lecture-3"><i class="fa fa-check"></i>Lecture</a></li>
+<li class="chapter" data-level="" data-path="module-4-single-nucleotide-variant-calling.html"><a href="module-4-single-nucleotide-variant-calling.html#lab-2"><i class="fa fa-check"></i>Lab</a></li>
+</ul></li>
+<li class="divider"></li>
+<h1 id="sponsors">Sponsors</h1>
+
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding-bottom: 20px;">
+  <a href="https://aws.amazon.com/fr/education/awseducate/">
+    <img src="img/sponsors/AWS-educate-logo.png" style="height: 70px;" alt="AWS Educate logo.">
+  </a>
+  <a href="https://www.mcgill.ca/micm/">
+    <img src="img/sponsors/MICM-logo.png" style="height: 70px;" alt="McGill Initiative in Computation Medicine logo.">
+  </a>
+  <a href="https://computationalgenomics.ca/">
+    <img src="img/sponsors/c3g-logo.png" style="height: 70px;" alt="Canadian Centre for Computational Genomics.">
+  </a>
+  <a href="https://www.mcgill.ca/neuro/">
+    <img src="img/sponsors/neuro-logo.png" style="height: 70px;" alt="The Neuro logo.">
+  </a>
+  <a href="https://oicr.on.ca/">
+    <img src="img/sponsors/oicr.png" style="height: 70px;" alt="Ontario Institute for Cancer Research logo.">
+  </a>
+  <a href="https://www.hpcforhealth.ca/">
+    <img src="img/sponsors/hpc4health.png" style="height: 70px;" alt="HPC4Health logo.">
+  </a>
+  <a href="https://www.impactt-microbiome.ca/">
+    <img src="img/sponsors/IMPACTT-logo.png" style="height: 70px;" alt="IMPACTT logo.">
+  </a>
+</div>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">High Throughout Genomics Analysis 2021</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="module-4-single-nucleotide-variant-calling" class="section level1 hasAnchor">
+<h1>Module 4: Single Nucleotide Variant Calling<a href="module-4-single-nucleotide-variant-calling.html#module-4-single-nucleotide-variant-calling" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="lecture-3" class="section level2 hasAnchor">
+<h2>Lecture<a href="module-4-single-nucleotide-variant-calling.html#lecture-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<iframe src="https://drive.google.com/file/d/1CcqgplR1KD7TdLOaK_ZqifAqzNy7ZIrv/preview" width="640" height="480" allow="autoplay">
+</iframe>
+</div>
+<div id="lab-2" class="section level2 hasAnchor">
+<h2>Lab<a href="module-4-single-nucleotide-variant-calling.html#lab-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><em>Created by Michael Stromberg and Guillaume Bourque.</em></p>
+<div id="introduction-2" class="section level4 hasAnchor">
+<h4>Introduction<a href="module-4-single-nucleotide-variant-calling.html#introduction-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The goal of this practical session is to identify single nucleotide variants (SNVs) in a human genome and to annotate them. In the previous module 3, we have aligned the reads from NA12878 (daughter) in a small region on chromosome 1. We will continue to use the data generated during the Module 3.</p>
+<p>NA12878 is the child of the trio while NA12891 and NA12892 are her parents.</p>
+<p>Pedigree</p>
+<p>For practical reasons we subsampled the reads from the sample because running the whole dataset would take way too much time and resources. We’re going to focus on the reads extracted from a 300 kbp stretch of chromosome 1</p>
+<table>
+<thead>
+<tr class="header">
+<th>Chromosome</th>
+<th>Start</th>
+<th>End</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>17704860</td>
+<td>18004860</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="original-setup-1" class="section level4 hasAnchor">
+<h4>Original Setup<a href="module-4-single-nucleotide-variant-calling.html#original-setup-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="software-requirements-1" class="section level5 hasAnchor">
+<h5>Software Requirements<a href="module-4-single-nucleotide-variant-calling.html#software-requirements-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>These are all already installed, but here are the original links.</p>
+<ul>
+<li><a href="https://sourceforge.net/projects/samtools/">SAMTools</a></li>
+<li><a href="https://igv.org/doc/desktop/#DownloadPage/">IGV</a></li>
+<li><a href="https://gatk.broadinstitute.org/hc/en-us">Genome Analysis Toolkit</a></li>
+<li><a href="https://pcingola.github.io/SnpEff/">SnpEff</a></li>
+</ul>
+<p>In this session, we will particularly focus on GATK HaplotypeCaller SNV detection tool. The main advantage of HaplotypeCaller is to do the calling using a local de-novo assembly approach. When the program encounters a region showing signs of variation, it discards the existing mapping information and completely reassembles the reads in that region. This allow a better accuracy in regions that are traditionally difficult to call, for example when they contain different types of variants close to each other.</p>
+</div>
+<div id="environment-setup-1" class="section level5 hasAnchor">
+<h5>Environment setup<a href="module-4-single-nucleotide-variant-calling.html#environment-setup-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<pre><code>mkdir -p $HOME/workspace/HTG/Module4/
+
+docker run --privileged -v /tmp:/tmp --network host -it -w $PWD -v $HOME:$HOME \
+--user $UID:$GROUPS -v /etc/group:/etc/group  -v /etc/passwd:/etc/passwd \
+-v /etc/fonts/:/etc/fonts/ -v /media:/media c3genomics/genpipes:0.8
+
+export WORK_DIR_M4=$HOME/workspace/HTG/Module4/
+export REF=$MUGQIC_INSTALL_HOME/genomes/species/Homo_sapiens.GRCh37/
+mkdir -p ${WORK_DIR_M4}/bam/NA12878
+cd $WORK_DIR_M4
+
+ln -s ~/CourseData/HTG_data/Module4/* .
+cp $HOME/workspace/HTG/Module3/alignment/NA12878/NA12878.sorted.ba* bam/NA12878
+cp $HOME/workspace/HTG/Module3/alignment/NA12878/NA12878.sorted.dup.recal.ba* bam/NA12878
+
+
+module load mugqic/java/openjdk-jdk1.8.0_72 mugqic/GenomeAnalysisTK/4.1.0.0 mugqic/snpEff/4.3</code></pre>
+</div>
+<div id="data-files-1" class="section level5 hasAnchor">
+<h5>Data files<a href="module-4-single-nucleotide-variant-calling.html#data-files-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>The initial structure of your folders should look like this:</p>
+<pre><code>ROOT
+|-- bam/               # bam file from the previous Module(down sampled)
+    `-- NA12878/             # Child sample directory
+`-- scripts/                 # command lines scripts
+`-- saved_results/           # precomputed final files</code></pre>
+</div>
+<div id="cheat-sheets-1" class="section level5 hasAnchor">
+<h5>Cheat sheets<a href="module-4-single-nucleotide-variant-calling.html#cheat-sheets-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li><a href="https://sites.tufts.edu/cbi/files/2013/01/linux_cheat_sheet.pdf">Unix comand line cheat sheet</a></li>
+<li><a href="https://github.com/mbourgey/CBW_HTseq_module4/blob/master/scripts/commands.sh">Commands file of this module</a></li>
+</ul>
+</div>
+<div id="input-files" class="section level5 hasAnchor">
+<h5>Input files<a href="module-4-single-nucleotide-variant-calling.html#input-files" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Let’s look into the NA12878 bam folders.</p>
+<pre><code>ls bam/NA12878/</code></pre>
+<p>Our starting data set consists of 100 bp paired-end Illumina reads from the child (NA12878) that have been aligned to GRCh37 during one of the previous modules (NA12878.sorted.bam). We also have the same data after duplicate removal, indel realignment and base recalibration (NA12878.sorted.dup.recal.bam).</p>
+<p><strong>1. Do you know what are the <code>.bai</code> files?</strong> solution</p>
+</div>
+</div>
+<div id="calling-variants-with-gatk" class="section level4 hasAnchor">
+<h4>Calling Variants with GATK<a href="module-4-single-nucleotide-variant-calling.html#calling-variants-with-gatk" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>If you recall from the previous module, we first mapped the reads to GRCh37 and then we removed duplicate reads and realigned the reads around the indels.</p>
+<p>Let’s call SNPs in NA12878 using both the original and the improved bam files:</p>
+<pre><code>mkdir -p variants
+#NA12878.sort
+java -Xmx2g -jar $GATK_JAR HaplotypeCaller \
+-R $REF/genome/Homo_sapiens.GRCh37.fa \
+-I bam/NA12878/NA12878.sorted.bam \
+-O variants/NA12878.hc.vcf \
+-L 1:17704860-18004860
+
+#NA12878.sort.rmdup.realign
+java -Xmx2g -jar $GATK_JAR HaplotypeCaller \
+-R $REF/genome/Homo_sapiens.GRCh37.fa \
+-I bam/NA12878/NA12878.sorted.dup.recal.bam \
+-O variants/NA12878.rmdup.realign.hc.vcf \
+-L 1:17704860-18004860</code></pre>
+<p><code>-Xmx2g</code> instructs java to allow up 2 GB of RAM to be used for GATK.</p>
+<p><code>-R</code> specifies which reference sequence to use.</p>
+<p><code>-I</code> specifies the input BAM files.</p>
+<p><code>-L</code> indicates the reference region where SNP calling should take place</p>
+</div>
+<div id="investigating-the-snp-calls" class="section level4 hasAnchor">
+<h4>Investigating the SNP Calls<a href="module-4-single-nucleotide-variant-calling.html#investigating-the-snp-calls" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Use less to take a look at the vcf files:</p>
+<pre><code>less -S variants/NA12878.rmdup.realign.hc.vcf</code></pre>
+<p>Vcf is a daunting format at first glance, but you can find some basic information about the format [here](<a href="https://www.internationalgenome.org/wiki/Analysis/vcf4.0" class="uri">https://www.internationalgenome.org/wiki/Analysis/vcf4.0</a>.</p>
+<p>Fields vary from caller to caller. Some values are more constant. The ref vs alt alleles, variant quality (QUAL column) and the per-sample genotype (GT) values are almost always there.</p>
+<p><strong>1. How do you figure out what the genotype is for each variant?</strong> solution</p>
+<p><strong>2. Do we have any annotation information yet?</strong> solution</p>
+<p><strong>3. How many SNPs were found?</strong> solution</p>
+<p><strong>4. Did we find the same number of variants using the files before and after duplicate removal and realignment?</strong> solution</p>
+<div id="looking-for-differences-between-the-two-vcf-files" class="section level6 hasAnchor">
+<h6>Looking for Differences Between the Two VCF Files<a href="module-4-single-nucleotide-variant-calling.html#looking-for-differences-between-the-two-vcf-files" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<p>Use the following command to pull out differences between the two files:</p>
+<pre><code>diff &lt;(grep -v &quot;^#&quot; variants/NA12878.hc.vcf | cut -f1-2 | sort) \
+&lt;(grep -v &quot;^#&quot; variants/NA12878.rmdup.realign.hc.vcf | cut -f1-2 | sort)</code></pre>
+<pre><code>103a104
+&gt; 1      17744709
+211a213
+&gt; 1      17811139
+244a247
+&gt; 1      17830757
+265,266c268,270
+&lt; 1      17845333
+&lt; 1      17845337
+---
+&gt; 1      17845298
+&gt; 1      17845318
+&gt; 1      17845334
+274a279
+&gt; 1      17850941
+303a309
+&gt; 1      17875141
+308d313
+&lt; 1      17879077</code></pre>
+<p><strong>5. Is this result concordant to our previous comparison of files before and after duplicate removal and realignment?</strong> solution</p>
+</div>
+<div id="use-igv-to-investigate-the-snps" class="section level5 hasAnchor">
+<h5>Use IGV to investigate the SNPs<a href="module-4-single-nucleotide-variant-calling.html#use-igv-to-investigate-the-snps" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>The best way to see and understand the differences between the two vcf files will be to look at them in IGV.</p>
+<p>If you need, the IGV color codes can be found here: [IGV color code by insert size]99(<a href="https://igv.org/doc/desktop/" class="uri">https://igv.org/doc/desktop/</a>) and <a href="https://igv.org/doc/desktop/">IGV color code by pair orientation</a>.</p>
+<p><strong>Option 1</strong>: You can view your files (bam and vcf files) in the IGV browser by using the URL for that file.</p>
+<p>In a browser, like Firefox, type in the server name and all files will be shown there. Find your bam and your vcf files, right click it and ‘copy the link location’.</p>
+<p>Next, open IGV and select b37 as the reference genome as you did in the visualization module.</p>
+<p>In IGV, load both the original and the realigned bam files (NA12878.bwa.sort.bam and NA12878.bwa.sort.rmdup.realign.bam) using (File-&gt;Load from URL…).</p>
+<p>After you have loaded the two bam files, load the two vcf files (NA12878.hc.vcf and NA12878.rmdup.realign.hc.vcf) in the same way.</p>
+<p><strong>Option 2</strong>: Alternatively, you can download all the NA12878.* files in the current directory to your local computer:</p>
+<p>To do this you can use the procedure that was described previously. Open another terminal and use the <code>scp</code> command to copy your data into your local computer</p>
+<p>Next, open IGV and select b37 as the reference genome as you did in the visualization module.</p>
+<p>In IGV, load both the original and the realigned bam files (NA12878.bwa.sort.bam and NA12878.bwa.sort.rmdup.realign.bam) using (File-&gt;Load from file…).</p>
+<p>After you have loaded the two bam files, load the two vcf files (NA12878.hc.vcf and NA12878.rmdup.realign.hc.vcf) in the same way.</p>
+<p>Finally, go to a region on chromsome 1 with reads (1:17704860-18004860) and spend some time SNP gazing…</p>
+<p><strong>6. Do the SNPs look believable?</strong> solution</p>
+<p><strong>7. Are there any positions that you think should have been called as a SNP, but weren’t?</strong> solution</p>
+</div>
+<div id="looking-for-indels" class="section level5 hasAnchor">
+<h5>Looking for INDELs<a href="module-4-single-nucleotide-variant-calling.html#looking-for-indels" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>INDELs can be found by looking for rows where the reference base column and the alternate base column are different lengths. It’s slightly more complicated than that since, you’ll also pick up the comma delimited alternate bases.</p>
+<p>Here’s an awk expression that almost picks out the INDELs:</p>
+<pre><code>grep -v &quot;^#&quot; variants/NA12878.rmdup.realign.hc.vcf \
+| awk &#39;{ if(length($4) != length($5)) { print $0 } }&#39; \
+| less -S</code></pre>
+<p>You can find a slightly more advanced awk script that separates the SNPs from the INDELs here.</p>
+<p><strong>8. Did you find any INDELs?</strong> solution</p>
+<p><strong>9. Can you find the largest INDEL?</strong> solution</p>
+</div>
+</div>
+<div id="filter-the-variants" class="section level4 hasAnchor">
+<h4>Filter the Variants<a href="module-4-single-nucleotide-variant-calling.html#filter-the-variants" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Typically variant callers will only perform a minimal amount of filtering when presenting variant calls.</p>
+<p>To perform more rigorous filtering, another program must be used. In our case, we will use the VariantFiltration tool in GATK.</p>
+<div class="callout-blue">
+<span class="callout-icon"><i class="fas fa-circle-info" aria-hidden="true"></i></span>
+<div class="callout-content">
+<div class="callout-title-static" style="margin-bottom: 0.5em;">
+<p>Note</p>
+</div>
+<p>The best practice when using GATK is to use the VariantRecalibrator. In our data set, we had too few variants to accurately use the variant recalibrator and therefore we used the VariantFiltration tool instead.</p>
+</div>
+</div>
+<pre><code>java -Xmx2g -jar $GATK_JAR VariantFiltration \
+-R $REF/genome/Homo_sapiens.GRCh37.fa \
+-V variants/NA12878.rmdup.realign.hc.vcf \
+-O variants/NA12878.rmdup.realign.hc.filter.vcf \
+-filter &quot;QD &lt; 2.0&quot; \
+-filter &quot;FS &gt; 200.0&quot; \
+-filter &quot;MQ &lt; 40.0&quot; \
+--filter-name QDFilter \
+--filter-name FSFilter \
+--filter-name MQFilter</code></pre>
+<p><code>-Xmx2g</code> instructs java to allow up 2 GB of RAM to be used for GATK.</p>
+<p><code>-R</code> specifies which reference sequence to use.</p>
+<p><code>-V</code> specifies the input vcf file.</p>
+<p><code>-O</code> specifies the output vcf file.</p>
+<p><code>-filter</code> defines an expression using the vcf INFO and genotype variables.</p>
+<p><code>--filter-name</code> defines what the filter field should display if that filter is true.</p>
+<p><strong>1. What is QD, FS, and MQ?</strong> solution</p>
+</div>
+<div id="adding-functional-consequence" class="section level4 hasAnchor">
+<h4>Adding Functional Consequence<a href="module-4-single-nucleotide-variant-calling.html#adding-functional-consequence" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The next step in trying to make sense of the variant calls is to assign functional consequence to each variant.</p>
+<p>At the most basic level, this involves using gene annotations to determine if variants are sense, missense, or nonsense.</p>
+<p>We typically use SnpEff but many use Annovar and VEP as well.</p>
+<p>Let’s run snpEff</p>
+<pre><code>java -Xmx4G -jar $SNPEFF_HOME/snpEff.jar eff \
+-v -no-intergenic \
+-i vcf -o vcf GRCh37.75 variants/NA12878.rmdup.realign.hc.filter.vcf &gt;  variants/NA12878.rmdup.realign.hc.filter.snpeff.vcf</code></pre>
+<p><code>-Xmx2g</code> instructs java to allow up 4 GB of RAM to be used for snpEff.</p>
+<p><code>-v</code> specifies verbose output.</p>
+<p><code>-no-intergenic</code> specifies that we want to skip functional consequence testing in intergenic regions.</p>
+<p><code>-i</code> and <code>-o</code> specify the input and output file format respectively. In this case, we specify vcf for both.</p>
+<p><code>GRCh37.75</code> specifies that we want to use the GRCh37.75 annotation database.</p>
+<p><code>variants/NA12878.rmdup.realign.hc.filter.vcf</code> specifies our input vcf filename</p>
+<p><code>variants/NA12878.rmdup.realign.hc.filter.snpeff.vcf</code> specifies our output vcf filename</p>
+</div>
+<div id="investigating-the-functional-consequence-of-variants" class="section level4 hasAnchor">
+<h4>Investigating the Functional Consequence of Variants<a href="module-4-single-nucleotide-variant-calling.html#investigating-the-functional-consequence-of-variants" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>You can learn more about the meaning of snpEff annotations <a href="https://pcingola.github.io/SnpEff/">here</a>.</p>
+<p>Use less to look at the new vcf file:</p>
+<pre><code>less -S variants/NA12878.rmdup.realign.hc.filter.snpeff.vcf</code></pre>
+<p>We can see in the vcf that snpEff added few sections. These are hard to decipher directly from the VCF other tools or scripts, need to be used to make sens of this.</p>
+<p>The annotation is presented in the INFO field using the new ANN format. For more information on this field see here. Typically, we have:</p>
+<p><code>ANN=Allele|Annotation|Putative impact|Gene name|Gene ID|Feature type|Feature ID|Transcript biotype|Rank Total|HGVS.c|...</code></p>
+<p>Here’s an example of a typical annotation:</p>
+<p><code>ANN=C|intron_variant|MODIFIER|PADI6|PADI6|transcript|NM_207421.4|Coding|5/16|c.553+80T&gt;C||||||</code></p>
+<p><strong>1. What does the example annotation actually mean?</strong> solution</p>
+<p>Next, you should view or download the report generated by snpEff.</p>
+<p>Use the procedure described previously to retrieve:</p>
+<p><code>snpEff_summary.html</code></p>
+<p>Next, open the file in any web browser.</p>
+<div id="finding-impactful-variants" class="section level5 hasAnchor">
+<h5>Finding Impactful Variants<a href="module-4-single-nucleotide-variant-calling.html#finding-impactful-variants" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>One nice feature in snpEff is that it tries to assess the impact of each variant. You can read more about the effect categories <a href="https://snpeff.sourceforge.net/VCFannotationformat_v1.0.pdf">here</a>.</p>
+<p><strong>2. How many variants had a high impact?</strong> solution</p>
+<p><strong>3. How many variants had a moderate impact?</strong> solution</p>
+<p><strong>4. What effect categories were represented in these variants?</strong> solution</p>
+<p><strong>5. Open that position in IGV, what do you see?</strong> solution</p>
+</div>
+</div>
+<div id="adding-dbsnp-annotations" class="section level4 hasAnchor">
+<h4>Adding dbSNP Annotations<a href="module-4-single-nucleotide-variant-calling.html#adding-dbsnp-annotations" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Go back to looking at your last vcf file:</p>
+<pre><code>less -S variants/NA12878.rmdup.realign.hc.filter.snpeff.vcf</code></pre>
+<p><strong>1. What do you see in the third column?</strong> solution</p>
+<p>The third column in the vcf file is reserved for identifiers. Perhaps the most common identifier is the dbSNP rsID.</p>
+<p>Use the following command to generate dbSNP rsIDs for our vcf file:</p>
+<pre><code>#switch to old GATK 3.8
+module unload  mugqic/GenomeAnalysisTK/4.1.0.0
+module load mugqic/GenomeAnalysisTK/3.8
+
+java -Xmx2g -jar $GATK_JAR -T VariantAnnotator \
+-R $REF/genome/Homo_sapiens.GRCh37.fa \
+--dbsnp $REF/annotations/Homo_sapiens.GRCh37.dbSNP150.vcf.gz \
+-V variants/NA12878.rmdup.realign.hc.filter.snpeff.vcf \
+-o variants/NA12878.rmdup.realign.hc.filter.snpeff.dbsnp.vcf \
+-L 1:17704860-18004860
+
+#return to GATK 4
+module unload mugqic/GenomeAnalysisTK/3.8
+module load  mugqic/GenomeAnalysisTK/4.1.0.0</code></pre>
+<p><code>-Xmx2g</code> instructs java to allow up 2 GB of RAM to be used for GATK.</p>
+<p><code>-R</code> specifies which reference sequence to use.</p>
+<p><code>--dbsnp</code> specifies the input dbSNP vcf file. This is used as the source for the annotations.</p>
+<p><code>-V</code> specifies the input vcf file.</p>
+<p><code>-o</code> specifies the output vcf file.</p>
+<p><code>-L</code> defines which regions we should annotate. In this case, I chose the chromosomes that contain the regions we are investigating.</p>
+<p><strong>2. What percentage of the variants that passed all filters were also in dbSNP?</strong> solution</p>
+<p><strong>3. Can you find a variant that passed and wasn’t in dbSNP?</strong> solution</p>
+</div>
+<div id="investigating-the-trio-optional-1" class="section level4 hasAnchor">
+<h4>Investigating the Trio (Optional)<a href="module-4-single-nucleotide-variant-calling.html#investigating-the-trio-optional-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>At this point we have aligned and called variants in one individual. However, we actually have FASTQ and BAM files for three family members!</p>
+<p>As additional practice, perform the same steps for the other two individuals (her parents): NA12891 and NA12892. Here are some additional things that you might want to look at:</p>
+<p><strong>1. If you load up all three realigned BAM files and all three final vcf files into IGV, do the variants look plausible?</strong> Use a <a href="https://en.wikipedia.org/wiki/Punnett_square">Punnett square</a> to help evaluate this. i.e. if both parents have a homozygous reference call and the child has a homozygous variant call at that locus, this might indicate a trio conflict. solution</p>
+<p><strong>2. Do you find any additional high or moderate impact variants in either of the parents?</strong> solution</p>
+<p><strong>3. Do all three family members have the same genotype for Rs7538876 and Rs2254135?</strong> solution</p>
+<ol start="4" style="list-style-type: decimal">
+<li>GATK produces even better variant calling results if all three BAM files are specified at the same time (i.e. specifying multiple <code>-I filename</code> options). Try this and then perform the rest of module 4 on the trio vcf file. <strong>Does this seem to improve your variant calling results? Does it seem to reduce the trio conflict rate?</strong> solution</li>
+</ol>
+<p>Quit the Container Environment</p>
+<pre><code>exit</code></pre>
+<div class="callout-green">
+<span class="callout-icon"><i class="fas fa-party-horn" aria-hidden="true"></i></span>
+<div class="callout-content">
+<div class="callout-title-static center" style="margin-bottom: 0.5em;">
+<p>Lab Complete!</p>
+</div>
+<p>You’re done Module 3! We hope that you enjoyed the lab and that you continue to enjoy Single Nucleotide Variant Calling.</p>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="module-3.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/cbw-dev/HTG-2021/blob/main/040-module-4.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["_main.pdf", "_main.epub"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>

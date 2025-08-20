@@ -10,7 +10,7 @@ cover-image: img/bioinformatics_logo.png
 description: |
   Workshop website for the 2021 High Throughput Genomics Analysis Canadian Bioinformatics Workshop
 link-citations: yes
-github-repo: bioinformaticsdotca/HTG-2021 # CHANGE THIS TO YOUR OWN REPO
+github-repo: bioinformaticsdotca/HTG_2021 # CHANGE THIS TO YOUR OWN REPO
 favicon: img/favicon.ico
 ---
 

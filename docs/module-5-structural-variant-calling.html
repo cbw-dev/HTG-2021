@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Module 5: Structural Variant Calling | High Throughout Genomics Analysis 2021</title>
+  <meta name="description" content="Workshop website for the 2021 High Throughput Genomics Analysis Canadian Bioinformatics Workshop" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Module 5: Structural Variant Calling | High Throughout Genomics Analysis 2021" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="https://bioinformaticsdotca.github.io/HTG_2021/img/bioinformatics_logo.png" />
+  <meta property="og:description" content="Workshop website for the 2021 High Throughput Genomics Analysis Canadian Bioinformatics Workshop" />
+  <meta name="github-repo" content="bioinformaticsdotca/HTG-2021" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Module 5: Structural Variant Calling | High Throughout Genomics Analysis 2021" />
+  
+  <meta name="twitter:description" content="Workshop website for the 2021 High Throughput Genomics Analysis Canadian Bioinformatics Workshop" />
+  <meta name="twitter:image" content="https://bioinformaticsdotca.github.io/HTG_2021/img/bioinformatics_logo.png" />
+
+<meta name="author" content="Faculty: Mathieu Bourgey, Jared Simpson, Robert Syme, Daniel Poppleton, BF Francis Ouellette, and Rachade Hmamouchi" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+<link rel="prev" href="module-4-single-nucleotide-variant-calling.html"/>
+<link rel="next" href="module-6-genome-assembly.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<a href="https://bioinformaticsdotca.github.io/">
+ <img src="img/bioinformatics_logo.png" width="90%" alt="bioinformatics.ca logo" style="display:block; margin-left:auto; margin-right:auto; margin-top:15px;">
+ </a>
+<li><center><strong><a href="./"><br>High Throughput Genomics Analysis<br><br></a></strong></center></li>
+<a href="./">
+ <img src="img/CBW-HTG-icon.png" width="70%" alt="High Throughput Genomics Analysis logo" style="display:block; margin-left:auto; margin-right:auto; ">
+ </a>
+<br>
+
+<li class="divider"></li>
+<li class="part"><span><b>I Introduction</b></span></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Workshop Info</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#schedule"><i class="fa fa-check"></i>Schedule</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#pre-work"><i class="fa fa-check"></i>Pre-work</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="meet-your-faculty.html"><a href="meet-your-faculty.html"><i class="fa fa-check"></i>Meet Your Faculty</a></li>
+<li class="chapter" data-level="" data-path="compute-setup.html"><a href="compute-setup.html"><i class="fa fa-check"></i>Compute setup</a>
+<ul>
+<li class="chapter" data-level="" data-path="compute-setup.html"><a href="compute-setup.html#aws-and-unix-intro"><i class="fa fa-check"></i>AWS and Unix Intro</a></li>
+</ul></li>
+<li class="part"><span><b>II Modules</b></span></li>
+<li class="chapter" data-level="" data-path="module-1-introduction.html"><a href="module-1-introduction.html"><i class="fa fa-check"></i>Module 1: Introduction</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-1-introduction.html"><a href="module-1-introduction.html#lecture"><i class="fa fa-check"></i>Lecture</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-1-introduction.html"><a href="module-1-introduction.html#introduction-to-sequencing-technologies"><i class="fa fa-check"></i>Introduction to Sequencing Technologies</a></li>
+<li class="chapter" data-level="" data-path="module-1-introduction.html"><a href="module-1-introduction.html#introduction-to-hts-file-formats"><i class="fa fa-check"></i>Introduction to HTS File Formats</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html"><i class="fa fa-check"></i>Module 2: Data Visualization with IGV</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html#lecture-1"><i class="fa fa-check"></i>Lecture</a></li>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html#lab"><i class="fa fa-check"></i>Lab</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html#visualization-part-1-getting-familiar-with-igv"><i class="fa fa-check"></i>Visualization Part 1: Getting Familiar with IGV</a></li>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html#visualization-part-2-inspecting-snps-snvs-and-svs"><i class="fa fa-check"></i>Visualization Part 2: Inspecting SNPs, SNVs, and SVs</a></li>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html#visualization-part-3-automating-tasks-in-igv-optional"><i class="fa fa-check"></i>Visualization Part 3: Automating Tasks in IGV (Optional)</a></li>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html#visualization-part-4-visualizing-long-reads"><i class="fa fa-check"></i>Visualization Part 4: Visualizing Long Reads</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html#lab-answers"><i class="fa fa-check"></i>Lab Answers</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html#visualization-part-2-inspecting-snps-snvs-and-svs-1"><i class="fa fa-check"></i>Visualization Part 2: Inspecting SNPs, SNVs, and SVs</a></li>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html#visualization-part-4-visualizing-long-reads-1"><i class="fa fa-check"></i>Visualization Part 4: Visualizing Long Reads</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="module-3.html"><a href="module-3.html"><i class="fa fa-check"></i>Module 3</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-3.html"><a href="module-3.html#lecture-2"><i class="fa fa-check"></i>Lecture</a></li>
+<li class="chapter" data-level="" data-path="module-3.html"><a href="module-3.html#lab-1"><i class="fa fa-check"></i>Lab</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="module-4-single-nucleotide-variant-calling.html"><a href="module-4-single-nucleotide-variant-calling.html"><i class="fa fa-check"></i>Module 4: Single Nucleotide Variant Calling</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-4-single-nucleotide-variant-calling.html"><a href="module-4-single-nucleotide-variant-calling.html#lecture-3"><i class="fa fa-check"></i>Lecture</a></li>
+<li class="chapter" data-level="" data-path="module-4-single-nucleotide-variant-calling.html"><a href="module-4-single-nucleotide-variant-calling.html#lab-2"><i class="fa fa-check"></i>Lab</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-4-single-nucleotide-variant-calling.html"><a href="module-4-single-nucleotide-variant-calling.html#calling-variants-with-gatk"><i class="fa fa-check"></i>Calling Variants with GATK</a></li>
+<li class="chapter" data-level="" data-path="module-4-single-nucleotide-variant-calling.html"><a href="module-4-single-nucleotide-variant-calling.html#investigating-the-snp-calls"><i class="fa fa-check"></i>Investigating the SNP Calls</a></li>
+<li class="chapter" data-level="" data-path="module-4-single-nucleotide-variant-calling.html"><a href="module-4-single-nucleotide-variant-calling.html#filter-the-variants"><i class="fa fa-check"></i>Filter the Variants</a></li>
+<li class="chapter" data-level="" data-path="module-4-single-nucleotide-variant-calling.html"><a href="module-4-single-nucleotide-variant-calling.html#adding-functional-consequence"><i class="fa fa-check"></i>Adding Functional Consequence</a></li>
+<li class="chapter" data-level="" data-path="module-4-single-nucleotide-variant-calling.html"><a href="module-4-single-nucleotide-variant-calling.html#investigating-the-functional-consequence-of-variants"><i class="fa fa-check"></i>Investigating the Functional Consequence of Variants</a></li>
+<li class="chapter" data-level="" data-path="module-4-single-nucleotide-variant-calling.html"><a href="module-4-single-nucleotide-variant-calling.html#adding-dbsnp-annotations"><i class="fa fa-check"></i>Adding dbSNP Annotations</a></li>
+<li class="chapter" data-level="" data-path="module-4-single-nucleotide-variant-calling.html"><a href="module-4-single-nucleotide-variant-calling.html#investigating-the-trio-optional-1"><i class="fa fa-check"></i>Investigating the Trio (Optional)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="module-5-structural-variant-calling.html"><a href="module-5-structural-variant-calling.html"><i class="fa fa-check"></i>Module 5: Structural Variant Calling</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-5-structural-variant-calling.html"><a href="module-5-structural-variant-calling.html#lecture-4"><i class="fa fa-check"></i>Lecture</a></li>
+<li class="chapter" data-level="" data-path="module-5-structural-variant-calling.html"><a href="module-5-structural-variant-calling.html#lab-3"><i class="fa fa-check"></i>Lab</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="module-6-genome-assembly.html"><a href="module-6-genome-assembly.html"><i class="fa fa-check"></i>Module 6: Genome Assembly</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-6-genome-assembly.html"><a href="module-6-genome-assembly.html#lecture-5"><i class="fa fa-check"></i>Lecture</a></li>
+<li class="chapter" data-level="" data-path="module-6-genome-assembly.html"><a href="module-6-genome-assembly.html#lab-4"><i class="fa fa-check"></i>Lab</a></li>
+</ul></li>
+<li class="divider"></li>
+<h1 id="sponsors">Sponsors</h1>
+<center>
+<a href="https://oicr.on.ca/"><img src="img/sponsors/oicr.png" width=25% style="display:inline-block;" style="padding-bottom: 20px" alt="Ontario Institute for Cancer Research logo.">
+<a href="https://www.hpcforhealth.ca/"><img src="img/sponsors/hpc4health.png" width=60% style="display:inline-block;" style="padding-bottom: 20px "alt="HPC4Health logo.">
+<br><br>
+<a href="https://computationalgenomics.ca/"><img src="img/sponsors/c3g-logo.png" style="display:inline-block;" width=35% style="padding-bottom: 20px" alt="Canadian Centre for Computational Genomics logo.">
+<a href="https://aws.amazon.com/fr/education/awseducate/"><img src="img/sponsors/AWS-educate-logo.png" style="display:inline-block;" width=35% style="padding-bottom: 20px" alt="AWS Educate logo.">
+<br><br>
+<a href="https://www.mcgill.ca/neuro/"><img src="img/sponsors/neuro-logo.png" style="display:inline-block;" width=35% style="padding-bottom: 20px" alt="The Neuro logo.">
+<a href="https://www.impactt-microbiome.ca/"><img src="img/sponsors/IMPACTT-logo.png" style="display:inline-block;" width=35% style="padding-bottom: 20px" alt="IMPACTT logo.">
+<br><br>
+<a href="https://www.mcgill.ca/micm/"><img src="img/sponsors/MICM-logo.png" style="display:inline-block;" width=35% style="padding-bottom: 20px" alt="McGill Initiative in Computation Medicine logo.">
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">High Throughout Genomics Analysis 2021</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="module-5-structural-variant-calling" class="section level1 hasAnchor">
+<h1>Module 5: Structural Variant Calling<a href="module-5-structural-variant-calling.html#module-5-structural-variant-calling" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="lecture-4" class="section level2 hasAnchor">
+<h2>Lecture<a href="module-5-structural-variant-calling.html#lecture-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<iframe src="https://drive.google.com/file/d/1BtuWeWUQHh-r2J1JuT7-ASjOtd9eBHA5/preview" width="640" height="480" allow="autoplay">
+</iframe>
+</div>
+<div id="lab-3" class="section level2 hasAnchor">
+<h2>Lab<a href="module-5-structural-variant-calling.html#lab-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="introduction-3" class="section level4 hasAnchor">
+<h4>Introduction<a href="module-5-structural-variant-calling.html#introduction-3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The goal of this practical session is to identify structural variants (SVs) in a human genome by identifying both discordant paired-end alignments and split-read alignments that.</p>
+<p>Discordant paired-end alignments conflict with the alignment patterns that we expect (i.e., concordant alignments) for the DNA library and sequencing technology we have used.</p>
+<p>For example, given a ~500bp paired-end Illumina library, we expect pairs to align in F/R orientation and we expect the ends of the pair to align roughly 500bp apart. Pairs that align too far apart suggest a potential deletion in the DNA sample’s genome. As you may have guessed, the trick is how we define what “too far” is — this depends on the fragment size distribution of the data.</p>
+<p>Split-read alignments contain SV breakpoints and consequently, then DNA sequences up- and down-stream of the breakpoint align to disjoint locations in the reference genome.</p>
+<p>We will be working on a 1000 genome sample, NA12878. You can find the whole raw data on the 1000 genome website: <a href="http://www.1000genomes.org/data" class="uri">http://www.1000genomes.org/data</a></p>
+<p>The dataset comes from the <a href="http://www.illumina.com/platinumgenomes/">Illumina Platinum Genomes Project</a>, which is a 50X-coverage dataset of the NA12891/NA12892/NA12878 trio. The raw data can be downloaded from the following <a href="http://www.ebi.ac.uk/ena/data/view/ERP001960">URL</a>.</p>
+<p>NA12878 is the child of the trio while NA12891 and NA12892 are her parents.</p>
+<div class="float">
+<img src="img/pedigree.png" alt="Pedigree" />
+<div class="figcaption">Pedigree</div>
+</div>
+<p>For practical reasons we subsampled the reads from the sample because running the whole dataset would take way too much time and resources. We’re going to focus on the reads extracted from the chromosome 20.</p>
+</div>
+<div id="original-setup-2" class="section level4 hasAnchor">
+<h4>Original Setup<a href="module-5-structural-variant-calling.html#original-setup-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="software-requirements-2" class="section level5 hasAnchor">
+<h5>Software Requirements<a href="module-5-structural-variant-calling.html#software-requirements-2" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>These are all already installed, but here are the original links.</p>
+<ul>
+<li><a href="https://github.com/Illumina/manta">Manta</a></li>
+<li><a href="http://sourceforge.net/projects/samtools/">samtools</a></li>
+<li><a href="https://samtools.github.io/bcftools/bcftools.html">bcftools</a></li>
+<li><a href="http://bio-bwa.sourceforge.net/">BWA-MEM</a></li>
+<li><a href="https://www.python.org/">python</a></li>
+<li><a href="https://cran.r-project.org/">R</a></li>
+</ul>
+<p>In this session, we will particularly focus on Manta, a SV detection tool. Manta is an integrated structural variant prediction method that can discover, genotype and visualize deletions, tandem duplications, inversions and translocations at single-nucleotide resolution in short-read massively parallel sequencing data. It uses paired-ends and split-reads to sensitively and accurately delineate genomic rearrangements throughout the genome.</p>
+<p>If you are interested in Manta, you can read the full manuscript <a href="https://doi.org/10.1093/bioinformatics/btv710">here</a>.</p>
+</div>
+<div id="setting-up-the-workspace" class="section level5 hasAnchor">
+<h5>Setting up the Workspace<a href="module-5-structural-variant-calling.html#setting-up-the-workspace" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>We’ll create a directory in which to do the module 5 lab:</p>
+<pre><code>export WORK_DIR_M5=$HOME/workspace/HTG/Module5
+mkdir -p $WORK_DIR_M5
+cd $WORK_DIR_M5</code></pre>
+</div>
+<div id="getting-data" class="section level5 hasAnchor">
+<h5>Getting Data<a href="module-5-structural-variant-calling.html#getting-data" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>First we’ll download the GRCh38 reference genome. Note that we use brackets to run these commands in a sub-shell so that when they finish, we end up in the same directory as we started.</p>
+<pre><code>(
+    mkdir -p ref
+    cd ref
+    time wget ftp://ftp-trace.ncbi.nih.gov/1000genomes/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa
+    wget ftp://ftp-trace.ncbi.nih.gov/1000genomes/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa.fai
+)</code></pre>
+<p>Lastly, we’ll download a subset of the bam files. We supply the “chr20” argument to samtools view so that we only download a section of the bam file rather than the whole thing. We do this subsetting in the interests of time so that the subsequent steps proceed more quickly.</p>
+<pre><code>(
+    mkdir -p bams
+    cd bams
+    samtools view \
+      -b \
+      --reference ../ref/GRCh38_full_analysis_set_plus_decoy_hla.fa \
+      ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239334/NA12878.final.cram chr20 &gt; NA12878.bam
+    samtools index NA12878.bam
+    samtools view \
+      -b \
+      --reference ../ref/GRCh38_full_analysis_set_plus_decoy_hla.fa \
+      ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989341/NA12891.final.cram chr20 &gt; NA12891.bam
+    samtools index NA12891.bam
+    samtools view \
+      -b \
+      --reference ../ref/GRCh38_full_analysis_set_plus_decoy_hla.fa \
+      ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989342/NA12892.final.cram chr20 &gt; NA12892.bam
+    samtools index NA12892.bam
+)</code></pre>
+<pre><code>$ cd $WORK_DIR_M5
+$ tree -h
+.
+├── [4.0K]  bams
+│   ├── [929M]  NA12878.bam
+│   ├── [1.3M]  NA12878.final.cram.crai
+│   ├── [1012M]  NA12891.bam
+│   ├── [1.3M]  NA12891.final.cram.crai
+│   ├── [946M]  NA12892.bam
+│   └── [1.3M]  NA12892.final.cram.crai
+└── [4.0K]  ref
+    ├── [3.0G]  GRCh38_full_analysis_set_plus_decoy_hla.fa
+    └── [151K]  GRCh38_full_analysis_set_plus_decoy_hla.fa.fai</code></pre>
+</div>
+<div id="checking-the-bams---markedduplicates" class="section level5 hasAnchor">
+<h5>Checking the BAMs - MarkedDuplicates<a href="module-5-structural-variant-calling.html#checking-the-bams---markedduplicates" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>When you are given data, it’s important to understand what it contains. Almost all variant detection protocols strongly recommend that basic QC has been performed, including the marking of duplicates. How would you go about checking that these bam files have already had the “MarkDuplicates” step performed?</p>
+<p>Are there any clues in the bam header?</p>
+<pre><code>samtools view -H bams/NA12878.bam | less -S</code></pre>
+<p>What about in the flags?</p>
+<pre><code>samtools flagstat bams/NA12878.bam</code></pre>
+</div>
+<div id="checking-the-bams---fragment-size-distribution" class="section level5 hasAnchor">
+<h5>Checking the BAMs - Fragment size distribution<a href="module-5-structural-variant-calling.html#checking-the-bams---fragment-size-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Before we can attempt to identify structural variants via discordant alignments, we must first characterize the insert size distribution</p>
+<p><strong>What do we mean by “the insert size distribution”?</strong></p>
+<details class="callout-dropdown callout-subtle callout-gray-subtle">
+<summary class="callout-dropdown-summary"><span
+class="callout-icon"><i class="fas fa-comment-dots" aria-hidden="true"></i></span><span
+class="callout-dropdown-title">Solution (click here)</span><span
+class="callout-dropdown-caret"><i class="fas fa-chevron-right" aria-hidden="true"></i></span></summary>
+<div class="callout-dropdown-content">
+<p>The insert size describes the distribution of the size of concordant alignments (i.e., they align in the expected orientation).</p>
+</div>
+</details>
+<p><strong>How can we use the fragment size distribution in SV detection?</strong></p>
+<details class="callout-dropdown callout-subtle callout-gray-subtle">
+<summary class="callout-dropdown-summary"><span
+class="callout-icon"><i class="fas fa-comment-dots" aria-hidden="true"></i></span><span
+class="callout-dropdown-title">Solution (click here)</span><span
+class="callout-dropdown-caret"><i class="fas fa-chevron-right" aria-hidden="true"></i></span></summary>
+<div class="callout-dropdown-content">
+<p>We can use the size distribution (mean and standard deviation) to decide the size threshold for discordant alignments.</p>
+</div>
+</details>
+<p>The following script, taken from LUMPY extracts F/R pairs from a BAM file and computes the mean and stdev of the F/R alignments. It also generates a density plot of the fragment size distribution.</p>
+<p>Let’s calculate the fragment distribution for the three dataset:</p>
+<p>First, we need some tools from the docker container:</p>
+<pre><code>docker run \
+    --privileged \
+    -v /tmp:/tmp \
+    --network host \
+    -it \
+    -w $PWD \
+    -v $HOME:$HOME \
+    --user $UID:$GROUPS \
+    -v /etc/group:/etc/group \
+    -v /etc/passwd:/etc/passwd \
+    -v /etc/fonts/:/etc/fonts/ \
+    -v /media:/media \
+    c3genomics/genpipes:0.8</code></pre>
+<p>Now from inside the docker container:</p>
+<pre><code>module load \
+    mugqic/LUMPY-SV \
+    mugqic/python/2.7.14 \
+    mugqic/samblaster/0.1.24 \
+    mugqic/sambamba/0.6.6 mugqic/samtools/1.4.1
+
+mkdir -p stats
+
+samtools view bams/NA12878.bam \
+| $LUMPY_HOME/scripts/pairend_distro.py \
+    -r 101 \
+    -X 4 \
+    -N 10000 \
+    -o stats/NA12878.pairs.histo \
+    &gt; stats/NA12878.pairs.params
+
+samtools view bams/NA12891.bam \
+| $LUMPY_HOME/scripts/pairend_distro.py \
+    -r 101 \
+    -X 4 \
+    -N 10000 \
+    -o stats/NA12891.pairs.histo \
+    &gt; stats/NA12891.pairs.params
+
+samtools view bams/NA12892.bam \
+| $LUMPY_HOME/scripts/pairend_distro.py \
+    -r 101 \
+    -X 4 \
+    -N 10000 \
+    -o stats/NA12892.pairs.histo \
+    &gt; stats/NA12892.pairs.params</code></pre>
+<p><code>-r</code> specifies the read length</p>
+<p><code>-X</code> specifies the number of stdevs from mean to extend</p>
+<p><code>-N</code> specfies the number of read to sample”</p>
+<p><code>-o</code> specifies the output file</p>
+<p>Let’s take a peak at the output. First the basic summary:</p>
+<pre><code>cat stats/NA12878.pairs.params</code></pre>
+<p>… and the first few lines of the histogram file that was produced:</p>
+<pre><code>$ head head stats/NA12878.pairs.histo
+0       0.000102082482646
+1       0.0
+2       0.000204164965292
+3       0.000204164965292
+4       0.000204164965292
+5       0.000306247447938
+6       0.000102082482646
+7       0.0
+8       0.0
+9       0.0
+```{}
+
+We can now exit the docker container with
+
+```{}
+exit</code></pre>
+<p>Let’s use R to plot the fragment size distribution. First, launch R from the command line.</p>
+<pre><code># Just to make sure we&#39;re in the correct directory:
+export WORK_DIR_M5=$HOME/workspace/HTG/Module5
+mkdir -p $WORK_DIR_M5
+cd $WORK_DIR_M5
+
+# Launch R
+R</code></pre>
+<p>Now, within R, execute the following commands:</p>
+<pre><code>size_dist &lt;- read.table(&quot;stats/NA12878.pairs.histo&quot;)
+pdf(file = &quot;stats/fragment.hist.pdf&quot;)
+layout(matrix(1:3))
+plot(size_dist[,1], size_dist[,2], type=&#39;h&#39;, main=&quot;NA12878 insert size&quot;)
+size_dist &lt;- read.table(&#39;stats/NA12891.pairs.histo&#39;)
+plot(size_dist[,1], size_dist[,2], type=&#39;h&#39;, main=&quot;NA12891 insert size&quot;)
+size_dist &lt;- read.table(&#39;stats/NA12892.pairs.histo&#39;)
+plot(size_dist[,1], size_dist[,2], type=&#39;h&#39;, main=&quot;NA12892 insert size&quot;)
+dev.off()
+quit(&quot;no&quot;)</code></pre>
+<p>At this point, you should have the following files:</p>
+<pre><code>$ tree stats
+stats
+├── NA12878.pairs.histo
+├── NA12878.pairs.params
+├── NA12891.pairs.histo
+├── NA12891.pairs.params
+├── NA12892.pairs.histo
+├── NA12892.pairs.params
+└── fragment.hist.pdf</code></pre>
+<p>Have a look at the resulting PDF plot we generated by using the http server in our instance. Visit <a href="http:///HTG/Module5/stats/" class="uri">http:///HTG/Module5/stats/</a></p>
+<p><strong>What does the mean fragment size appear to be? Are all 3 graphs the same?</strong></p>
+<details class="callout-dropdown callout-subtle callout-gray-subtle">
+<summary class="callout-dropdown-summary"><span
+class="callout-icon"><i class="fas fa-comment-dots" aria-hidden="true"></i></span><span
+class="callout-dropdown-title">Solution (click here)</span><span
+class="callout-dropdown-caret"><i class="fas fa-chevron-right" aria-hidden="true"></i></span></summary>
+<div class="callout-dropdown-content">
+<p>In each of the 3 samples, the mean is around 200-250 bp</p>
+<div class="float">
+<img src="img/insert_size.png" alt="Insert size" />
+<div class="figcaption">Insert size</div>
+</div>
+</div>
+</details>
+</div>
+</div>
+<div id="sv-detection" class="section level4 hasAnchor">
+<h4>SV Detection<a href="module-5-structural-variant-calling.html#sv-detection" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="first-call" class="section level5 hasAnchor">
+<h5>First call<a href="module-5-structural-variant-calling.html#first-call" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>We’ve used Manta to call SVs on samples one at a time:</p>
+<pre><code>export WORK_DIR_M5=$HOME/workspace/HTG/Module5
+mkdir -p $WORK_DIR_M5
+cd $WORK_DIR_M5
+
+export MANTA_HOME=/usr/local/manta-1.6.0.centos6_x86_64
+
+# NA12878
+${MANTA_HOME}/bin/configManta.py \
+--bam bams/NA12878.bam \
+--referenceFasta ref/GRCh38_full_analysis_set_plus_decoy_hla.fa \
+--runDir singles/NA12878
+singles/NA12878/runWorkflow.py --quiet
+
+# NA12891
+${MANTA_HOME}/bin/configManta.py \
+--bam bams/NA12891.bam \
+--referenceFasta ref/GRCh38_full_analysis_set_plus_decoy_hla.fa \
+--runDir singles/NA12891
+singles/NA12891/runWorkflow.py --quiet
+
+# NA12892
+${MANTA_HOME}/bin/configManta.py \
+--bam bams/NA12892.bam \
+--referenceFasta ref/GRCh38_full_analysis_set_plus_decoy_hla.fa \
+--runDir singles/NA12892
+singles/NA12892/runWorkflow.py --quiet</code></pre>
+<p><strong>How many variants delly found in each sample?</strong></p>
+<p><strong>How many variants by SV type are found in each sample?</strong></p>
+</div>
+</div>
+<div id="merge-calls" class="section level4 hasAnchor">
+<h4>Merge Calls<a href="module-5-structural-variant-calling.html#merge-calls" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>We need to merge the SV sites into a unified site list:</p>
+<pre><code>bcftools merge \
+  --output-type b \
+  --output singles/merged.bcf \
+  singles/NA12878/results/variants/diploidSV.vcf.gz \
+  singles/NA12891/results/variants/diploidSV.vcf.gz \
+  singles/NA12892/results/variants/diploidSV.vcf.gz
+
+bcftools index singles/merged.bcf
+
+bcftools view singles/merged.bcf &gt; singles/merged.vcf
+
+bgzip -c singles/merged.vcf &gt; singles/merged.vcf.gz
+
+tabix -fp vcf singles/merged.vcf.gz</code></pre>
+<p>Look at the output:</p>
+<pre><code>bcftools view singles/merged.vcf.gz | less -S</code></pre>
+<p><strong>How many variants by SV type are found?</strong></p>
+</div>
+<div id="re-genotype-in-all-samples" class="section level4 hasAnchor">
+<h4>Re-genotype in all Samples<a href="module-5-structural-variant-calling.html#re-genotype-in-all-samples" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>We need to re-genotype the merged SV site list across all samples. This can be run in parallel for each sample.</p>
+<pre><code>${MANTA_HOME}/bin/configManta.py \
+--bam bams/NA12878.bam \
+--bam bams/NA12891.bam \
+--bam bams/NA12892.bam \
+--referenceFasta ref/GRCh38_full_analysis_set_plus_decoy_hla.fa \
+--runDir joint/trio
+
+joint/trio/runWorkflow.py --quiet</code></pre>
+<p>Look at the output:</p>
+<pre><code>bcftools view SVvariants/NA12878.geno.bcf | less -S</code></pre>
+<p><strong>Do you know how to look at the resulting file?</strong></p>
+<p><strong>What might the advantages be to genotyping all members of the trio together?</strong></p>
+</div>
+<div id="setting-up-igv-for-sv-visualization" class="section level4 hasAnchor">
+<h4>Setting up IGV for SV Visualization<a href="module-5-structural-variant-calling.html#setting-up-igv-for-sv-visualization" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>We can make a second IGV-specific index of the bam files. We need to use a tool (igvtools) from the docker container:</p>
+<pre><code>docker run \
+    --privileged \
+    -v /tmp:/tmp \
+    --network host \
+    -it \
+    -w $PWD \
+    -v $HOME:$HOME \
+    --user $UID:$GROUPS \
+    -v /etc/group:/etc/group \
+    -v /etc/passwd:/etc/passwd \
+    -v /etc/fonts/:/etc/fonts/ \
+    -v /media:/media \
+    c3genomics/genpipes:0.8
+
+module load mugqic/igvtools/2.3.67 mugqic/java
+
+(
+  cd ~/workspace/HTG/Module5/bams
+  # Iterate over each of the bam files and create an IGV tdf index:
+  for bam in *.bam; do
+    igvtools count $bam ${bam}.tdf ../ref/GRCh38_full_analysis_set_plus_decoy_hla.fa.fai
+  done
+)
+
+# Leave the docker container to return to the native shell environment.
+exit</code></pre>
+<p>Launch IGV and load the merged calls and the germline calls using <code>File -&gt; Load from URL</code> using:</p>
+<ul>
+<li><a href="http://your.ip.address/HTG/Module5/singles/NA12878/results/variants/diploidSV.vcf.gz" class="uri">http://your.ip.address/HTG/Module5/singles/NA12878/results/variants/diploidSV.vcf.gz</a></li>
+<li><a href="http://your.ip.address/HTG/Module5/singles/NA12891/results/variants/diploidSV.vcf.gz" class="uri">http://your.ip.address/HTG/Module5/singles/NA12891/results/variants/diploidSV.vcf.gz</a></li>
+<li><a href="http://your.ip.address/HTG/Module5/singles/NA12892/results/variants/diploidSV.vcf.gz" class="uri">http://your.ip.address/HTG/Module5/singles/NA12892/results/variants/diploidSV.vcf.gz</a></li>
+</ul>
+<p>Now load the bam files in the same way using:</p>
+<ul>
+<li><a href="http://your.ip.address/HTG/Module5/bams/NA12878.bam" class="uri">http://your.ip.address/HTG/Module5/bams/NA12878.bam</a></li>
+<li><a href="http://your.ip.address/HTG/Module5/bams/NA12891.bam" class="uri">http://your.ip.address/HTG/Module5/bams/NA12891.bam</a></li>
+<li><a href="http://your.ip.address/HTG/Module5/bams/NA12892.bam" class="uri">http://your.ip.address/HTG/Module5/bams/NA12892.bam</a></li>
+</ul>
+<p>Navigate to the following location to see a deletion: <code>chr20:32,720,935-32,726,494</code></p>
+<p>You should see something like this:</p>
+<div class="float">
+<img src="img/deletion.png" alt="Deletion" />
+<div class="figcaption">Deletion</div>
+</div>
+<p>You can try to configure IGV such that we can more clearly see the alignments that support the SV prediction.</p>
+<div class="callout-blue">
+<span class="callout-icon"><i class="fas fa-circle-info" aria-hidden="true"></i></span>
+<div class="callout-content">
+<div class="callout-title-static" style="margin-bottom: 0.5em;">
+<p>Note</p>
+</div>
+<p>Do you remember how to make sure that the alignments are colored by insert size and orientation?</p>
+</div>
+</div>
+</div>
+<div id="explore-the-svs" class="section level4 hasAnchor">
+<h4>Explore the SVs<a href="module-5-structural-variant-calling.html#explore-the-svs" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><em>Is the variant at chr20:32,720,935-32,726,494 found in each member of the trio?</em></p>
+<details class="callout-dropdown callout-subtle callout-gray-subtle">
+<summary class="callout-dropdown-summary"><span
+class="callout-icon"><i class="fas fa-comment-dots" aria-hidden="true"></i></span><span
+class="callout-dropdown-title">Solution (click here)</span><span
+class="callout-dropdown-caret"><i class="fas fa-chevron-right" aria-hidden="true"></i></span></summary>
+<div class="callout-dropdown-content">
+<p>The deletion is found in the mother and the daugther but not in the father.</p>
+<p>Note the low number of reads supporting the event.</p>
+</div>
+</details>
+<p><strong>What are the genotypes for each member of the trio at the locus chr20:63090171-63097143 (e.g., hemizygous, homozygous)?</strong></p>
+<details class="callout-dropdown callout-subtle callout-gray-subtle">
+<summary class="callout-dropdown-summary"><span
+class="callout-icon"><i class="fas fa-comment-dots" aria-hidden="true"></i></span><span
+class="callout-dropdown-title">Solution (click here)</span><span
+class="callout-dropdown-caret"><i class="fas fa-chevron-right" aria-hidden="true"></i></span></summary>
+<div class="callout-dropdown-content">
+<p>The deletion at the position chr20:61,721,523-61,728,495.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><strong>Sample</strong></th>
+<th align="center"><strong>ID</strong></th>
+<th align="center"><strong>genotype</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Mother</td>
+<td align="center">NA12892</td>
+<td align="center">Heterozygous</td>
+</tr>
+<tr class="even">
+<td align="center">Father</td>
+<td align="center">NA12891</td>
+<td align="center">Homozigous variant</td>
+</tr>
+<tr class="odd">
+<td align="center">Child</td>
+<td align="center">NA12878</td>
+<td align="center">Homozigous variant</td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<p><strong>What about the variant at chr20:54015643-54047569?</strong></p>
+<details class="callout-dropdown callout-subtle callout-gray-subtle">
+<summary class="callout-dropdown-summary"><span
+class="callout-icon"><i class="fas fa-comment-dots" aria-hidden="true"></i></span><span
+class="callout-dropdown-title">Solution (click here)</span><span
+class="callout-dropdown-caret"><i class="fas fa-chevron-right" aria-hidden="true"></i></span></summary>
+<div class="callout-dropdown-content">
+<p>The deletion at the position chr20:52,632,182-52,664,108</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><strong>Sample</strong></th>
+<th align="center"><strong>ID</strong></th>
+<th align="center"><strong>genotype</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Mother</td>
+<td align="center">NA12892</td>
+<td align="center">Homozygous reference</td>
+</tr>
+<tr class="even">
+<td align="center">Father</td>
+<td align="center">NA12891</td>
+<td align="center">Heterozygous</td>
+</tr>
+<tr class="odd">
+<td align="center">Child</td>
+<td align="center">NA12878</td>
+<td align="center">Heterozygous</td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<p>Now load the Nanopore bam file at:</p>
+<ul>
+<li><a href="http://htg.oicrcbw.ca/Module5/nanopore/nanopore.bam" class="uri">http://htg.oicrcbw.ca/Module5/nanopore/nanopore.bam</a></li>
+</ul>
+<p><strong>Does the evidence in the Nanopore track mimic the evidence in the Illumina track for NA12878?</strong></p>
+<details class="callout-dropdown callout-subtle callout-gray-subtle">
+<summary class="callout-dropdown-summary"><span
+class="callout-icon"><i class="fas fa-comment-dots" aria-hidden="true"></i></span><span
+class="callout-dropdown-title">Solution (click here)</span><span
+class="callout-dropdown-caret"><i class="fas fa-chevron-right" aria-hidden="true"></i></span></summary>
+<div class="callout-dropdown-content">
+<p>What we see from the molleculo data:</p>
+<ul>
+<li>chr20:31,310,769-31,312,959 - yes</li>
+<li>chr20:61,721,523-61,728,495 - yes</li>
+<li>chr20:52,632,182-52,664,108 - yes</li>
+</ul>
+<p>This shows how using an orthogonal technology can improve the confidence in the call, particularly if there is low read evidence from a classical Illumina approach.</p>
+</div>
+</details>
+<p><strong>What about chr20:18,953,476-18,957,998?</strong></p>
+<details class="callout-dropdown callout-subtle callout-gray-subtle">
+<summary class="callout-dropdown-summary"><span
+class="callout-icon"><i class="fas fa-comment-dots" aria-hidden="true"></i></span><span
+class="callout-dropdown-title">Solution (click here)</span><span
+class="callout-dropdown-caret"><i class="fas fa-chevron-right" aria-hidden="true"></i></span></summary>
+<div class="callout-dropdown-content">
+<p>There are a few reads that show evidence of a deletion in the short read, but no evidence to support that deletion from the molleculo reads. This call is likely a false positive.</p>
+</div>
+</details>
+<p>Continue exploring the data!</p>
+<div id="acknowledgements-2" class="section level5 hasAnchor">
+<h5>Acknowledgements<a href="module-5-structural-variant-calling.html#acknowledgements-2" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>This module is based on a previous module prepared by Aaron Quinlan and Guillaume Bourque.</p>
+<div class="callout-green">
+<span class="callout-icon"><i class="fas fa-party-horn" aria-hidden="true"></i></span>
+<div class="callout-content">
+<div class="callout-title-static center" style="margin-bottom: 0.5em;">
+<p>Lab Complete!</p>
+</div>
+<p>You’re done Module 5! We hope that you enjoyed the lab and that you continue to enjoy Single Nucleotide Variant Calling.</p>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="module-4-single-nucleotide-variant-calling.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="module-6-genome-assembly.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/bioinformaticsdotca/HTG_2021/blob/main/050-module-5.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["_main.pdf", "_main.epub"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

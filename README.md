@@ -1,9 +1,4 @@
-## CBW WORKSHOP YEAR
+## CBW High Throughput Genomics Analysis
 
-[Workshop Website](YOUR WORKSHOP URL HERE)
+[Workshop Website](https://bioinformaticsdotca.github.io/HTG_2021/)
 
-CITY, PROVINCE(S)  
-Instructors: INSTRUCTOR NAMES  
-TAs: TA NAMES
-
-OUTLINE HERE

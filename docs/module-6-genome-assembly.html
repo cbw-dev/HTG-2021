@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Meet Your Faculty | High Throughout Genomics Analysis 2021</title>
+  <title>Module 6: Genome Assembly | High Throughout Genomics Analysis 2021</title>
   <meta name="description" content="Workshop website for the 2021 High Throughput Genomics Analysis Canadian Bioinformatics Workshop" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Meet Your Faculty | High Throughout Genomics Analysis 2021" />
+  <meta property="og:title" content="Module 6: Genome Assembly | High Throughout Genomics Analysis 2021" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="https://bioinformaticsdotca.github.io/HTG_2021/img/bioinformatics_logo.png" />
   <meta property="og:description" content="Workshop website for the 2021 High Throughput Genomics Analysis Canadian Bioinformatics Workshop" />
   <meta name="github-repo" content="bioinformaticsdotca/HTG-2021" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Meet Your Faculty | High Throughout Genomics Analysis 2021" />
+  <meta name="twitter:title" content="Module 6: Genome Assembly | High Throughout Genomics Analysis 2021" />
   
   <meta name="twitter:description" content="Workshop website for the 2021 High Throughput Genomics Analysis Canadian Bioinformatics Workshop" />
   <meta name="twitter:image" content="https://bioinformaticsdotca.github.io/HTG_2021/img/bioinformatics_logo.png" />
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="index.html"/>
-<link rel="next" href="compute-setup.html"/>
+<link rel="prev" href="module-5-structural-variant-calling.html"/>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -179,95 +179,90 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="meet-your-faculty" class="section level1 hasAnchor">
-<h1>Meet Your Faculty<a href="meet-your-faculty.html#meet-your-faculty" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="mathieu-bourgey" class="section level4 hasAnchor">
-<h4>Mathieu Bourgey<a href="meet-your-faculty.html#mathieu-bourgey" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p><img src="img/faculty/mathieu-bourgey.png" width="200" alt="Photo of Mathieu Bourgey"></p>
-<blockquote>
-<p>Bioinformatics Manager <br>
-Canadian Center for Computational Genomic <br></p>
-</blockquote>
-<p>As a Bioinformatics manager of the TechDev unit, Mathieu ensures the
-integration and the support of new genomics technologies in the platform, and
-he leads the software development. Prior to joining C3G, Mathieu was the
-team leader of the Bioinformatics service unit at Genome Quebec. He holds a
-PhD in Statistical Genetics from University Paris-Sud XI and a Master degree
-in Genetics from University Pierre-et-Marie-Currie (Paris VI).</p>
+<div id="module-6-genome-assembly" class="section level1 hasAnchor">
+<h1>Module 6: Genome Assembly<a href="module-6-genome-assembly.html#module-6-genome-assembly" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="lecture-5" class="section level2 hasAnchor">
+<h2>Lecture<a href="module-6-genome-assembly.html#lecture-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<iframe src="https://drive.google.com/file/d/1AlEzENO7255ymBqUzNNVv5nx9OTgEddp/preview" width="640" height="480" allow="autoplay">
+</iframe>
 </div>
-<div id="jared-simpson" class="section level4 hasAnchor">
-<h4>Jared Simpson<a href="meet-your-faculty.html#jared-simpson" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p><img src="img/faculty/jared-simpson.png" width="200" alt="Photo of Jared Simpson"></p>
-<blockquote>
-<p>Principal Investigator, Ontario Institute for Cancer Research <br>
-Assistant Prof. Department of Computer Science, University of Toronto <br></p>
-</blockquote>
-<p>Dr. Simpson develops algorithms and software for the analysis of
-high-throughput sequencing data. He is interested in de novo assembly and
-the detection of sequence variation in individuals, cancers and populations,
-with a focus on long read sequencing technologies. Dr. Simpson developed
-the ABYSS, SGA and nanopolish software packages.</p>
+<div id="lab-4" class="section level2 hasAnchor">
+<h2>Lab<a href="module-6-genome-assembly.html#lab-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="introduction-4" class="section level4 hasAnchor">
+<h4>Introduction<a href="module-6-genome-assembly.html#introduction-4" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>In this lab we will perform de novo genome assembly of a bacterial genome using three different sequencing technologies. You will be guided through the genome assembly. At the end of the lab you will know:</p>
+<ol style="list-style-type: decimal">
+<li>How to run a short read assembler on Illumina data</li>
+<li>How to run a long read assembler on Pacific Biosciences or Oxford Nanopore data</li>
+<li>How to polish a long read assembly</li>
+<li>How to assess the quality of an assembly</li>
+</ol>
 </div>
-<div id="robert-syme" class="section level4 hasAnchor">
-<h4>Robert Syme<a href="meet-your-faculty.html#robert-syme" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p><img src="img/faculty/robert-syme.png" width="200" alt="Photo of Robert Syme"></p>
-<blockquote>
-<p>Bioinformatics Specialist <br>
-Canadian Center for Computational Genomics <br></p>
-</blockquote>
-<p>After completing a postdoctoral position in Australia, Rob joins the team as a
-Bioinformatics consultant specialising in fungal/plant genetics and developing
-omics resources, strategies, and infrastructure for laboratories working with
-non-model organisms. He has more than a decade of experience working in
-genomics, and holds a PhD in bioinformatics from Curtin University.</p>
+<div id="data-sets" class="section level4 hasAnchor">
+<h4>Data Sets<a href="module-6-genome-assembly.html#data-sets" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>In this lab we will use a bacterial data set to demonstrate genome assembly. This data set consists of sequencing reads for Escherichia coli. E. coli is a great data set for getting started on genome assembly as it is a small genome (4.6 Mbp) with relatively few repeats, and has a high quality reference. We have provided Illumina, PacBio HiFi and Oxford Nanopore reads for this genome. In this lab, you will make assemblies of the complete E. coli genome using <code>spades</code> and <code>flye</code>.</p>
 </div>
-<div id="daniel-poppleton" class="section level4 hasAnchor">
-<h4>Daniel Poppleton<a href="meet-your-faculty.html#daniel-poppleton" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p><img src="img/faculty/daniel-poppleton.png" width="200" alt="Photo of Daniel Poppleton"></p>
-<blockquote>
-<p>Bioinformatics Consultant <br>
-Canadian Center for Computational Genomic <br></p>
-</blockquote>
-<p>Daniel recently joined the C3G after completion of a post-doctoral
-fellowship on mammalian genomics at the Royal Veterinary College in
-London. He previously worked on bacterial genetics and microbiomes
-during his doctorate at the Pasteur Institute in Paris. Currently, he
-contributes through the development of pipelines and the processing of
-raw data with the team.</p>
+<div id="data-preparation" class="section level4 hasAnchor">
+<h4>Data Preparation<a href="module-6-genome-assembly.html#data-preparation" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>First, lets create and move to a directory that we’ll use to work on our assemblies:</p>
+<pre><code>mkdir -p ~/workspace/HTG/Module6
+cd ~/workspace/HTG/Module6</code></pre>
+<p>For convenience, we’ll make symbolic links to the data sets that we’ll work with. Run this command from the terminal, which will find all of the sequencing data sets we provided (using the <code>ls</code> command) and symlink those files into your current working directory.</p>
+<pre><code>ls ~/CourseData/HTG_data/Module6/ecoli* | xargs -i ln -s {}</code></pre>
+<p>If you run <code>ls</code> you should now be able to see the three datasets. There are two files for the Illumina data as the two halves of the paired end reads are in separate files.</p>
 </div>
-<div id="bf-francis-ouellette" class="section level4 hasAnchor">
-<h4>BF Francis Ouellette<a href="meet-your-faculty.html#bf-francis-ouellette" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p><img src="img/faculty/francis-ouellette.png" width="200" alt="Photo of BF Francis Ouellette"></p>
-<blockquote>
-<p>Scientific Director <br>
-Canadian Bioinformatics Workshops (CBW) <br>
-Montreal, QC, CA</p>
-<p>— <a href="mailto:francis@bioinformatics.ca" class="email">francis@bioinformatics.ca</a></p>
-</blockquote>
-<p>Francis was one of the co-founders of the CBW in 1998. His teams over
-the years have been involved in the development of DNA, RNA and
-protein sequences analysis methods, as well as the development of
-platforms to integrate data from various open databases. Since July 2021 Francis is the
-Executive Director of the Neuro Bioinformatics Core Facility and the TOSI Open Science Officer,
-both positions at McGill University.</p>
+<div id="e.-coli-genome-assembly-with-short-reads" class="section level4 hasAnchor">
+<h4>E. coli Genome Assembly with Short Reads<a href="module-6-genome-assembly.html#e.-coli-genome-assembly-with-short-reads" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Now we’ll assemble the E. coli Illumina data using the <a href="http://bioinf.spbau.ru/spades">spades</a> assembler. Parameterizing a short read assembly can be tricky and tuning the parameters (for example the size of the k-mer used) is often quite time consuming. Thankfully, spades will automatically select values for its parameters, making it particularly easy to use. You can start spades with this command (it will take a few minutes to run):</p>
+<pre><code>spades.py -o ecoli_illumina_spades/ -t 4 -1 ecoli_illumina_1.fastq -2 ecoli_illumina_2.fastq</code></pre>
+<p>After the assembly completes, let’s move the results to a new directory that we’ll use to keep track of all of our assemblies</p>
+<pre><code>mkdir -p assemblies
+cp ecoli_illumina_spades/contigs.fasta assemblies/ecoli_illumina_spades.fasta</code></pre>
+<p>We can now start assessing the quality of our assembly. We typically measure the quality of an assembly using three factors:</p>
+<ul>
+<li>Contiguity: Long contigs are better than short contigs as long contigs give more information about the structure of the genome (for example, the order of genes)</li>
+<li>Completeness: Most of the genome should be assembled into contigs with few regions missing from the assembly</li>
+<li>Accuracy: The assembly should have few large-scale misassemblies and consensus errors (mismatches or insertions/deletions)</li>
+</ul>
+<p>We’ll use <code>abyss-fac</code> to calculate how contiguous our spades assembly is. Typically there will be a lot of short “leftover” contigs consisting of repetitive or low-complexity sequence, or reads with a very high error rate that could not be assembled. We don’t want to include these in our statistics so we’ll only use contigs that are at least 500bp in length (protip: piping tabular data into <code>column -t</code> will format the output so the columns nicely line up):</p>
+<pre><code>abyss-fac.pl -t 500 assemblies/ecoli_illumina_spades.fasta | column -t</code></pre>
+<p>The N50 statistic is the most commonly used measure of assembly contiguity. An N50 of x means that 50% of the assembly is represented in contigs x bp or longer. What is the N50 of the spades assembly? How many contigs were produced?</p>
 </div>
-<div id="rachade-hmamouchi" class="section level4 hasAnchor">
-<h4>Rachade Hmamouchi<a href="meet-your-faculty.html#rachade-hmamouchi" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p><img src="img/faculty/rachade-hmamouchi.png" width="200" alt="Photo of Rachade Hmamouchi"></p>
-<blockquote>
-<p>Program Manager <br>
-Canadian Bioinformatics Workshops (CBW) <br>
-Montreal, QC, CA</p>
-<p>— <a href="mailto:rachade@bioinformatics.ca" class="email">rachade@bioinformatics.ca</a></p>
-</blockquote>
-<p>As a Program Manager, Rachade is leading the organization of current
-workshop series as well as the development of new ones. She
-contributes to the development and implementation of promotional
-strategies too. Rachade has a background in bioinformatics and project
-management, working in academic and industrial research. She holds an
-M.Sc. degree in bioinformatics and data analysis from the University of
-Geneva.</p>
+<div id="e.-coli-genome-assembly-with-long-reads" class="section level4 hasAnchor">
+<h4>E. coli Genome Assembly with Long Reads<a href="module-6-genome-assembly.html#e.-coli-genome-assembly-with-long-reads" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Now, we’ll use long sequencing reads to assemble the E. coli genome. Long sequencing reads are better at resolving repeats and typically give much more contiguous assemblies. Long reads need to use a different assembly strategy. For this tutorial, we’ll use <a href="https://github.com/fenderglass/Flye">flye</a> to assemble the PacBio HiFi dataset. Flye is a state-of-the-art assembler that is quite fast to run. Like Spades it is easy to configure as we only need to tell it the type of data we are using:</p>
+<pre><code>flye --out-dir ecoli_pacbio_flye --threads 4 --pacbio-hifi ecoli_pacbio.fastq</code></pre>
+<p>After the assembly completes, copy it to your assemblies directory:</p>
+<pre><code>cp ecoli_pacbio_flye/assembly.fasta assemblies/ecoli_pacbio_flye.fasta</code></pre>
+<p>Our data set also includes an Oxford Nanopore data set. We can now assemble it using flye - the command is very similar, we just need to tell flye we are assembling nanopore data and change the input filename:</p>
+<pre><code>flye --out-dir ecoli_nanopore_flye --threads 4 --nano-raw ecoli_nanopore.fastq</code></pre>
+<p>And we’ll copy the assembly:</p>
+<pre><code>cp ecoli_nanopore_flye/assembly.fasta assemblies/ecoli_nanopore_flye.fasta</code></pre>
+</div>
+<div id="assessing-the-quality-of-your-assemblies-using-a-reference" class="section level4 hasAnchor">
+<h4>Assessing the Quality of your Assemblies using a Reference<a href="module-6-genome-assembly.html#assessing-the-quality-of-your-assemblies-using-a-reference" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The accuracy of the genome assembly is determined by how many misassemblies (large-scale rearrangements) and consensus errors (mismatches, insertions or deletions) the assembler makes. Calculating the accuracy of an assembly typically requires the use of a reference genome. We will use the <a href="http://quast.bioinf.spbau.ru/">QUAST</a> software package to assess the accuracy of the assemblies.</p>
+<p>Run QUAST on your three E. coli assemblies by running this command:</p>
+<pre><code>quast.py -R ~/CourseData/HTG_data/Module6/references/ecoli_k12.fasta assemblies/*.fasta</code></pre>
+<p>Using the web browser for your instance, open the QUAST PDF report (Module6/quast_results/latest/report.pdf) and try to determine which of the assemblies was a) the most complete b) the most contiguous and c) the most accurate.</p>
+</div>
+<div id="assembly-polishing" class="section level4 hasAnchor">
+<h4>Assembly Polishing<a href="module-6-genome-assembly.html#assembly-polishing" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The nanopore assembly can be improved by running a “polishing” step. There are many assembly polishing programs available for nanopore data (nanopolish, racon). To demonstrate polishing we will use a program called <code>medaka</code> that is particularly fast and easy to run.</p>
+<p>We’re now going to use <code>medaka</code> to improve our assembly. Medaka uses a neural network which is trained to calculate a better consensus sequence for nanopore assemblies:</p>
+<pre><code>medaka_consensus -i ecoli_nanopore.fastq -d assemblies/ecoli_nanopore_flye.fasta -o ecoli_nanopore_medaka_polished -t 1</code></pre>
+<p>Now we can copy the medaka assembly to our output directory:</p>
+<pre><code>cp ecoli_nanopore_medaka_polished/consensus.fasta assemblies/ecoli_nanopore_flye_medaka.fasta</code></pre>
+<p>Now, re-run the QUAST step from above:</p>
+<pre><code>quast.py -R ~/CourseData/HTG_data/Module6/references/ecoli_k12.fasta assemblies/*.fasta</code></pre>
+<p>The report will be updated in Module6/quast_results/latest/report.html (all versions will also be stored in their own time-stamped directories in Module6/quast_results). Did the quality of your nanopore assembly improve?</p>
+</div>
+<div id="bonus-exercise-time-permitting" class="section level4 hasAnchor">
+<h4>Bonus Exercise (time permitting)<a href="module-6-genome-assembly.html#bonus-exercise-time-permitting" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Now, you can try to make a <em>hybrid</em> assembly where reads from two technologies are assembled together. Try to use <code>spades</code> to make a hybrid assembly of the Illumina and nanopore datasets. We’re not going to give you the command for this step, so you have a chance to run it on your own (hint: if you run <code>spades.py --help</code> it will print the list of options that the program takes). If you are stuck ask an instructor for help!</p>
+<p>How does the hybrid assembly compare to the illumina-only or nanopore-only assemblies?</p>
 
+</div>
 </div>
 </div>
             </section>
@@ -275,8 +270,8 @@ Geneva.</p>
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="compute-setup.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="module-5-structural-variant-calling.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -307,7 +302,7 @@ gitbook.start({
     "size": 2
   },
   "edit": {
-    "link": "https://github.com/bioinformaticsdotca/HTG_2021/blob/main/001-faculty.Rmd",
+    "link": "https://github.com/bioinformaticsdotca/HTG_2021/blob/main/060-module-6.Rmd",
     "text": "Edit"
   },
   "history": {

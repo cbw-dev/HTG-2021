@@ -1,16 +1,16 @@
 --- 
 title: "High Throughout Genomics Analysis 2021"
-author: "Faculty: Mathieu Bourgey, Jared Simpson, Robert Syme, Daniel Poppleton, BF Francis Ouellette, Rachade Hmamouchi"
-date: "Sep 27, 2021 - Sep 29, 2021"
+author: "Faculty: Mathieu Bourgey, Jared Simpson, Robert Syme, Daniel Poppleton, BF Francis Ouellette, and Rachade Hmamouchi"
+date: "September 27, 2021 - September 29, 2021"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
-url: https://github.com/cbw-dev/HTG-2021/blob/main/index.Rmd # CHANGE THIS LINK TO YOUR LANDING PAGE LINK
+url: https://bioinformaticsdotca.github.io/HTG_2021/ # CHANGE THIS LINK TO YOUR LANDING PAGE LINK
 cover-image: img/bioinformatics_logo.png
 description: |
   Workshop website for the 2021 High Throughput Genomics Analysis Canadian Bioinformatics Workshop
 link-citations: yes
-github-repo: cbw-dev/HTG-2021 # CHANGE THIS TO YOUR OWN REPO
+github-repo: bioinformaticsdotca/HTG-2021 # CHANGE THIS TO YOUR OWN REPO
 favicon: img/favicon.ico
 ---
 
@@ -22,7 +22,7 @@ Welcome to the 2021 High Throughput Genomics Analysis Canadian Bioinformatics Wo
 
 ## Schedule
 
-|       |                         Monday, September 27                         |       |            Tuesday, September 28            |       |        Wednesday, September 29       |
+|    **Time**   |                         **September 27**                         |   **Time**    |            **September 28**            |   **Time**    |        **September 29**       |
 |:-----:|:--------------------------------------------------------------------:|:-----:|:-------------------------------------------:|:-----:|:------------------------------------:|
 | 10:00 |                                Welcome                               | 10:00 |                Module 3: Lab                | 10:00 | Module 5: Structural Variant Calling |
 | 10:15 | Module 1: Introduction to Sequencing Technologies & HTS file formats |       |                                             | 11:00 |             Module 5 lab             |

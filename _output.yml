@@ -20,33 +20,21 @@ bookdown::gitbook:
 
       after: |
         <h1 id="sponsors">Sponsors</h1>
+        <center>
+        <a href="https://oicr.on.ca/"><img src="img/sponsors/oicr.png" width=25% style="display:inline-block;" style="padding-bottom: 20px" alt="Ontario Institute for Cancer Research logo.">
+        <a href="https://www.hpcforhealth.ca/"><img src="img/sponsors/hpc4health.png" width=60% style="display:inline-block;" style="padding-bottom: 20px "alt="HPC4Health logo.">
+        <br><br>
+        <a href="https://computationalgenomics.ca/"><img src="img/sponsors/c3g-logo.png" style="display:inline-block;" width=35% style="padding-bottom: 20px" alt="Canadian Centre for Computational Genomics logo.">
+        <a href="https://aws.amazon.com/fr/education/awseducate/"><img src="img/sponsors/AWS-educate-logo.png" style="display:inline-block;" width=35% style="padding-bottom: 20px" alt="AWS Educate logo.">
+        <br><br>
+        <a href="https://www.mcgill.ca/neuro/"><img src="img/sponsors/neuro-logo.png" style="display:inline-block;" width=35% style="padding-bottom: 20px" alt="The Neuro logo.">
+        <a href="https://www.impactt-microbiome.ca/"><img src="img/sponsors/IMPACTT-logo.png" style="display:inline-block;" width=35% style="padding-bottom: 20px" alt="IMPACTT logo.">
+        <br><br>
+        <a href="https://www.mcgill.ca/micm/"><img src="img/sponsors/MICM-logo.png" style="display:inline-block;" width=35% style="padding-bottom: 20px" alt="McGill Initiative in Computation Medicine logo.">
 
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding-bottom: 20px;">
-          <a href="https://aws.amazon.com/fr/education/awseducate/">
-            <img src="img/sponsors/AWS-educate-logo.png" style="height: 70px;" alt="AWS Educate logo.">
-          </a>
-          <a href="https://www.mcgill.ca/micm/">
-            <img src="img/sponsors/MICM-logo.png" style="height: 70px;" alt="McGill Initiative in Computation Medicine logo.">
-          </a>
-          <a href="https://computationalgenomics.ca/">
-            <img src="img/sponsors/c3g-logo.png" style="height: 70px;" alt="Canadian Centre for Computational Genomics.">
-          </a>
-          <a href="https://www.mcgill.ca/neuro/">
-            <img src="img/sponsors/neuro-logo.png" style="height: 70px;" alt="The Neuro logo.">
-          </a>
-          <a href="https://oicr.on.ca/">
-            <img src="img/sponsors/oicr.png" style="height: 70px;" alt="Ontario Institute for Cancer Research logo.">
-          </a>
-          <a href="https://www.hpcforhealth.ca/">
-            <img src="img/sponsors/hpc4health.png" style="height: 70px;" alt="HPC4Health logo.">
-          </a>
-          <a href="https://www.impactt-microbiome.ca/">
-            <img src="img/sponsors/IMPACTT-logo.png" style="height: 70px;" alt="IMPACTT logo.">
-          </a>
-        </div>
 
     # YOU MUST REPLACE THE LINK BELOW - This is a link to your index.Rmd on your GitHub repo, which allows people to make suggestions
-    edit: https://github.com/cbw-dev/HTG-2021/blob/main/%s # Go to your index.Rmd page on GitHub, copy and paste the link to it, and add
+    edit: https://github.com/bioinformaticsdotca/HTG_2021/blob/main/%s # Go to your index.Rmd page on GitHub, copy and paste the link to it, and add
     # Steps:
     # 1. Go to your index.Rmd page on GitHub, Copy and paste the link to it.
     # 2. Copy and paste the link to it, excluding the "index.Rmd" ending.

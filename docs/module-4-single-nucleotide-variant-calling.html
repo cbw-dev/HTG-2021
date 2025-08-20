@@ -10,17 +10,17 @@
 
   <meta property="og:title" content="Module 4: Single Nucleotide Variant Calling | High Throughout Genomics Analysis 2021" />
   <meta property="og:type" content="book" />
-  <meta property="og:image" content="https://github.com/cbw-dev/HTG-2021/blob/main/index.Rmd/img/bioinformatics_logo.png" />
+  <meta property="og:image" content="https://bioinformaticsdotca.github.io/HTG_2021/img/bioinformatics_logo.png" />
   <meta property="og:description" content="Workshop website for the 2021 High Throughput Genomics Analysis Canadian Bioinformatics Workshop" />
-  <meta name="github-repo" content="cbw-dev/HTG-2021" />
+  <meta name="github-repo" content="bioinformaticsdotca/HTG-2021" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Module 4: Single Nucleotide Variant Calling | High Throughout Genomics Analysis 2021" />
   
   <meta name="twitter:description" content="Workshop website for the 2021 High Throughput Genomics Analysis Canadian Bioinformatics Workshop" />
-  <meta name="twitter:image" content="https://github.com/cbw-dev/HTG-2021/blob/main/index.Rmd/img/bioinformatics_logo.png" />
+  <meta name="twitter:image" content="https://bioinformaticsdotca.github.io/HTG_2021/img/bioinformatics_logo.png" />
 
-<meta name="author" content="Faculty: Mathieu Bourgey, Jared Simpson, Robert Syme, Daniel Poppleton, BF Francis Ouellette, Rachade Hmamouchi" />
+<meta name="author" content="Faculty: Mathieu Bourgey, Jared Simpson, Robert Syme, Daniel Poppleton, BF Francis Ouellette, and Rachade Hmamouchi" />
 
 
 
@@ -30,7 +30,7 @@
   
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
 <link rel="prev" href="module-3.html"/>
-
+<link rel="next" href="module-5-structural-variant-calling.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -90,13 +90,9 @@
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#pre-work"><i class="fa fa-check"></i>Pre-work</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="meet-your-faculty.html"><a href="meet-your-faculty.html"><i class="fa fa-check"></i>Meet Your Faculty</a></li>
-<li class="chapter" data-level="" data-path="data-and-compute-setup.html"><a href="data-and-compute-setup.html"><i class="fa fa-check"></i>Data and Compute Setup</a>
+<li class="chapter" data-level="" data-path="compute-setup.html"><a href="compute-setup.html"><i class="fa fa-check"></i>Compute setup</a>
 <ul>
-<li class="chapter" data-level="" data-path="data-and-compute-setup.html"><a href="data-and-compute-setup.html#course-data-downloads"><i class="fa fa-check"></i>Course data downloads</a></li>
-<li class="chapter" data-level="" data-path="data-and-compute-setup.html"><a href="data-and-compute-setup.html#compute-setup"><i class="fa fa-check"></i>Compute setup</a>
-<ul>
-<li class="chapter" data-level="" data-path="data-and-compute-setup.html"><a href="data-and-compute-setup.html#aws-and-unix-intro"><i class="fa fa-check"></i>AWS and Unix Intro</a></li>
-</ul></li>
+<li class="chapter" data-level="" data-path="compute-setup.html"><a href="compute-setup.html#aws-and-unix-intro"><i class="fa fa-check"></i>AWS and Unix Intro</a></li>
 </ul></li>
 <li class="part"><span><b>II Modules</b></span></li>
 <li class="chapter" data-level="" data-path="module-1-introduction.html"><a href="module-1-introduction.html"><i class="fa fa-check"></i>Module 1: Introduction</a>
@@ -131,34 +127,40 @@
 <li class="chapter" data-level="" data-path="module-4-single-nucleotide-variant-calling.html"><a href="module-4-single-nucleotide-variant-calling.html"><i class="fa fa-check"></i>Module 4: Single Nucleotide Variant Calling</a>
 <ul>
 <li class="chapter" data-level="" data-path="module-4-single-nucleotide-variant-calling.html"><a href="module-4-single-nucleotide-variant-calling.html#lecture-3"><i class="fa fa-check"></i>Lecture</a></li>
-<li class="chapter" data-level="" data-path="module-4-single-nucleotide-variant-calling.html"><a href="module-4-single-nucleotide-variant-calling.html#lab-2"><i class="fa fa-check"></i>Lab</a></li>
+<li class="chapter" data-level="" data-path="module-4-single-nucleotide-variant-calling.html"><a href="module-4-single-nucleotide-variant-calling.html#lab-2"><i class="fa fa-check"></i>Lab</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-4-single-nucleotide-variant-calling.html"><a href="module-4-single-nucleotide-variant-calling.html#calling-variants-with-gatk"><i class="fa fa-check"></i>Calling Variants with GATK</a></li>
+<li class="chapter" data-level="" data-path="module-4-single-nucleotide-variant-calling.html"><a href="module-4-single-nucleotide-variant-calling.html#investigating-the-snp-calls"><i class="fa fa-check"></i>Investigating the SNP Calls</a></li>
+<li class="chapter" data-level="" data-path="module-4-single-nucleotide-variant-calling.html"><a href="module-4-single-nucleotide-variant-calling.html#filter-the-variants"><i class="fa fa-check"></i>Filter the Variants</a></li>
+<li class="chapter" data-level="" data-path="module-4-single-nucleotide-variant-calling.html"><a href="module-4-single-nucleotide-variant-calling.html#adding-functional-consequence"><i class="fa fa-check"></i>Adding Functional Consequence</a></li>
+<li class="chapter" data-level="" data-path="module-4-single-nucleotide-variant-calling.html"><a href="module-4-single-nucleotide-variant-calling.html#investigating-the-functional-consequence-of-variants"><i class="fa fa-check"></i>Investigating the Functional Consequence of Variants</a></li>
+<li class="chapter" data-level="" data-path="module-4-single-nucleotide-variant-calling.html"><a href="module-4-single-nucleotide-variant-calling.html#adding-dbsnp-annotations"><i class="fa fa-check"></i>Adding dbSNP Annotations</a></li>
+<li class="chapter" data-level="" data-path="module-4-single-nucleotide-variant-calling.html"><a href="module-4-single-nucleotide-variant-calling.html#investigating-the-trio-optional-1"><i class="fa fa-check"></i>Investigating the Trio (Optional)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="module-5-structural-variant-calling.html"><a href="module-5-structural-variant-calling.html"><i class="fa fa-check"></i>Module 5: Structural Variant Calling</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-5-structural-variant-calling.html"><a href="module-5-structural-variant-calling.html#lecture-4"><i class="fa fa-check"></i>Lecture</a></li>
+<li class="chapter" data-level="" data-path="module-5-structural-variant-calling.html"><a href="module-5-structural-variant-calling.html#lab-3"><i class="fa fa-check"></i>Lab</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="module-6-genome-assembly.html"><a href="module-6-genome-assembly.html"><i class="fa fa-check"></i>Module 6: Genome Assembly</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-6-genome-assembly.html"><a href="module-6-genome-assembly.html#lecture-5"><i class="fa fa-check"></i>Lecture</a></li>
+<li class="chapter" data-level="" data-path="module-6-genome-assembly.html"><a href="module-6-genome-assembly.html#lab-4"><i class="fa fa-check"></i>Lab</a></li>
 </ul></li>
 <li class="divider"></li>
 <h1 id="sponsors">Sponsors</h1>
-
-<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding-bottom: 20px;">
-  <a href="https://aws.amazon.com/fr/education/awseducate/">
-    <img src="img/sponsors/AWS-educate-logo.png" style="height: 70px;" alt="AWS Educate logo.">
-  </a>
-  <a href="https://www.mcgill.ca/micm/">
-    <img src="img/sponsors/MICM-logo.png" style="height: 70px;" alt="McGill Initiative in Computation Medicine logo.">
-  </a>
-  <a href="https://computationalgenomics.ca/">
-    <img src="img/sponsors/c3g-logo.png" style="height: 70px;" alt="Canadian Centre for Computational Genomics.">
-  </a>
-  <a href="https://www.mcgill.ca/neuro/">
-    <img src="img/sponsors/neuro-logo.png" style="height: 70px;" alt="The Neuro logo.">
-  </a>
-  <a href="https://oicr.on.ca/">
-    <img src="img/sponsors/oicr.png" style="height: 70px;" alt="Ontario Institute for Cancer Research logo.">
-  </a>
-  <a href="https://www.hpcforhealth.ca/">
-    <img src="img/sponsors/hpc4health.png" style="height: 70px;" alt="HPC4Health logo.">
-  </a>
-  <a href="https://www.impactt-microbiome.ca/">
-    <img src="img/sponsors/IMPACTT-logo.png" style="height: 70px;" alt="IMPACTT logo.">
-  </a>
-</div>
+<center>
+<a href="https://oicr.on.ca/"><img src="img/sponsors/oicr.png" width=25% style="display:inline-block;" style="padding-bottom: 20px" alt="Ontario Institute for Cancer Research logo.">
+<a href="https://www.hpcforhealth.ca/"><img src="img/sponsors/hpc4health.png" width=60% style="display:inline-block;" style="padding-bottom: 20px "alt="HPC4Health logo.">
+<br><br>
+<a href="https://computationalgenomics.ca/"><img src="img/sponsors/c3g-logo.png" style="display:inline-block;" width=35% style="padding-bottom: 20px" alt="Canadian Centre for Computational Genomics logo.">
+<a href="https://aws.amazon.com/fr/education/awseducate/"><img src="img/sponsors/AWS-educate-logo.png" style="display:inline-block;" width=35% style="padding-bottom: 20px" alt="AWS Educate logo.">
+<br><br>
+<a href="https://www.mcgill.ca/neuro/"><img src="img/sponsors/neuro-logo.png" style="display:inline-block;" width=35% style="padding-bottom: 20px" alt="The Neuro logo.">
+<a href="https://www.impactt-microbiome.ca/"><img src="img/sponsors/IMPACTT-logo.png" style="display:inline-block;" width=35% style="padding-bottom: 20px" alt="IMPACTT logo.">
+<br><br>
+<a href="https://www.mcgill.ca/micm/"><img src="img/sponsors/MICM-logo.png" style="display:inline-block;" width=35% style="padding-bottom: 20px" alt="McGill Initiative in Computation Medicine logo.">
 
 </ul>
 
@@ -186,12 +188,14 @@
 </div>
 <div id="lab-2" class="section level2 hasAnchor">
 <h2>Lab<a href="module-4-single-nucleotide-variant-calling.html#lab-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><em>Created by Michael Stromberg and Guillaume Bourque.</em></p>
 <div id="introduction-2" class="section level4 hasAnchor">
 <h4>Introduction<a href="module-4-single-nucleotide-variant-calling.html#introduction-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>The goal of this practical session is to identify single nucleotide variants (SNVs) in a human genome and to annotate them. In the previous module 3, we have aligned the reads from NA12878 (daughter) in a small region on chromosome 1. We will continue to use the data generated during the Module 3.</p>
 <p>NA12878 is the child of the trio while NA12891 and NA12892 are her parents.</p>
-<p>Pedigree</p>
+<div class="float">
+<img src="img/pedigree.png" alt="Pedigree" />
+<div class="figcaption">Pedigree</div>
+</div>
 <p>For practical reasons we subsampled the reads from the sample because running the whole dataset would take way too much time and resources. We’re going to focus on the reads extracted from a 300 kbp stretch of chromosome 1</p>
 <table>
 <thead>
@@ -264,11 +268,22 @@ module load mugqic/java/openjdk-jdk1.8.0_72 mugqic/GenomeAnalysisTK/4.1.0.0 mugq
 <p>Let’s look into the NA12878 bam folders.</p>
 <pre><code>ls bam/NA12878/</code></pre>
 <p>Our starting data set consists of 100 bp paired-end Illumina reads from the child (NA12878) that have been aligned to GRCh37 during one of the previous modules (NA12878.sorted.bam). We also have the same data after duplicate removal, indel realignment and base recalibration (NA12878.sorted.dup.recal.bam).</p>
-<p><strong>1. Do you know what are the <code>.bai</code> files?</strong> solution</p>
+<p><strong>1. Do you know what are the <code>.bai</code> files?</strong></p>
+<details class="callout-dropdown callout-subtle callout-gray-subtle">
+<summary class="callout-dropdown-summary"><span
+class="callout-icon"><i class="fas fa-comment-dots" aria-hidden="true"></i></span><span
+class="callout-dropdown-title">Solution (click here)</span><span
+class="callout-dropdown-caret"><i class="fas fa-chevron-right" aria-hidden="true"></i></span></summary>
+<div class="callout-dropdown-content">
+<p>A bai file is an indexed form of a bam - it’s a companion to your bam that contains the index.</p>
+<p>A bam file is a binary blob that stores all of your aligned sequence data. The index allows to acces specific region of the bam file without having to decompress the data and read it from start.</p>
+<p>Working with indexed bam file allows to speed-up the data acces. Moreover many tools require index bam files.</p>
+</div>
+</details>
 </div>
 </div>
-<div id="calling-variants-with-gatk" class="section level4 hasAnchor">
-<h4>Calling Variants with GATK<a href="module-4-single-nucleotide-variant-calling.html#calling-variants-with-gatk" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="calling-variants-with-gatk" class="section level3 hasAnchor">
+<h3>Calling Variants with GATK<a href="module-4-single-nucleotide-variant-calling.html#calling-variants-with-gatk" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>If you recall from the previous module, we first mapped the reads to GRCh37 and then we removed duplicate reads and realigned the reads around the indels.</p>
 <p>Let’s call SNPs in NA12878 using both the original and the improved bam files:</p>
 <pre><code>mkdir -p variants
@@ -290,16 +305,64 @@ java -Xmx2g -jar $GATK_JAR HaplotypeCaller \
 <p><code>-I</code> specifies the input BAM files.</p>
 <p><code>-L</code> indicates the reference region where SNP calling should take place</p>
 </div>
-<div id="investigating-the-snp-calls" class="section level4 hasAnchor">
-<h4>Investigating the SNP Calls<a href="module-4-single-nucleotide-variant-calling.html#investigating-the-snp-calls" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="investigating-the-snp-calls" class="section level3 hasAnchor">
+<h3>Investigating the SNP Calls<a href="module-4-single-nucleotide-variant-calling.html#investigating-the-snp-calls" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Use less to take a look at the vcf files:</p>
 <pre><code>less -S variants/NA12878.rmdup.realign.hc.vcf</code></pre>
 <p>Vcf is a daunting format at first glance, but you can find some basic information about the format [here](<a href="https://www.internationalgenome.org/wiki/Analysis/vcf4.0" class="uri">https://www.internationalgenome.org/wiki/Analysis/vcf4.0</a>.</p>
 <p>Fields vary from caller to caller. Some values are more constant. The ref vs alt alleles, variant quality (QUAL column) and the per-sample genotype (GT) values are almost always there.</p>
-<p><strong>1. How do you figure out what the genotype is for each variant?</strong> solution</p>
-<p><strong>2. Do we have any annotation information yet?</strong> solution</p>
-<p><strong>3. How many SNPs were found?</strong> solution</p>
-<p><strong>4. Did we find the same number of variants using the files before and after duplicate removal and realignment?</strong> solution</p>
+<p><strong>1. How do you figure out what the genotype is for each variant?</strong></p>
+<details class="callout-dropdown callout-subtle callout-gray-subtle">
+<summary class="callout-dropdown-summary"><span
+class="callout-icon"><i class="fas fa-comment-dots" aria-hidden="true"></i></span><span
+class="callout-dropdown-title">Solution (click here)</span><span
+class="callout-dropdown-caret"><i class="fas fa-chevron-right" aria-hidden="true"></i></span></summary>
+<div class="callout-dropdown-content">
+<p>Genotypes are given per individuals in the 10+ columns.</p>
+<p>Based on the FORMAT description, the genotype (GT) is the first information provided (separated by :).</p>
+<p>3 different values are available:</p>
+<ul>
+<li>0/0 : homozgote reference (with the REF columns value)</li>
+<li>1/1 : homozgote variant (with the ALT columns value)</li>
+<li>1/0 : heterozygote (with both REF and ALT columns values)</li>
+</ul>
+</div>
+</details>
+<p><strong>2. Do we have any annotation information yet?</strong></p>
+<details class="callout-dropdown callout-subtle callout-gray-subtle">
+<summary class="callout-dropdown-summary"><span
+class="callout-icon"><i class="fas fa-comment-dots" aria-hidden="true"></i></span><span
+class="callout-dropdown-title">Solution (click here)</span><span
+class="callout-dropdown-caret"><i class="fas fa-chevron-right" aria-hidden="true"></i></span></summary>
+<div class="callout-dropdown-content">
+<p>No the ID field is empty and no functional information is provided.</p>
+</div>
+</details>
+<p><strong>3. How many SNPs were found?</strong></p>
+<details class="callout-dropdown callout-subtle callout-gray-subtle">
+<summary class="callout-dropdown-summary"><span
+class="callout-icon"><i class="fas fa-comment-dots" aria-hidden="true"></i></span><span
+class="callout-dropdown-title">Solution (click here)</span><span
+class="callout-dropdown-caret"><i class="fas fa-chevron-right" aria-hidden="true"></i></span></summary>
+<div class="callout-dropdown-content">
+<p>The number of variant can be computed using this simple command:</p>
+<pre><code>grep -v &quot;^#&quot; variants/NA12878.rmdup.realign.hc.vcf | wc -l </code></pre>
+<p>We have 404 variants in the realigned vcf.</p>
+</div>
+</details>
+<p><strong>4. Did we find the same number of variants using the files before and after duplicate removal and realignment?</strong></p>
+<details class="callout-dropdown callout-subtle callout-gray-subtle">
+<summary class="callout-dropdown-summary"><span
+class="callout-icon"><i class="fas fa-comment-dots" aria-hidden="true"></i></span><span
+class="callout-dropdown-title">Solution (click here)</span><span
+class="callout-dropdown-caret"><i class="fas fa-chevron-right" aria-hidden="true"></i></span></summary>
+<div class="callout-dropdown-content">
+<p>The number of variant can be computed using this simple command:</p>
+<pre><code>grep -v &quot;^#&quot; variants/NA12878.hc.vcf | wc -l</code></pre>
+<p>We have 399 in the raw vcf, we previously saw 404 in the realigned vcf.</p>
+<p>In that case the impact of bam improvement is very low because HaplotypeCaller perform internally a similar step to indel-realignment.</p>
+</div>
+</details>
 <div id="looking-for-differences-between-the-two-vcf-files" class="section level6 hasAnchor">
 <h6>Looking for Differences Between the Two VCF Files<a href="module-4-single-nucleotide-variant-calling.html#looking-for-differences-between-the-two-vcf-files" class="anchor-section" aria-label="Anchor link to header"></a></h6>
 <p>Use the following command to pull out differences between the two files:</p>
@@ -324,7 +387,19 @@ java -Xmx2g -jar $GATK_JAR HaplotypeCaller \
 &gt; 1      17875141
 308d313
 &lt; 1      17879077</code></pre>
-<p><strong>5. Is this result concordant to our previous comparison of files before and after duplicate removal and realignment?</strong> solution</p>
+<p><strong>5. Is this result concordant to our previous comparison of files before and after duplicate removal and realignment?</strong></p>
+<details class="callout-dropdown callout-subtle callout-gray-subtle">
+<summary class="callout-dropdown-summary"><span
+class="callout-icon"><i class="fas fa-comment-dots" aria-hidden="true"></i></span><span
+class="callout-dropdown-title">Solution (click here)</span><span
+class="callout-dropdown-caret"><i class="fas fa-chevron-right" aria-hidden="true"></i></span></summary>
+<div class="callout-dropdown-content">
+<p>The real number of variants which differ is higher than what we estimated by just counting the variant number:</p>
+<p>1 - There is 8 variants specific to realign + rmdup bam
+2 - There is 3 variants specific to not realign + rmdup bam
+3 - So in reality 11 variants differ due to bam imporvement</p>
+</div>
+</details>
 </div>
 <div id="use-igv-to-investigate-the-snps" class="section level5 hasAnchor">
 <h5>Use IGV to investigate the SNPs<a href="module-4-single-nucleotide-variant-calling.html#use-igv-to-investigate-the-snps" class="anchor-section" aria-label="Anchor link to header"></a></h5>
@@ -341,8 +416,34 @@ java -Xmx2g -jar $GATK_JAR HaplotypeCaller \
 <p>In IGV, load both the original and the realigned bam files (NA12878.bwa.sort.bam and NA12878.bwa.sort.rmdup.realign.bam) using (File-&gt;Load from file…).</p>
 <p>After you have loaded the two bam files, load the two vcf files (NA12878.hc.vcf and NA12878.rmdup.realign.hc.vcf) in the same way.</p>
 <p>Finally, go to a region on chromsome 1 with reads (1:17704860-18004860) and spend some time SNP gazing…</p>
-<p><strong>6. Do the SNPs look believable?</strong> solution</p>
-<p><strong>7. Are there any positions that you think should have been called as a SNP, but weren’t?</strong> solution</p>
+<p><strong>6. Do the SNPs look believable?</strong></p>
+<details class="callout-dropdown callout-subtle callout-gray-subtle">
+<summary class="callout-dropdown-summary"><span
+class="callout-icon"><i class="fas fa-comment-dots" aria-hidden="true"></i></span><span
+class="callout-dropdown-title">Solution (click here)</span><span
+class="callout-dropdown-caret"><i class="fas fa-chevron-right" aria-hidden="true"></i></span></summary>
+<div class="callout-dropdown-content">
+<p>Yes most of them look believable, but sometime in region with lower coverage the call coul be more ambigous.</p>
+<p>for example in region 1:17,792,577-17,792,646 SNP is supicious because:</p>
+<ol style="list-style-type: decimal">
+<li>Mix of indel and SNP</li>
+<li>Most of the variant evidences are on the same reads strand for both SNPs or on the edge of the read</li>
+<li>The region is a long strech of T which is prone to misalignment</li>
+</ol>
+</div>
+</details>
+<p><strong>7. Are there any positions that you think should have been called as a SNP, but weren’t?</strong></p>
+<details class="callout-dropdown callout-subtle callout-gray-subtle">
+<summary class="callout-dropdown-summary"><span
+class="callout-icon"><i class="fas fa-comment-dots" aria-hidden="true"></i></span><span
+class="callout-dropdown-title">Solution (click here)</span><span
+class="callout-dropdown-caret"><i class="fas fa-chevron-right" aria-hidden="true"></i></span></summary>
+<div class="callout-dropdown-content">
+<p>Probably yes but very few!</p>
+<p>For example in region 1:17,730,458-17,730,509 or 1:17,764,435-17,764,476 which prove that no caller is perfect.</p>
+<p>But in these regions the missing variant are in a middle of a strech of the same letter which may be complicated to align reads and call variants. And maybe these one are not real.</p>
+</div>
+</details>
 </div>
 <div id="looking-for-indels" class="section level5 hasAnchor">
 <h5>Looking for INDELs<a href="module-4-single-nucleotide-variant-calling.html#looking-for-indels" class="anchor-section" aria-label="Anchor link to header"></a></h5>
@@ -352,12 +453,37 @@ java -Xmx2g -jar $GATK_JAR HaplotypeCaller \
 | awk &#39;{ if(length($4) != length($5)) { print $0 } }&#39; \
 | less -S</code></pre>
 <p>You can find a slightly more advanced awk script that separates the SNPs from the INDELs here.</p>
-<p><strong>8. Did you find any INDELs?</strong> solution</p>
-<p><strong>9. Can you find the largest INDEL?</strong> solution</p>
+<p><strong>8. Did you find any INDELs?</strong></p>
+<details class="callout-dropdown callout-subtle callout-gray-subtle">
+<summary class="callout-dropdown-summary"><span
+class="callout-icon"><i class="fas fa-comment-dots" aria-hidden="true"></i></span><span
+class="callout-dropdown-title">Solution (click here)</span><span
+class="callout-dropdown-caret"><i class="fas fa-chevron-right" aria-hidden="true"></i></span></summary>
+<div class="callout-dropdown-content">
+<p>The number of indel can be computed using this command:</p>
+<pre><code>grep -v &quot;^#&quot; variants/NA12878.rmdup.realign.hc.vcf | awk &#39;{ if(length($4) != length($5)) { print $0 } }&#39; | wc -l </code></pre>
+<p>We have 82 INDELs in the realigned vcf.</p>
+</div>
+</details>
+<p><strong>9. Can you find the largest INDEL?</strong></p>
+<details class="callout-dropdown callout-subtle callout-gray-subtle">
+<summary class="callout-dropdown-summary"><span
+class="callout-icon"><i class="fas fa-comment-dots" aria-hidden="true"></i></span><span
+class="callout-dropdown-title">Solution (click here)</span><span
+class="callout-dropdown-caret"><i class="fas fa-chevron-right" aria-hidden="true"></i></span></summary>
+<div class="callout-dropdown-content">
+<p>Largest indels size can be computed by extending the previous command while printing the size of the indel:</p>
+<pre><code>grep -v &quot;^#&quot; variants/NA12878.rmdup.realign.hc.vcf | \
+awk &#39;{ if(length($4) != length($5)) { print sqrt((length($4) - length($5))^2) &quot;\t&quot;$0 } }&#39; | \
+sort -k1,1nr | head </code></pre>
+<p>The indel sizes are computed as the absolute value of the difference in charater size between the 2 alleles.</p>
+<p>The largest ones are 15bp long chr1 17798774 and chr1 17817280.</p>
+</div>
+</details>
 </div>
 </div>
-<div id="filter-the-variants" class="section level4 hasAnchor">
-<h4>Filter the Variants<a href="module-4-single-nucleotide-variant-calling.html#filter-the-variants" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="filter-the-variants" class="section level3 hasAnchor">
+<h3>Filter the Variants<a href="module-4-single-nucleotide-variant-calling.html#filter-the-variants" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Typically variant callers will only perform a minimal amount of filtering when presenting variant calls.</p>
 <p>To perform more rigorous filtering, another program must be used. In our case, we will use the VariantFiltration tool in GATK.</p>
 <div class="callout-blue">
@@ -385,10 +511,24 @@ java -Xmx2g -jar $GATK_JAR HaplotypeCaller \
 <p><code>-O</code> specifies the output vcf file.</p>
 <p><code>-filter</code> defines an expression using the vcf INFO and genotype variables.</p>
 <p><code>--filter-name</code> defines what the filter field should display if that filter is true.</p>
-<p><strong>1. What is QD, FS, and MQ?</strong> solution</p>
+<p><strong>1. What is QD, FS, and MQ?</strong></p>
+<details class="callout-dropdown callout-subtle callout-gray-subtle">
+<summary class="callout-dropdown-summary"><span
+class="callout-icon"><i class="fas fa-comment-dots" aria-hidden="true"></i></span><span
+class="callout-dropdown-title">Solution (click here)</span><span
+class="callout-dropdown-caret"><i class="fas fa-chevron-right" aria-hidden="true"></i></span></summary>
+<div class="callout-dropdown-content">
+<p>By looking at INFO field we can understand the filter.</p>
+<ul>
+<li>‘QD’ stands for Variant Confidence/Quality by Depth which corresponds to the QUAL score normalized by allele depth (AD) for a variant</li>
+<li>‘FS’ stands for Phred-scaled p-value using Fisher’s exact test to detect strand bias which corresponds to result of a Fisher’s Exact Test to determine if there is strand bias between forward and reverse strands for the reference or alternate allele</li>
+<li>‘MQ’ stands for RMS Mapping Quality which corresponds to an estimation of the overall mapping quality of reads supporting a variant call</li>
+</ul>
 </div>
-<div id="adding-functional-consequence" class="section level4 hasAnchor">
-<h4>Adding Functional Consequence<a href="module-4-single-nucleotide-variant-calling.html#adding-functional-consequence" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+</details>
+</div>
+<div id="adding-functional-consequence" class="section level3 hasAnchor">
+<h3>Adding Functional Consequence<a href="module-4-single-nucleotide-variant-calling.html#adding-functional-consequence" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The next step in trying to make sense of the variant calls is to assign functional consequence to each variant.</p>
 <p>At the most basic level, this involves using gene annotations to determine if variants are sense, missense, or nonsense.</p>
 <p>We typically use SnpEff but many use Annovar and VEP as well.</p>
@@ -404,8 +544,8 @@ java -Xmx2g -jar $GATK_JAR HaplotypeCaller \
 <p><code>variants/NA12878.rmdup.realign.hc.filter.vcf</code> specifies our input vcf filename</p>
 <p><code>variants/NA12878.rmdup.realign.hc.filter.snpeff.vcf</code> specifies our output vcf filename</p>
 </div>
-<div id="investigating-the-functional-consequence-of-variants" class="section level4 hasAnchor">
-<h4>Investigating the Functional Consequence of Variants<a href="module-4-single-nucleotide-variant-calling.html#investigating-the-functional-consequence-of-variants" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="investigating-the-functional-consequence-of-variants" class="section level3 hasAnchor">
+<h3>Investigating the Functional Consequence of Variants<a href="module-4-single-nucleotide-variant-calling.html#investigating-the-functional-consequence-of-variants" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>You can learn more about the meaning of snpEff annotations <a href="https://pcingola.github.io/SnpEff/">here</a>.</p>
 <p>Use less to look at the new vcf file:</p>
 <pre><code>less -S variants/NA12878.rmdup.realign.hc.filter.snpeff.vcf</code></pre>
@@ -414,7 +554,16 @@ java -Xmx2g -jar $GATK_JAR HaplotypeCaller \
 <p><code>ANN=Allele|Annotation|Putative impact|Gene name|Gene ID|Feature type|Feature ID|Transcript biotype|Rank Total|HGVS.c|...</code></p>
 <p>Here’s an example of a typical annotation:</p>
 <p><code>ANN=C|intron_variant|MODIFIER|PADI6|PADI6|transcript|NM_207421.4|Coding|5/16|c.553+80T&gt;C||||||</code></p>
-<p><strong>1. What does the example annotation actually mean?</strong> solution</p>
+<p><strong>1. What does the example annotation actually mean?</strong></p>
+<details class="callout-dropdown callout-subtle callout-gray-subtle">
+<summary class="callout-dropdown-summary"><span
+class="callout-icon"><i class="fas fa-comment-dots" aria-hidden="true"></i></span><span
+class="callout-dropdown-title">Solution (click here)</span><span
+class="callout-dropdown-caret"><i class="fas fa-chevron-right" aria-hidden="true"></i></span></summary>
+<div class="callout-dropdown-content">
+<p>This variant (T&gt;C) is located in an intron of the PADI6 gene and is probably not affecting the fonction of the gene.</p>
+</div>
+</details>
 <p>Next, you should view or download the report generated by snpEff.</p>
 <p>Use the procedure described previously to retrieve:</p>
 <p><code>snpEff_summary.html</code></p>
@@ -422,17 +571,67 @@ java -Xmx2g -jar $GATK_JAR HaplotypeCaller \
 <div id="finding-impactful-variants" class="section level5 hasAnchor">
 <h5>Finding Impactful Variants<a href="module-4-single-nucleotide-variant-calling.html#finding-impactful-variants" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <p>One nice feature in snpEff is that it tries to assess the impact of each variant. You can read more about the effect categories <a href="https://snpeff.sourceforge.net/VCFannotationformat_v1.0.pdf">here</a>.</p>
-<p><strong>2. How many variants had a high impact?</strong> solution</p>
-<p><strong>3. How many variants had a moderate impact?</strong> solution</p>
-<p><strong>4. What effect categories were represented in these variants?</strong> solution</p>
-<p><strong>5. Open that position in IGV, what do you see?</strong> solution</p>
+<p><strong>2. How many variants had a high impact?</strong></p>
+<details class="callout-dropdown callout-subtle callout-gray-subtle">
+<summary class="callout-dropdown-summary"><span
+class="callout-icon"><i class="fas fa-comment-dots" aria-hidden="true"></i></span><span
+class="callout-dropdown-title">Solution (click here)</span><span
+class="callout-dropdown-caret"><i class="fas fa-chevron-right" aria-hidden="true"></i></span></summary>
+<div class="callout-dropdown-content">
+<p>Let’s extract variants with a high impact:</p>
+<pre><code>grep HIGH variants/NA12878.rmdup.realign.hc.filter.snpeff.vcf</code></pre>
+<p>No high impact variant is found.</p>
+</div>
+</details>
+<p><strong>3. How many variants had a moderate impact?</strong></p>
+<details class="callout-dropdown callout-subtle callout-gray-subtle">
+<summary class="callout-dropdown-summary"><span
+class="callout-icon"><i class="fas fa-comment-dots" aria-hidden="true"></i></span><span
+class="callout-dropdown-title">Solution (click here)</span><span
+class="callout-dropdown-caret"><i class="fas fa-chevron-right" aria-hidden="true"></i></span></summary>
+<div class="callout-dropdown-content">
+<p>The MODERATE variant can be extracted using this command:</p>
+<pre><code>grep MODERATE variants/NA12878.rmdup.realign.hc.filter.snpeff.vcf</code></pre>
+<p>There are 2 MODERATE variants found.</p>
+</div>
+</details>
+<p><strong>4. What effect categories were represented in these variants?</strong></p>
+<details class="callout-dropdown callout-subtle callout-gray-subtle">
+<summary class="callout-dropdown-summary"><span
+class="callout-icon"><i class="fas fa-comment-dots" aria-hidden="true"></i></span><span
+class="callout-dropdown-title">Solution (click here)</span><span
+class="callout-dropdown-caret"><i class="fas fa-chevron-right" aria-hidden="true"></i></span></summary>
+<div class="callout-dropdown-content">
+<p>The 2 variants are missense variants which means a non-disruptive variant that might change protein effectiveness.</p>
+</div>
+</details>
+<p><strong>5. Open that position in IGV, what do you see?</strong></p>
+<details class="callout-dropdown callout-subtle callout-gray-subtle">
+<summary class="callout-dropdown-summary"><span
+class="callout-icon"><i class="fas fa-comment-dots" aria-hidden="true"></i></span><span
+class="callout-dropdown-title">Solution (click here)</span><span
+class="callout-dropdown-caret"><i class="fas fa-chevron-right" aria-hidden="true"></i></span></summary>
+<div class="callout-dropdown-content">
+<p>The variant 1 17944934 is a C-&gt;T substitution in the 29th codon of the exome 1 of the ARHGEF10 gene. Substitution induce a change from a Alanine to a Valine amino acid.</p>
+<p>The variant 1 17991052 is a T-&gt;C substitution in the 769th codon of the exome 18 of the ARHGEF10 gene. Substitution induce a change from a Triptophan to Arginine amino acid.</p>
+</div>
+</details>
 </div>
 </div>
-<div id="adding-dbsnp-annotations" class="section level4 hasAnchor">
-<h4>Adding dbSNP Annotations<a href="module-4-single-nucleotide-variant-calling.html#adding-dbsnp-annotations" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="adding-dbsnp-annotations" class="section level3 hasAnchor">
+<h3>Adding dbSNP Annotations<a href="module-4-single-nucleotide-variant-calling.html#adding-dbsnp-annotations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Go back to looking at your last vcf file:</p>
 <pre><code>less -S variants/NA12878.rmdup.realign.hc.filter.snpeff.vcf</code></pre>
-<p><strong>1. What do you see in the third column?</strong> solution</p>
+<p><strong>1. What do you see in the third column?</strong></p>
+<details class="callout-dropdown callout-subtle callout-gray-subtle">
+<summary class="callout-dropdown-summary"><span
+class="callout-icon"><i class="fas fa-comment-dots" aria-hidden="true"></i></span><span
+class="callout-dropdown-title">Solution (click here)</span><span
+class="callout-dropdown-caret"><i class="fas fa-chevron-right" aria-hidden="true"></i></span></summary>
+<div class="callout-dropdown-content">
+<p>The 3rd which correspond to the ID of the variant is empty .. We can actually not see if variants we are look at have already been discover in other samples.</p>
+</div>
+</details>
 <p>The third column in the vcf file is reserved for identifiers. Perhaps the most common identifier is the dbSNP rsID.</p>
 <p>Use the following command to generate dbSNP rsIDs for our vcf file:</p>
 <pre><code>#switch to old GATK 3.8
@@ -455,31 +654,114 @@ module load  mugqic/GenomeAnalysisTK/4.1.0.0</code></pre>
 <p><code>-V</code> specifies the input vcf file.</p>
 <p><code>-o</code> specifies the output vcf file.</p>
 <p><code>-L</code> defines which regions we should annotate. In this case, I chose the chromosomes that contain the regions we are investigating.</p>
-<p><strong>2. What percentage of the variants that passed all filters were also in dbSNP?</strong> solution</p>
-<p><strong>3. Can you find a variant that passed and wasn’t in dbSNP?</strong> solution</p>
+<p><strong>2. What percentage of the variants that passed all filters were also in dbSNP?</strong></p>
+<details class="callout-dropdown callout-subtle callout-gray-subtle">
+<summary class="callout-dropdown-summary"><span
+class="callout-icon"><i class="fas fa-comment-dots" aria-hidden="true"></i></span><span
+class="callout-dropdown-title">Solution (click here)</span><span
+class="callout-dropdown-caret"><i class="fas fa-chevron-right" aria-hidden="true"></i></span></summary>
+<div class="callout-dropdown-content">
+<p>The precentage could be estimate directly by this command:</p>
+<pre><code>awk &#39; BEGIN {FS=&quot;\t&quot; ; p=0; d=0 ; OFS=&quot;\t&quot;} \
+{if ($7 == &quot;PASS&quot;) {p++; if ($3 != &quot;.&quot;) {d++}}} \
+END {print &quot;PASS:&quot;, p , &quot;dbSNP:&quot; , d , &quot;%:&quot;, d/p} &#39; variants/NA12878.rmdup.realign.hc.filter.snpeff.dbsnp.vcf</code></pre>
+<pre><code>PASS:      404      dbSNP:      397      %:      0.982673</code></pre>
+<p>For those unfamiliar with awk commands, they can use these commands and then compute manually the percentage.</p>
+<pre><code>grep -v ^# variants/NA12878.rmdup.realign.hc.filter.snpeff.dbsnp.vcf | grep PASS | grep -c rs
+grep -v ^# variants/NA12878.rmdup.realign.hc.filter.snpeff.dbsnp.vcf | grep -c PASS</code></pre>
+<pre><code>397
+404</code></pre>
 </div>
-<div id="investigating-the-trio-optional-1" class="section level4 hasAnchor">
-<h4>Investigating the Trio (Optional)<a href="module-4-single-nucleotide-variant-calling.html#investigating-the-trio-optional-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+</details>
+<p><strong>3. Can you find a variant that passed and wasn’t in dbSNP?</strong></p>
+<details class="callout-dropdown callout-subtle callout-gray-subtle">
+<summary class="callout-dropdown-summary"><span
+class="callout-icon"><i class="fas fa-comment-dots" aria-hidden="true"></i></span><span
+class="callout-dropdown-title">Solution (click here)</span><span
+class="callout-dropdown-caret"><i class="fas fa-chevron-right" aria-hidden="true"></i></span></summary>
+<div class="callout-dropdown-content">
+<p>The unknown passed variants could be found:</p>
+<pre><code>awk &#39; BEGIN {FS=&quot;\t&quot;} {if ($7 == &quot;PASS&quot; &amp;&amp; $3 == &quot;.&quot;) {print $0}}&#39; variants/NA12878.rmdup.realign.hc.filter.snpeff.dbsnp.vcf</code></pre>
+</div>
+</details>
+</div>
+<div id="investigating-the-trio-optional-1" class="section level3 hasAnchor">
+<h3>Investigating the Trio (Optional)<a href="module-4-single-nucleotide-variant-calling.html#investigating-the-trio-optional-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>At this point we have aligned and called variants in one individual. However, we actually have FASTQ and BAM files for three family members!</p>
 <p>As additional practice, perform the same steps for the other two individuals (her parents): NA12891 and NA12892. Here are some additional things that you might want to look at:</p>
-<p><strong>1. If you load up all three realigned BAM files and all three final vcf files into IGV, do the variants look plausible?</strong> Use a <a href="https://en.wikipedia.org/wiki/Punnett_square">Punnett square</a> to help evaluate this. i.e. if both parents have a homozygous reference call and the child has a homozygous variant call at that locus, this might indicate a trio conflict. solution</p>
-<p><strong>2. Do you find any additional high or moderate impact variants in either of the parents?</strong> solution</p>
-<p><strong>3. Do all three family members have the same genotype for Rs7538876 and Rs2254135?</strong> solution</p>
+<p><strong>1. If you load up all three realigned BAM files and all three final vcf files into IGV, do the variants look plausible?</strong> Use a <a href="https://en.wikipedia.org/wiki/Punnett_square">Punnett square</a> to help evaluate this. i.e. if both parents have a homozygous reference call and the child has a homozygous variant call at that locus, this might indicate a trio conflict.</p>
+<details class="callout-dropdown callout-subtle callout-gray-subtle">
+<summary class="callout-dropdown-summary"><span
+class="callout-icon"><i class="fas fa-comment-dots" aria-hidden="true"></i></span><span
+class="callout-dropdown-title">Solution (click here)</span><span
+class="callout-dropdown-caret"><i class="fas fa-chevron-right" aria-hidden="true"></i></span></summary>
+<div class="callout-dropdown-content">
+<p>Most of the variant looks plausible. But some of them seems missing, for exemple:</p>
+<ul>
+<li>1:17,882,695-17,882,837 - 2bp deletion variant is missing in NA12892 whereas the son looks like to be homozygote</li>
+<li>1:17,879,015-17,879,138 - the variant is call in NA12891 and some few reads seems present in NA12878 but not called</li>
+<li>1:17,841,784-17,841,823 - the variant is call in NA12891 and some few reads seems present in NA12878 and NA12892 but not called. Addtionally there is an indel at the same location which is a strech of T. So the region is supicious</li>
+</ul>
+</div>
+</details>
+<p><strong>2. Do you find any additional high or moderate impact variants in either of the parents?</strong></p>
+<details class="callout-dropdown callout-subtle callout-gray-subtle">
+<summary class="callout-dropdown-summary"><span
+class="callout-icon"><i class="fas fa-comment-dots" aria-hidden="true"></i></span><span
+class="callout-dropdown-title">Solution (click here)</span><span
+class="callout-dropdown-caret"><i class="fas fa-chevron-right" aria-hidden="true"></i></span></summary>
+<div class="callout-dropdown-content">
+<p>We can extract the HIGH impact variant in all sample using this command:</p>
+<pre><code>grep HIGH variants/NA128*.rmdup.realign.hc.filter.snpeff.vcf</code></pre>
+<p>We don’t find any high impact variant in the trio.</p>
+</div>
+</details>
+<p><strong>3. Do all three family members have the same genotype for Rs7538876 and Rs2254135?</strong></p>
+<details class="callout-dropdown callout-subtle callout-gray-subtle">
+<summary class="callout-dropdown-summary"><span
+class="callout-icon"><i class="fas fa-comment-dots" aria-hidden="true"></i></span><span
+class="callout-dropdown-title">Solution (click here)</span><span
+class="callout-dropdown-caret"><i class="fas fa-chevron-right" aria-hidden="true"></i></span></summary>
+<div class="callout-dropdown-content">
+<p>For Rs7538876:</p>
+<pre><code>grep rs7538876 variants/NA128*.rmdup.realign.hc.filter.snpeff.dbsnp.vcf</code></pre>
+<p>One parent is Homozygote variant the second one is Heterozygote and the child is Homozygote variant.</p>
+<p>For Rs2254135:</p>
+<pre><code>grep rs2254135 variants/NA128*.rmdup.realign.hc.filter.snpeff.dbsnp.vcf</code></pre>
+<p>The two parents are Heterozygotes and the child is Homozygote variant.</p>
+</div>
+</details>
 <ol start="4" style="list-style-type: decimal">
-<li>GATK produces even better variant calling results if all three BAM files are specified at the same time (i.e. specifying multiple <code>-I filename</code> options). Try this and then perform the rest of module 4 on the trio vcf file. <strong>Does this seem to improve your variant calling results? Does it seem to reduce the trio conflict rate?</strong> solution</li>
+<li>GATK produces even better variant calling results if all three BAM files are specified at the same time (i.e. specifying multiple <code>-I filename</code> options). Try this and then perform the rest of module 4 on the trio vcf file. <strong>Does this seem to improve your variant calling results? Does it seem to reduce the trio conflict rate?</strong></li>
 </ol>
+<details class="callout-dropdown callout-subtle callout-gray-subtle">
+<summary class="callout-dropdown-summary"><span
+class="callout-icon"><i class="fas fa-comment-dots" aria-hidden="true"></i></span><span
+class="callout-dropdown-title">Solution (click here)</span><span
+class="callout-dropdown-caret"><i class="fas fa-chevron-right" aria-hidden="true"></i></span></summary>
+<div class="callout-dropdown-content">
+<p>Most of the variant have keep the same genotpes but it improve call in supicious site such as 1:17,841,784-17,841,823.</p>
+<p>Also some new variant appears such as the one at position 1:17,826,542-17,826,580. This one has been called but then we removed it due to low QD.</p>
+<p>Or at position 1:17,822,491-17,822,569 where the variant was missed at individual call.</p>
+<p>In a general manner the more information is provided, the more accurate and the more sensitive the genotype call are.</p>
+</div>
+</details>
 <p>Quit the Container Environment</p>
 <pre><code>exit</code></pre>
+<div id="acknowledgements-1" class="section level5 hasAnchor">
+<h5>Acknowledgements<a href="module-4-single-nucleotide-variant-calling.html#acknowledgements-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>This module is heavily based on a previous module prepared by Michael Stromberg and Guillaume Bourque.</p>
 <div class="callout-green">
 <span class="callout-icon"><i class="fas fa-party-horn" aria-hidden="true"></i></span>
 <div class="callout-content">
 <div class="callout-title-static center" style="margin-bottom: 0.5em;">
 <p>Lab Complete!</p>
 </div>
-<p>You’re done Module 3! We hope that you enjoyed the lab and that you continue to enjoy Single Nucleotide Variant Calling.</p>
+<p>You’re done Module 4! We hope that you enjoyed the lab and that you continue to enjoy Single Nucleotide Variant Calling.</p>
 </div>
 </div>
 
+</div>
 </div>
 </div>
 </div>
@@ -488,8 +770,8 @@ module load  mugqic/GenomeAnalysisTK/4.1.0.0</code></pre>
           </div>
         </div>
       </div>
-<a href="module-3.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="module-3.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="module-5-structural-variant-calling.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -520,7 +802,7 @@ gitbook.start({
     "size": 2
   },
   "edit": {
-    "link": "https://github.com/cbw-dev/HTG-2021/blob/main/040-module-4.Rmd",
+    "link": "https://github.com/bioinformaticsdotca/HTG_2021/blob/main/040-module-4.Rmd",
     "text": "Edit"
   },
   "history": {
@@ -543,6 +825,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

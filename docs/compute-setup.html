@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Compute setup | High Throughout Genomics Analysis 2021</title>
+  <meta name="description" content="Workshop website for the 2021 High Throughput Genomics Analysis Canadian Bioinformatics Workshop" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Compute setup | High Throughout Genomics Analysis 2021" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="https://bioinformaticsdotca.github.io/HTG_2021/img/bioinformatics_logo.png" />
+  <meta property="og:description" content="Workshop website for the 2021 High Throughput Genomics Analysis Canadian Bioinformatics Workshop" />
+  <meta name="github-repo" content="bioinformaticsdotca/HTG-2021" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Compute setup | High Throughout Genomics Analysis 2021" />
+  
+  <meta name="twitter:description" content="Workshop website for the 2021 High Throughput Genomics Analysis Canadian Bioinformatics Workshop" />
+  <meta name="twitter:image" content="https://bioinformaticsdotca.github.io/HTG_2021/img/bioinformatics_logo.png" />
+
+<meta name="author" content="Faculty: Mathieu Bourgey, Jared Simpson, Robert Syme, Daniel Poppleton, BF Francis Ouellette, and Rachade Hmamouchi" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+<link rel="prev" href="meet-your-faculty.html"/>
+<link rel="next" href="module-1-introduction.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<a href="https://bioinformaticsdotca.github.io/">
+ <img src="img/bioinformatics_logo.png" width="90%" alt="bioinformatics.ca logo" style="display:block; margin-left:auto; margin-right:auto; margin-top:15px;">
+ </a>
+<li><center><strong><a href="./"><br>High Throughput Genomics Analysis<br><br></a></strong></center></li>
+<a href="./">
+ <img src="img/CBW-HTG-icon.png" width="70%" alt="High Throughput Genomics Analysis logo" style="display:block; margin-left:auto; margin-right:auto; ">
+ </a>
+<br>
+
+<li class="divider"></li>
+<li class="part"><span><b>I Introduction</b></span></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Workshop Info</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#schedule"><i class="fa fa-check"></i>Schedule</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#pre-work"><i class="fa fa-check"></i>Pre-work</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="meet-your-faculty.html"><a href="meet-your-faculty.html"><i class="fa fa-check"></i>Meet Your Faculty</a></li>
+<li class="chapter" data-level="" data-path="compute-setup.html"><a href="compute-setup.html"><i class="fa fa-check"></i>Compute setup</a>
+<ul>
+<li class="chapter" data-level="" data-path="compute-setup.html"><a href="compute-setup.html#aws-and-unix-intro"><i class="fa fa-check"></i>AWS and Unix Intro</a></li>
+</ul></li>
+<li class="part"><span><b>II Modules</b></span></li>
+<li class="chapter" data-level="" data-path="module-1-introduction.html"><a href="module-1-introduction.html"><i class="fa fa-check"></i>Module 1: Introduction</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-1-introduction.html"><a href="module-1-introduction.html#lecture"><i class="fa fa-check"></i>Lecture</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-1-introduction.html"><a href="module-1-introduction.html#introduction-to-sequencing-technologies"><i class="fa fa-check"></i>Introduction to Sequencing Technologies</a></li>
+<li class="chapter" data-level="" data-path="module-1-introduction.html"><a href="module-1-introduction.html#introduction-to-hts-file-formats"><i class="fa fa-check"></i>Introduction to HTS File Formats</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html"><i class="fa fa-check"></i>Module 2: Data Visualization with IGV</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html#lecture-1"><i class="fa fa-check"></i>Lecture</a></li>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html#lab"><i class="fa fa-check"></i>Lab</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html#visualization-part-1-getting-familiar-with-igv"><i class="fa fa-check"></i>Visualization Part 1: Getting Familiar with IGV</a></li>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html#visualization-part-2-inspecting-snps-snvs-and-svs"><i class="fa fa-check"></i>Visualization Part 2: Inspecting SNPs, SNVs, and SVs</a></li>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html#visualization-part-3-automating-tasks-in-igv-optional"><i class="fa fa-check"></i>Visualization Part 3: Automating Tasks in IGV (Optional)</a></li>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html#visualization-part-4-visualizing-long-reads"><i class="fa fa-check"></i>Visualization Part 4: Visualizing Long Reads</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html#lab-answers"><i class="fa fa-check"></i>Lab Answers</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html#visualization-part-2-inspecting-snps-snvs-and-svs-1"><i class="fa fa-check"></i>Visualization Part 2: Inspecting SNPs, SNVs, and SVs</a></li>
+<li class="chapter" data-level="" data-path="module-2-data-visualization-with-igv.html"><a href="module-2-data-visualization-with-igv.html#visualization-part-4-visualizing-long-reads-1"><i class="fa fa-check"></i>Visualization Part 4: Visualizing Long Reads</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="module-3.html"><a href="module-3.html"><i class="fa fa-check"></i>Module 3</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-3.html"><a href="module-3.html#lecture-2"><i class="fa fa-check"></i>Lecture</a></li>
+<li class="chapter" data-level="" data-path="module-3.html"><a href="module-3.html#lab-1"><i class="fa fa-check"></i>Lab</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="module-4-single-nucleotide-variant-calling.html"><a href="module-4-single-nucleotide-variant-calling.html"><i class="fa fa-check"></i>Module 4: Single Nucleotide Variant Calling</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-4-single-nucleotide-variant-calling.html"><a href="module-4-single-nucleotide-variant-calling.html#lecture-3"><i class="fa fa-check"></i>Lecture</a></li>
+<li class="chapter" data-level="" data-path="module-4-single-nucleotide-variant-calling.html"><a href="module-4-single-nucleotide-variant-calling.html#lab-2"><i class="fa fa-check"></i>Lab</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-4-single-nucleotide-variant-calling.html"><a href="module-4-single-nucleotide-variant-calling.html#calling-variants-with-gatk"><i class="fa fa-check"></i>Calling Variants with GATK</a></li>
+<li class="chapter" data-level="" data-path="module-4-single-nucleotide-variant-calling.html"><a href="module-4-single-nucleotide-variant-calling.html#investigating-the-snp-calls"><i class="fa fa-check"></i>Investigating the SNP Calls</a></li>
+<li class="chapter" data-level="" data-path="module-4-single-nucleotide-variant-calling.html"><a href="module-4-single-nucleotide-variant-calling.html#filter-the-variants"><i class="fa fa-check"></i>Filter the Variants</a></li>
+<li class="chapter" data-level="" data-path="module-4-single-nucleotide-variant-calling.html"><a href="module-4-single-nucleotide-variant-calling.html#adding-functional-consequence"><i class="fa fa-check"></i>Adding Functional Consequence</a></li>
+<li class="chapter" data-level="" data-path="module-4-single-nucleotide-variant-calling.html"><a href="module-4-single-nucleotide-variant-calling.html#investigating-the-functional-consequence-of-variants"><i class="fa fa-check"></i>Investigating the Functional Consequence of Variants</a></li>
+<li class="chapter" data-level="" data-path="module-4-single-nucleotide-variant-calling.html"><a href="module-4-single-nucleotide-variant-calling.html#adding-dbsnp-annotations"><i class="fa fa-check"></i>Adding dbSNP Annotations</a></li>
+<li class="chapter" data-level="" data-path="module-4-single-nucleotide-variant-calling.html"><a href="module-4-single-nucleotide-variant-calling.html#investigating-the-trio-optional-1"><i class="fa fa-check"></i>Investigating the Trio (Optional)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="module-5-structural-variant-calling.html"><a href="module-5-structural-variant-calling.html"><i class="fa fa-check"></i>Module 5: Structural Variant Calling</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-5-structural-variant-calling.html"><a href="module-5-structural-variant-calling.html#lecture-4"><i class="fa fa-check"></i>Lecture</a></li>
+<li class="chapter" data-level="" data-path="module-5-structural-variant-calling.html"><a href="module-5-structural-variant-calling.html#lab-3"><i class="fa fa-check"></i>Lab</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="module-6-genome-assembly.html"><a href="module-6-genome-assembly.html"><i class="fa fa-check"></i>Module 6: Genome Assembly</a>
+<ul>
+<li class="chapter" data-level="" data-path="module-6-genome-assembly.html"><a href="module-6-genome-assembly.html#lecture-5"><i class="fa fa-check"></i>Lecture</a></li>
+<li class="chapter" data-level="" data-path="module-6-genome-assembly.html"><a href="module-6-genome-assembly.html#lab-4"><i class="fa fa-check"></i>Lab</a></li>
+</ul></li>
+<li class="divider"></li>
+<h1 id="sponsors">Sponsors</h1>
+<center>
+<a href="https://oicr.on.ca/"><img src="img/sponsors/oicr.png" width=25% style="display:inline-block;" style="padding-bottom: 20px" alt="Ontario Institute for Cancer Research logo.">
+<a href="https://www.hpcforhealth.ca/"><img src="img/sponsors/hpc4health.png" width=60% style="display:inline-block;" style="padding-bottom: 20px "alt="HPC4Health logo.">
+<br><br>
+<a href="https://computationalgenomics.ca/"><img src="img/sponsors/c3g-logo.png" style="display:inline-block;" width=35% style="padding-bottom: 20px" alt="Canadian Centre for Computational Genomics logo.">
+<a href="https://aws.amazon.com/fr/education/awseducate/"><img src="img/sponsors/AWS-educate-logo.png" style="display:inline-block;" width=35% style="padding-bottom: 20px" alt="AWS Educate logo.">
+<br><br>
+<a href="https://www.mcgill.ca/neuro/"><img src="img/sponsors/neuro-logo.png" style="display:inline-block;" width=35% style="padding-bottom: 20px" alt="The Neuro logo.">
+<a href="https://www.impactt-microbiome.ca/"><img src="img/sponsors/IMPACTT-logo.png" style="display:inline-block;" width=35% style="padding-bottom: 20px" alt="IMPACTT logo.">
+<br><br>
+<a href="https://www.mcgill.ca/micm/"><img src="img/sponsors/MICM-logo.png" style="display:inline-block;" width=35% style="padding-bottom: 20px" alt="McGill Initiative in Computation Medicine logo.">
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">High Throughout Genomics Analysis 2021</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="compute-setup" class="section level1 hasAnchor">
+<h1>Compute setup<a href="compute-setup.html#compute-setup" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="aws-and-unix-intro" class="section level3 hasAnchor">
+<h3>AWS and Unix Intro<a href="compute-setup.html#aws-and-unix-intro" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="connecting-and-properly-using-a-cloud-computring-cluster-at-the-cbw" class="section level4 hasAnchor">
+<h4>Connecting and Properly Using a Cloud Computring Cluster at the CBW<a href="compute-setup.html#connecting-and-properly-using-a-cloud-computring-cluster-at-the-cbw" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="schedule-1" class="section level5 hasAnchor">
+<h5>Schedule<a href="compute-setup.html#schedule-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<table>
+<colgroup>
+<col width="9%" />
+<col width="90%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th align="center">Day 1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>10:00</td>
+<td align="center">Welcome Introduction (Rachade)</td>
+</tr>
+<tr class="even">
+<td>10:10</td>
+<td align="center">Module 0 : AWS EC2 instance (Zhibin)</td>
+</tr>
+<tr class="odd">
+<td>10:40</td>
+<td align="center">Module 1: Logging into AWS (group split into Windows and Mac/Linux)</td>
+</tr>
+<tr class="even">
+<td>11:10</td>
+<td align="center">Break</td>
+</tr>
+<tr class="odd">
+<td>11:15</td>
+<td align="center">Module 2: Introduction to the UNIX Command Line (Hector)</td>
+</tr>
+<tr class="even">
+<td>11:35</td>
+<td align="center">Module 3: File Manipulation</td>
+</tr>
+<tr class="odd">
+<td>12:05</td>
+<td align="center">Break</td>
+</tr>
+<tr class="even">
+<td>13:05</td>
+<td align="center">Module 4: Searching and Sorting Through Files (Rob)</td>
+</tr>
+<tr class="odd">
+<td>14:00</td>
+<td align="center">Break</td>
+</tr>
+<tr class="even">
+<td>14:05</td>
+<td align="center">Module 5: Shell scripts (Rob)</td>
+</tr>
+<tr class="odd">
+<td>15:00</td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="logging-into-aws" class="section level5 hasAnchor">
+<h5>1. Logging into AWS<a href="compute-setup.html#logging-into-aws" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Description of the lab:</p>
+<p>This section will show students how to login to AWS and create an instance</p>
+<iframe src="https://drive.google.com/file/d/1Vf1uiJPpY8025pJjsWNFvgK-ImqkGmVE/preview" width="640" height="480" allow="autoplay">
+</iframe>
+<p>Once you have confirmed your account as per the email (subject line “You have been invited to join an AWS Educate Classroom”), you can log in here:</p>
+<p><a href="www.awseducate.com">www.awseducate.com</a></p>
+</div>
+<div id="introduction-to-the-command-line" class="section level5 hasAnchor">
+<h5>2. Introduction to the Command Line<a href="compute-setup.html#introduction-to-the-command-line" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Description of the lab:</p>
+<p>This section will show students the basics of the command line, with a focus on navigation.</p>
+<iframe src="https://drive.google.com/file/d/1gTOzpP_VUjR7vIPidLWABps9jh5mYvA0/preview" width="640" height="480" allow="autoplay">
+</iframe>
+<div id="exercise-exploring-the-filesystem" class="section level6 hasAnchor">
+<h6>Exercise: Exploring the filesystem<a href="compute-setup.html#exercise-exploring-the-filesystem" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<ol style="list-style-type: decimal">
+<li>Connect to your AWS instance</li>
+<li>Type the <code>ls</code> command, what do you see?</li>
+</ol>
+<details class="callout-dropdown callout-subtle callout-gray-subtle">
+<summary class="callout-dropdown-summary"><span
+class="callout-icon"><i class="fas fa-comment-dots" aria-hidden="true"></i></span><span
+class="callout-dropdown-title">Solution (click here)</span><span
+class="callout-dropdown-caret"><i class="fas fa-chevron-right" aria-hidden="true"></i></span></summary>
+<div class="callout-dropdown-content">
+<p>The <code>ls</code> command lists the contents of a working directory.</p>
+</div>
+</details>
+<ol start="3" style="list-style-type: decimal">
+<li>After following the tutorial, can you answer what these commands (<code>cd</code>, <code>pwd</code>) do?</li>
+</ol>
+<details class="callout-dropdown callout-subtle callout-gray-subtle">
+<summary class="callout-dropdown-summary"><span
+class="callout-icon"><i class="fas fa-comment-dots" aria-hidden="true"></i></span><span
+class="callout-dropdown-title">Solution (click here)</span><span
+class="callout-dropdown-caret"><i class="fas fa-chevron-right" aria-hidden="true"></i></span></summary>
+<div class="callout-dropdown-content">
+<p>The <code>cd</code> command is used to <em>change directories</em>. Without arguments, it will move to the home directory (<code>~</code>) The <code>pwd</code> command shows the absolute <em>path to the working directory</em>.</p>
+</div>
+</details>
+</div>
+</div>
+<div id="file-manipulation" class="section level5 hasAnchor">
+<h5>3. File Manipulation<a href="compute-setup.html#file-manipulation" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Description of the lab:</p>
+<p>This section will show students how to manipulate files, including reading, editing, and renamming text files.</p>
+<iframe src="https://drive.google.com/file/d/1gYHurIPaOlmxZMtVXDqjDW8L-jZfFzr6/preview" width="640" height="480" allow="autoplay">
+</iframe>
+<p>Additional material:</p>
+<p>Here are two cheat-sheets that can be usedful to have as a reference for common UNIX/Linux commands:</p>
+<ul>
+<li><a href="https://files.fosswire.com/2007/08/fwunixref.pdf">FOSSwire.com Unix/Linux Command Reference</a></li>
+<li><a href="https://www.reddit.com/media?url=https%3A%2F%2Fi.redd.it%2F6s2q64ticje51.png">SUSO.org Unix/Linux Command Syntax and Reference</a></li>
+</ul>
+<div id="excercise-reading-text-files" class="section level6 hasAnchor">
+<h6>Excercise: Reading Text Files<a href="compute-setup.html#excercise-reading-text-files" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<ol style="list-style-type: decimal">
+<li>What do the commands <code>cat</code>, <code>head</code>, and <code>tail</code> do? What do they have in common?</li>
+</ol>
+<details class="callout-dropdown callout-subtle callout-gray-subtle">
+<summary class="callout-dropdown-summary"><span
+class="callout-icon"><i class="fas fa-comment-dots" aria-hidden="true"></i></span><span
+class="callout-dropdown-title">Solution (click here)</span><span
+class="callout-dropdown-caret"><i class="fas fa-chevron-right" aria-hidden="true"></i></span></summary>
+<div class="callout-dropdown-content">
+<p>All three of these commands ouptut the contents of a text file to <em>standard out</em>: - <code>cat</code> outputs the <em>full</em> contents of the file - <code>head</code> outputs the <em>first</em> 10 lines of a file - <code>tail</code> outputs the <em>last</em> 10 lines of a file</p>
+</div>
+</details>
+<ol start="2" style="list-style-type: decimal">
+<li>What does the command <code>less</code> do? How is it different from <code>cat</code>?</li>
+</ol>
+<details class="callout-dropdown callout-subtle callout-gray-subtle">
+<summary class="callout-dropdown-summary"><span
+class="callout-icon"><i class="fas fa-comment-dots" aria-hidden="true"></i></span><span
+class="callout-dropdown-title">Solution (click here)</span><span
+class="callout-dropdown-caret"><i class="fas fa-chevron-right" aria-hidden="true"></i></span></summary>
+<div class="callout-dropdown-content">
+<p><code>less</code> opens a text file for viewing. Unlike <code>cat</code>, it will display it in a separate file viewer.</p>
+</div>
+</details>
+<ol start="3" style="list-style-type: decimal">
+<li>How can you know the number of lines in a file?</li>
+</ol>
+<details class="callout-dropdown callout-subtle callout-gray-subtle">
+<summary class="callout-dropdown-summary"><span
+class="callout-icon"><i class="fas fa-comment-dots" aria-hidden="true"></i></span><span
+class="callout-dropdown-title">Solution (click here)</span><span
+class="callout-dropdown-caret"><i class="fas fa-chevron-right" aria-hidden="true"></i></span></summary>
+<div class="callout-dropdown-content">
+<pre><code>The command `wc -l` will display the number of lines in a file. `wc` (word count) displays the number of words, lines, and bytes in a file. The       `-l` option, limits the output to lines.</code></pre>
+</div>
+</details>
+</div>
+<div id="excercise-editing-text-files" class="section level6 hasAnchor">
+<h6>Excercise: Editing Text Files<a href="compute-setup.html#excercise-editing-text-files" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<ol style="list-style-type: decimal">
+<li>Write “Hello world” into a file called <code>helloworld.txt</code> using <code>nano</code>. Save and then exit.</li>
+</ol>
+<details class="callout-dropdown callout-subtle callout-gray-subtle">
+<summary class="callout-dropdown-summary"><span
+class="callout-icon"><i class="fas fa-comment-dots" aria-hidden="true"></i></span><span
+class="callout-dropdown-title">Solution (click here)</span><span
+class="callout-dropdown-caret"><i class="fas fa-chevron-right" aria-hidden="true"></i></span></summary>
+<div class="callout-dropdown-content">
+<pre><code>First, use the `nano` command to open a file called `helloworld.txt` ``` $ nano helloworld.txt ``` Inside the nano editor, write &quot;Hello world&quot; and     then use the `^O` option to write the changes and then `^X` to exit.</code></pre>
+</div>
+</details>
+<ol start="2" style="list-style-type: decimal">
+<li>Create a subdirectory called <code>test</code>. Then, move the <code>helloworld.txt</code> file into the directory.</li>
+</ol>
+<details class="callout-dropdown callout-subtle callout-gray-subtle">
+<summary class="callout-dropdown-summary"><span
+class="callout-icon"><i class="fas fa-comment-dots" aria-hidden="true"></i></span><span
+class="callout-dropdown-title">Solution (click here)</span><span
+class="callout-dropdown-caret"><i class="fas fa-chevron-right" aria-hidden="true"></i></span></summary>
+<div class="callout-dropdown-content">
+<pre><code>First, use the command `mkdir` to create this new directory. Then, use `mv` to move `helloworld.txt` into this directory. ``` $ mkdir test $ mv       helloworld.txt test/ ```</code></pre>
+</div>
+</details>
+<ol start="3" style="list-style-type: decimal">
+<li>Create a copy of the <code>helloworld.txt file</code> called <code>helloworld2.txt</code>, inside the <code>test</code> directory.</li>
+</ol>
+<details class="callout-dropdown callout-subtle callout-gray-subtle">
+<summary class="callout-dropdown-summary"><span
+class="callout-icon"><i class="fas fa-comment-dots" aria-hidden="true"></i></span><span
+class="callout-dropdown-title">Solution (click here)</span><span
+class="callout-dropdown-caret"><i class="fas fa-chevron-right" aria-hidden="true"></i></span></summary>
+<div class="callout-dropdown-content">
+<pre><code>First, change the working directory using `cd`, then use the `cp` command to create the copy. ``` $ cd test $ cp helloworld.txt helloworld2.txt       ```</code></pre>
+</div>
+</details>
+</div>
+</div>
+<div id="searching-and-sorting-files" class="section level5 hasAnchor">
+<h5>4. Searching and Sorting Files<a href="compute-setup.html#searching-and-sorting-files" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Description of the lab:</p>
+<p>This section will show students how to search for files and in files.</p>
+<div id="preamble" class="section level6 hasAnchor">
+<h6>Preamble<a href="compute-setup.html#preamble" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<p>The exercies here are taken from the <a href="https://swcarpentry.github.io/shell-novice/">Software Carpentry Unix shell lesson</a>. Licensed under CC-BY 4.0 2018–2021 by <a href="https://carpentries.org/">The Carpentries</a>.</p>
+</div>
+<div id="setup" class="section level6 hasAnchor">
+<h6>Setup<a href="compute-setup.html#setup" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<p>The first step will be to download some example data. First move into your home directory, download the example data as a zip file and then unzip the file:</p>
+<pre><code>cd ~
+wget http://bioinformaticsdotca.github.io/AWS_2021/data/data.zip
+unzip data.zip
+cd data</code></pre>
+</div>
+<div id="data-exploration" class="section level6 hasAnchor">
+<h6>Data Exploration<a href="compute-setup.html#data-exploration" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<p>We’ll begin by looking at files are in Genbank gbff. This is a text file that describes the nucleotide sequence and annotation features on those nucleotide sequences. First of all, we run the <code>ls</code> command to view the names of the files in the <code>ecoli_genomes</code> directory:</p>
+<pre><code>$ cd data
+$ ls genomes</code></pre>
+<p>Let’s go into that directory with <code>cd</code> and run an example command <code>wc london.gbff</code>:</p>
+<pre><code>$ cd genomes
+$ wc london.gbff</code></pre>
+<p><code>wc</code> is the ‘word count’ command: it counts the number of lines, words, and characters in files (from left to right, in that order).</p>
+<p>If we run the command <code>wc *.gbff</code>, the <code>*</code> wildcard matches zero or more occurences of any character, so the shell turns *.gbff into a list of all gbff files in the current directory:</p>
+<pre><code>$ wc *.gbff</code></pre>
+<p>Note that <code>wc *.gbff</code> also shows the total number of all lines in the last line of the output.</p>
+<p>If we run <code>wc -l</code> instead of just <code>wc</code>, the output shows only the number of lines per file:</p>
+<pre><code>$ wc -l *.gbff</code></pre>
+<p>Which of these files contains the fewest lines? It’s an easy question to answer when there are only six files, but what if there were 6000? Our first step toward a solution is to run the command:</p>
+<pre><code>$ wc -l *.gbff &gt; lengths.txt</code></pre>
+<p>The greater than symbol, <code>&gt;</code>, tells the shell to redirect the command’s output to a file instead of printing it to the screen. (This is why there is no screen output: everything that wc would have printed has gone into the file <code>lengths.txt</code> instead.) The shell will create the file if it doesn’t exist. If the file exists, it will be silently overwritten, which may lead to data loss and thus requires some caution. <code>ls lengths.txt</code> confirms that the file exists:</p>
+<pre><code>$ ls lengths.txt
+lengths.txt</code></pre>
+<p>We can now send the content of <code>lengths.txt</code> to the screen using <code>cat lengths.txt</code>. The cat command gets its name from ‘concatenate’ i.e. join together, and it prints the contents of files one after another. There’s only one file in this case, so cat just shows us what it contains:</p>
+<pre><code>$ cat lengths.txt</code></pre>
+</div>
+<div id="sorting" class="section level6 hasAnchor">
+<h6>Sorting<a href="compute-setup.html#sorting" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<p>The <code>sort</code> command rearranges the lines in a file in order. There are different methods of sorting - lexigraphically (a-z1-9) or numerically. The default sort type is lexigraphically, where numbers are treated one character at a time. Given a hypothetical file “numbers.txt” that looks like:</p>
+<pre><code>cd ../sorting
+cat numbers.txt</code></pre>
+<p>If we run <code>sort</code> on this file:</p>
+<pre><code>sort numbers.txt</code></pre>
+<p>If we run <code>sort -n</code> on the same input - specifying that we want to sort numerically, we get this instead:</p>
+<pre><code>sort -n numbers.txt</code></pre>
+<p>Explain why <code>-n</code> has this effect.
+:::: {.callout title=“Solution (click here)” type=“gray” style=“subtle” icon=“true” collapsible=“true”}</p>
+<p>The -n option specifies a numerical rather than an alphanumerical sort.</p>
+<p>::::</p>
+<p>We will sort our lengths.txt file using the <code>-n</code> option to specify that the sort is numerical instead of alphanumerical. Note that running sort does not modify the file; instead, it sends the sorted result to the screen:</p>
+<pre><code>cd ../genomes
+$ sort -n lengths.txt</code></pre>
+<p>We can put the sorted list of lines in another temporary file called <code>sorted-lengths.txt</code> by putting <code>&gt; sorted-lengths.txt</code> after the command, just as we used <code>&gt; lengths.txt</code> to put the output of <code>wc</code> into <code>lengths.txt</code>. Once we’ve done that, we can run another command called <code>head</code> to get the first few lines in sorted-lengths.txt:</p>
+<pre><code>$ sort -n lengths.txt &gt; sorted-lengths.txt
+$ head -n 1 sorted-lengths.txt</code></pre>
+<p>Using <code>-n 1</code> with head tells it that we only want the first line of the file; <code>-n 20</code> would get the first 20, and so on. Since <code>sorted-lengths.txt</code> contains the lengths of our files ordered from least to greatest, the output of head must be the file with the fewest lines.</p>
+</div>
+<div id="what-does-mean" class="section level6 hasAnchor">
+<h6>What does &gt;&gt; Mean?<a href="compute-setup.html#what-does-mean" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<p>We have seen the use of <code>&gt;</code>, but there is a similar operator <code>&gt;&gt;</code> which works slightly differently. We’ll learn about the differences between these two operators by printing some strings. We can use the echo command to print strings e.g.</p>
+<pre><code>$ echo The echo command prints text</code></pre>
+<p>Now test the commands below to reveal the difference between the two operators:</p>
+<pre><code>$ echo hello &gt; testfile01.txt</code></pre>
+<p>and:</p>
+<pre><code>$ echo hello &gt;&gt; testfile01.txt</code></pre>
+</div>
+<div id="running-commands-together" class="section level6 hasAnchor">
+<h6>Running Commands Together<a href="compute-setup.html#running-commands-together" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<p>If you think this is confusing, you’re in good company: even once you understand what <code>wc</code>, <code>sort</code>, and <code>head</code> do, all those intermediate files make it hard to follow what’s going on. We can make it easier to understand by running sort and head together:</p>
+<pre><code>$ sort -n lengths.txt | head -n 1</code></pre>
+<p>The vertical bar, <code>|</code>, between the two commands is called a pipe. It tells the shell that we want to use the output of the command on the left as the input to the command on the right.</p>
+<p>Nothing prevents us from chaining pipes consecutively. That is, we can for example send the output of <code>wc</code> directly to sort, and then the resulting output to head. Thus we first use a pipe to send the output of <code>wc</code> to <code>sort</code>:</p>
+<pre><code>$ wc -l *.gbff | sort -n</code></pre>
+<p>And now we send the output of this pipe, through another pipe, to head, so that the full pipeline becomes:</p>
+<pre><code>$ wc -l *.gbff | sort -n | head -n 1</code></pre>
+<p>The redirection and pipes used in the last few commands are illustrated below:</p>
+<p><img src="img/redirects-and-pipes.svg" alt="Redirection and pipes" />
+###### Piping Commands Together</p>
+<p>In our current directory, we want to find the 3 files which have the least number of lines. Which command listed below would work?</p>
+<pre><code>$ wc -l * &gt; sort -n &gt; head -n 3
+$ wc -l * | sort -n | head -n 1-3
+$ wc -l * | head -n 3 | sort -n
+$ wc -l * | sort -n | head -n 3</code></pre>
+<p>This idea of linking programs together is why Unix has been so successful. Instead of creating enormous programs that try to do many different things, Unix programmers focus on creating lots of simple tools that each do one job well, and that work well with each other. This programming model is called ‘pipes and filters’. We’ve already seen pipes; a filter is a program like <code>wc</code> or <code>sort</code> that transforms a stream of input into a stream of output. Almost all of the standard Unix tools can work this way: unless told to do otherwise, they read from standard input, do something with what they’ve read, and write to standard output.</p>
+<p>The key is that any program that reads lines of text from standard input and writes lines of text to standard output can be combined with every other program that behaves this way as well. You can and should write your programs this way so that you and other people can put those programs into pipes to multiply their power.</p>
+</div>
+<div id="pipe-reading-comprehension" class="section level6 hasAnchor">
+<h6>Pipe Reading Comprehension<a href="compute-setup.html#pipe-reading-comprehension" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<p>A file called <code>annotation-dates.txt</code> (in the <code>data/collection</code> folder) contains the annotation dates for our strains in CSV format. Note the file contains some duplicate lines:</p>
+<pre><code>2021-05-23,atlanta
+2021-05-19,branschweig
+2021-05-23,london
+2021-05-23,london
+2021-05-26,muenster
+2021-05-27,nevada
+2021-05-30,texas
+2021-05-30,texas
+2004-06-10,lab-strain</code></pre>
+<p>What text passes through each of the pipes and the final redirect in the pipeline below?</p>
+<pre><code>$ cd data/collection
+$ cat annotation-dates.txt | head -n 5 | tail -n 3 | sort -r &gt; final.txt</code></pre>
+<details class="callout-dropdown callout-subtle callout-gray-subtle">
+<summary class="callout-dropdown-summary"><span
+class="callout-icon"><i class="fas fa-comment-dots" aria-hidden="true"></i></span><span
+class="callout-dropdown-title">Solution (click here)</span><span
+class="callout-dropdown-caret"><i class="fas fa-chevron-right" aria-hidden="true"></i></span></summary>
+<div class="callout-dropdown-content">
+<p>The head command extracts the first 5 lines from annotation-dates.txt. Then, the last 3 lines are extracted from the previous 5 by using the tail command. With the sort -r command those 3 lines are sorted in reverse order and finally, the output is redirected to a file final.txt. The content of this file can be checked by executing cat final.txt. The file should contain the following lines:</p>
+<pre><code>2021-05-26,muenster
+2021-05-23,london
+2021-05-23,london</code></pre>
+</div>
+</details>
+</div>
+<div id="pipe-construction" class="section level6 hasAnchor">
+<h6>Pipe Construction<a href="compute-setup.html#pipe-construction" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<p>For the file <code>annotation-dates.txt</code> from the previous exercise, consider the following command:</p>
+<pre><code>$ cut -d , -f 2 annotation-dates.txt</code></pre>
+<p>The <code>cut</code> command is used to remove or ‘cut out’ certain sections of each line in the file, and <code>cut</code> expects the lines to be separated into columns by a Tab character. A character used in this way is a called a delimiter. In the example above we use the <code>-d</code> option to specify the comma as our delimiter character. We have also used the <code>-f</code> option to specify that we want to extract the second field (column). This gives the following output:</p>
+<pre><code>atlanta
+branschweig
+london
+london
+muenster
+nevada
+texas
+texas
+lab-strain</code></pre>
+<p>The <code>uniq</code> command filters out adjacent matching lines in a file. How could you extend this pipeline (using <code>uniq</code> and another command) to find out what animals the file contains (without any duplicates in their names)?</p>
+<details class="callout-dropdown callout-subtle callout-gray-subtle">
+<summary class="callout-dropdown-summary"><span
+class="callout-icon"><i class="fas fa-comment-dots" aria-hidden="true"></i></span><span
+class="callout-dropdown-title">Solution (click here)</span><span
+class="callout-dropdown-caret"><i class="fas fa-chevron-right" aria-hidden="true"></i></span></summary>
+<div class="callout-dropdown-content">
+<pre><code>$ cut -d , -f 2 annotation-dates.txt | sort | uniq</code></pre>
+</div>
+</details>
+</div>
+<div id="which-pipe" class="section level6 hasAnchor">
+<h6>Which Pipe?<a href="compute-setup.html#which-pipe" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<p>The <code>uniq</code> command has a <code>-c</code> option which gives a count of the number of times a line occurs in its input. Assuming your current directory is <code>data/collection</code>, what command would you use to produce a table that shows the total number of times each E. coli strain appears in the file?</p>
+<ol style="list-style-type: decimal">
+<li><code>sort annotation-dates.txt | uniq -c</code></li>
+<li><code>sort -t, -k2,2 annotation-dates.txt | uniq -c</code></li>
+<li><code>cut -d, -f 2 annotation-dates.txt | uniq -c</code></li>
+<li><code>cut -d, -f 2 annotation-dates.txt | sort | uniq -c</code></li>
+<li><code>cut -d, -f 2 annotation-dates.txt | sort | uniq -c | wc -l</code></li>
+</ol>
+<details class="callout-dropdown callout-subtle callout-gray-subtle">
+<summary class="callout-dropdown-summary"><span
+class="callout-icon"><i class="fas fa-comment-dots" aria-hidden="true"></i></span><span
+class="callout-dropdown-title">Solution (click here)</span><span
+class="callout-dropdown-caret"><i class="fas fa-chevron-right" aria-hidden="true"></i></span></summary>
+<div class="callout-dropdown-content">
+<p>Option 4. is the correct answer. If you have difficulty understanding why, try running the commands, or sub-sections of the pipelines (make sure you are in the <code>data/collections</code> directory).</p>
+</div>
+</details>
+</div>
+<div id="checking-files" class="section level6 hasAnchor">
+<h6>Checking Files<a href="compute-setup.html#checking-files" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<p>Let’s say our collaborator has created 17 files in the <code>north-pacific-gyre/2012-07-03</code> directory. As a quick check, starting from the <code>data</code> directory, if we type:</p>
+<pre><code>$ cd north-pacific-gyre/2012-07-03
+$ wc -l *.txt</code></pre>
+<p>The output is 18 lines that look like this:</p>
+<pre><code># output
+  300 NENE01729A.txt
+  300 NENE01729B.txt
+  300 NENE01736A.txt
+  300 NENE01751A.txt
+  300 NENE01751B.txt
+  300 NENE01812A.txt
+  ...</code></pre>
+<p>Now if we run:</p>
+<pre><code>$ wc -l *.txt | sort -n | head -n 5</code></pre>
+<p>Whoops: one of the files is 60 lines shorter than the others. When we goes back and checks it, we sees that assay at 8:00 on a Monday morning — someone was probably in using the machine on the weekend, and forgot to reset it. Before re-running that sample, lets checks to see if any files have too much data:</p>
+<pre><code>$ wc -l *.txt | sort -n | tail -n 5</code></pre>
+<pre><code># output
+ 300 NENE02040B.txt
+ 300 NENE02040Z.txt
+ 300 NENE02043A.txt
+ 300 NENE02043B.txt
+5040 total</code></pre>
+<p>5040 total. Those numbers look good — but what’s that ‘Z’ doing there in the third-to-last line? All of her samples should be marked ‘A’ or ‘B’; by convention, her lab uses ‘Z’ to indicate samples with missing information. To find others like it, we can:</p>
+<pre><code>$ ls *Z.txt</code></pre>
+<pre><code># output
+NENE01971Z.txt    NENE02040Z.txt</code></pre>
+<p>It turns outt hat there’s no depth recorded for either of those samples. Since it’s too late to get the information any other way, we must exclude those two files from our analysis. We could delete them using rm, but there are actually some analyses we might do later where depth doesn’t matter, so instead, we’ll have to be careful later on to select files using the wildcard expression <code>*[AB].txt</code>. As always, the <code>*</code> matches any number of characters; the expression [AB] matches either an ‘A’ or a ‘B’, so this matches all the valid data files she has.</p>
+</div>
+<div id="wildcard-expressions" class="section level6 hasAnchor">
+<h6>Wildcard Expressions<a href="compute-setup.html#wildcard-expressions" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<p>Wildcard expressions can be very complex, but you can sometimes write them in ways that only use simple syntax, at the expense of being a bit more verbose. Consider the directory <code>data/north-pacific-gyre/2012-07-03</code> : the wildcard expression <code>*[AB].txt</code> matches all files ending in <code>A.txt</code> or <code>B.txt</code>. Imagine you forgot about this.</p>
+<p>Can you match the same set of files with basic wildcard expressions that do not use the [] syntax? Hint: You may need more than one command, or two arguments to the ls command.</p>
+<p>If you used two commands, the files in your output will match the same set of files in this example. What is the small difference between the outputs?</p>
+<p>If you used two commands, under what circumstances would your new expression produce an error message where the original one would not?</p>
+<details class="callout-dropdown callout-subtle callout-gray-subtle">
+<summary class="callout-dropdown-summary"><span
+class="callout-icon"><i class="fas fa-comment-dots" aria-hidden="true"></i></span><span
+class="callout-dropdown-title">Solution (click here)</span><span
+class="callout-dropdown-caret"><i class="fas fa-chevron-right" aria-hidden="true"></i></span></summary>
+<div class="callout-dropdown-content">
+<p>1: A solution using two wildcard commands: <code>ls *A.txt</code> and then <code>ls *B.txt</code> A solution using one command but with two arguments: <code>ls *A.txt *B.txt</code> 2: The output from the two new commands is separated because there are two commands. 3: When there are no files ending in <code>A.txt</code>, or there are no files ending in <code>B.txt</code>, then one of the two commands will fail.</p>
+</div>
+</details>
+</div>
+<div id="key-points" class="section level6 hasAnchor">
+<h6>Key Points<a href="compute-setup.html#key-points" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<ul>
+<li><code>cat</code> displays the contents of its inputs.</li>
+<li><code>head</code> displays the first 10 lines of its input.</li>
+<li><code>tail</code> displays the last 10 lines of its input.</li>
+<li><code>sort</code> sorts its inputs.</li>
+<li><code>wc</code> counts lines, words, and characters in its inputs.</li>
+<li><code>command &gt; [file]</code> redirects a command’s output to a file (overwriting any existing content).</li>
+<li><code>command &gt;&gt; [file]</code> appends a command’s output to a file.</li>
+<li><code>[first] | [second]</code> is a pipeline: the output of the first command is used as the input to the second.</li>
+<li>The best way to use the shell is to use pipes to combine simple single-purpose programs (filters).</li>
+</ul>
+</div>
+</div>
+<div id="putting-it-all-together" class="section level5 hasAnchor">
+<h5>5. Putting it all Together<a href="compute-setup.html#putting-it-all-together" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Description of the lab:</p>
+<p>This section will show students how the basic concepts fit together and in the context of bioinformatics.</p>
+<div id="preamble-1" class="section level6 hasAnchor">
+<h6>Preamble<a href="compute-setup.html#preamble-1" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<p>The exercies here are taken from the <a href="https://swcarpentry.github.io/shell-novice/">Software Carpentry Unix shell lesson</a>. Licensed under CC-BY 4.0 2018–2021 by <a href="https://carpentries.org/">The Carpentries</a>.</p>
+<p>We are finally ready to see what makes the shell such a powerful programming environment. We are going to take the commands we repeat frequently and save them in files so that we can re-run all those operations again later by typing a single command. For historical reasons, a bunch of commands saved in a file is usually called a shell script, but make no mistake: these are actually small programs.</p>
+<p>Not only will writing shell scripts make your work faster– you won’t have to retype the same commands over and over again– it will also make it more accurate (fewer chances for typos) and more reproducible. If you come back to your work later (or if someone else finds your work and wants to build on it) you will be able to reproduce the same results simply by running your script, rather than having to remember or retype a long list of commands.</p>
+<p>Let’s start by going back to <code>data/genomes</code> and creating a new file, <code>get_tags.sh</code> which will become our shell script:</p>
+<pre><code>$ cd data/genomes
+$ nano count_tags.sh</code></pre>
+<p>The command <code>nano</code> get_tags.sh opens the file <code>get_tags.sh</code> within the text editor ‘nano’ (which runs within the shell). If the file does not exist, it will be created. We can use the text editor to directly edit the file – we’ll simply insert the following line:</p>
+<pre><code>echo -n &quot;atlanta.gbff: &quot;
+grep &quot;/locus_tag=&quot; atlanta.gbff | wc -l</code></pre>
+<p>Then we save the file (Ctrl-O in nano), and exit the text editor (Ctrl-X in nano). Check that the directory molecules now contains a file called <code>get_tags.sh</code>.</p>
+<p>Once we have saved the file, we can ask the shell to execute the commands it contains. Our shell is called bash, so we run the following command:</p>
+<pre><code>$ bash count_tags.sh</code></pre>
+<p>Sure enough, our script’s output is exactly what we would get if we ran that pipeline directly.</p>
+<p>I’ve noticed that each locus tag appears twice in the gbff file, so we’re double-counting a lot of tags. Let’s modify our script to only count unique tags:</p>
+<pre><code>$ nano count_tags.sh</code></pre>
+<pre><code>echo -n &quot;atlanta.gbff: &quot;
+grep &quot;/locus_tag=&quot; atlanta.gbff | sort | uniq | wc -l</code></pre>
+<p>Now when we run the script:</p>
+<pre><code>$ nano count_tags.sh</code></pre>
+<p>What if we want to count the number of locus tags in many files? Let’s introduce a new concept: loopingOpen up our script again.</p>
+<pre><code>$ nano count_tags.sh</code></pre>
+<pre><code>for filename in atlanta.gbff london.gbff
+do
+  echo -n &quot;$filename &quot;
+  grep &quot;/locus_tag=&quot; $filename | sort | uniq | wc -l
+done</code></pre>
+<p>We feed the loop with two elements: the text “atlanta.gbff” and then with the text “london.gbff”. The loop executes all of the commands between <code>do</code> and <code>done</code> for each time the loop iterates, and each time, the variable “$filename” is replaced by either “atlanta.gbff” or “london.gbff”</p>
+<p>What if we wanted to count the number of tags in other gbff file. At the moment, the filenames are hard-coded into our script. It only counts tags in atlanta.gbff and london.gbff. We can make the script a little bit more flexible by using the variable nams “$1” and “<span class="math inline">\(2”
+```{}\)</span> nano get_tags.sh</p>
+<pre><code>
+Now, within “nano”, replace the text “atlanta.gbff” with the special variable called $1:
+```{}
+for filename in $1 $2
+do
+  echo -n &quot;$filename &quot;
+  grep &quot;/locus_tag=&quot; $filename | sort | uniq | wc -l
+done</code></pre>
+<p>Inside a shell script, <code>$1</code> means ‘the first filename (or other argument) on the command line’. Similarly, <code>$2</code> is the second argument passed to the script. We can now run our script like this:</p>
+<pre><code>$ bash count_tags.sh atlanta.gbff london.gbff</code></pre>
+<p>or on a different file like this:</p>
+<pre><code>$ bash count_tags.sh nevada.gbff texas.gbff</code></pre>
+<p>In case the filename happens to contain any spaces, we surround $1 with double-quotes.</p>
+<p>This is better, but our script still isn’t quite as flexible as I’d like. It can only operate on two files at a time. What if I wanted to count the tags in three or four files at a time?</p>
+<p>There is a special variable <code>$@</code> which holds all of the arguments passed to the script. Let’s make another modification to our script:</p>
+<pre><code>$ nano get_tags.sh</code></pre>
+<pre><code>for filename in $@
+do
+  echo -n &quot;$filename &quot;
+  grep &quot;/locus_tag=&quot; $filename | sort | uniq | wc -l
+done</code></pre>
+<p>The <code>$@</code> variable gets replaced with all of the arguments passed to our script. This allows us to run:</p>
+<pre><code>$ bash count_tags.sh *.gbff</code></pre>
+<p>This works, but it may take the next person who reads count_tags.sh a moment to figure out what it does. We can improve our script by adding some comments at the top:</p>
+<pre><code>$ nano count_tags.sh</code></pre>
+<pre><code># Counts the number of unique locus tags in one or more gbff files.
+
+for filename in $@
+do
+  echo -n &quot;$filename &quot;
+  grep &quot;/locus_tag=&quot; $filename | sort | uniq | wc -l
+done</code></pre>
+<p>A comment starts with a <code>#</code> character and runs to the end of the line. The computer ignores comments, but they’re invaluable for helping people (including your future self) understand and use scripts. The only caveat is that each time you modify the script, you should check that the comment is still accurate: an explanation that sends the reader in the wrong direction is worse than none at all.</p>
+<p>Lastly, let’s make our script executable. First we’ll modify the file permissions. This can be done using the <code>chmod</code> command:</p>
+<pre><code>chmod +x count_tags.sh</code></pre>
+<p>We’ll also add a “shebang” line to our script which tells the shell what program should be used to run our script. Modify our script to include this first line:</p>
+<pre><code>#!/bin/bash
+# Counts the number of unique locus tags in one or more gbff files.
+
+for filename in $@
+do
+  echo -n &quot;$filename &quot;
+  grep &quot;/locus_tag=&quot; $filename | sort | uniq | wc -l
+done</code></pre>
+<p>Exercise: Can you create a command that uses our count_tags.sh script to find the gbff file with the smallest number of locus tags?</p>
+</div>
+<div id="awk" class="section level6 hasAnchor">
+<h6>Awk<a href="compute-setup.html#awk" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<p>Another very helpful “Swiss Army knife” of the shell is the program <code>awk</code>. Awk that, like grep, allows you to search for lines in a file matching some condition, but <code>awk</code> /also/ allows you to perform some small operations on those lines once you have matched them.</p>
+<p>Let’s build an simple example piece by piece.</p>
+<p>Open up a new file:</p>
+<pre><code>nano find_lengths.awk</code></pre>
+<p>In this awk script, let’s just write:</p>
+<pre><code>/LOCUS/</code></pre>
+<p>This is instructing awk to find all files that match the string “LOCUS”. We can find all the lines matching “LOCUS” in the atlanta.gbff file by running:</p>
+<pre><code>awk -f find_lengths.awk atlanta.gbff</code></pre>
+<p>Notice that the third column in the “LOCUS” lines includes the length of the sequence. Let’s pull that out. Modify the contents of find_lengths.awk to include a block (executed each time awk finds a matching line)</p>
+<p>In an awk script, we can use $3 to refer to the text in the third column (space-separated). Note that this is different to the dollar-sign variables in bash. Here we are writing in a script in the awk language, and not the bash language.</p>
+<pre><code>/LOCUS/ {
+    print &quot;Found a locus with length &quot; $3 &quot; bp&quot;
+}</code></pre>
+<p>Running the script now gives:</p>
+<pre><code>awk -f find_lengths.awk atlanta.gbff</code></pre>
+<p>It might be helpful to sum up those lengths. We can create a variable called ‘total’ and add the numbers found in the third column. Open up the awk script and modify the contents to read.</p>
+<pre><code>/LOCUS/ {
+    print &quot;Found a locus with length &quot; $3 &quot; bp&quot;
+    sum += $3
+}
+
+END {
+    print &quot;Total: &quot; sum &quot; bp&quot;
+}</code></pre>
+<p>We’ve written a new block here. Our first block uses the <code>/LOCUS/</code> matcher so it is run every time awk finds a line that matches “LOCUS”. The <code>END</code> block is a special block that is run only once - when awk reaches the end of the input file. There is a similar optional <code>BEGIN</code> block run once at the beginning, but we have no use for that in our example.</p>
+<p>Running the script now gives:</p>
+<pre><code>awk -f find_lengths.awk atlanta.gbff</code></pre>
+<p>I think that this script is a little bit too long and verbose. Let’s clean it up a little to read simply:</p>
+<pre><code>/LOCUS/ {sum += $3}
+END {print sum}</code></pre>
+<p>This gives us just the total length for a file:</p>
+<pre><code>awk -f find_lengths.awk atlanta.gbff</code></pre>
+<p>It is actually not even necessary to write our awk command in a separte file. Our script is short enough that we might even just want to write it in-line inside a command:</p>
+<pre><code>awk &#39;/LOCUS/{sum += $3} END{print sum}&#39; atlanta.gbff</code></pre>
+<p>Exercise: Can you write a command or a bash script to find the genome with the smallest total size?</p>
+</div>
+<div id="key-points-1" class="section level6 hasAnchor">
+<h6>Key Points<a href="compute-setup.html#key-points-1" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<ol style="list-style-type: decimal">
+<li>Save commands in files (usually called shell scripts) for re-use.</li>
+<li><code>bash [filename]</code> runs the commands saved in a file.</li>
+<li><code>$@</code> refers to all of a shell script’s command-line arguments.</li>
+<li><code>$1</code>, <code>$2</code>, etc., refer to the first command-line argument, the second command-line argument, etc.</li>
+<li>Place variables in quotes if the values might have spaces in them.</li>
+<li>Letting users decide what files to process is more flexible and more consistent with built-in Unix commands.</li>
+</ol>
+</div>
+</div>
+<div id="aws-machine-image-ami" class="section level5 hasAnchor">
+<h5>6. AWS Machine Image (AMI)<a href="compute-setup.html#aws-machine-image-ami" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Starting the AWS AMI after the workshop is over:</p>
+<p>An updated AWS Machine Image (AMI) will be be prepred by Zhibin at the end of this CBW workshop: It will have the same software used in the workshop, but it will not contain any of the data. To get such an image started, you will need to set up your own AWS account with your own credit card, and then, the same as you did in this workshop, look for the CBW AMI, and start that with your own project.</p>
+<p><a href="https://bioinformatics-ca.github.io/bioinformatics_for_cancer_genomics_AMI_2015/">Launching the AMI</a></p>
+<p>Let us know on the slack channel or at <a href="mailto:course_info@bioinformatics.ca" class="email">course_info@bioinformatics.ca</a> if you are experiencing any problems with this.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="meet-your-faculty.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="module-1-introduction.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/bioinformaticsdotca/HTG_2021/blob/main/002-computing.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["_main.pdf", "_main.epub"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -6,8 +6,6 @@
 
 ## Lab
 
-*This lab was created by Sorana Morrissy, then modified by Florence Cavalli, Heather Gibling, and Rob Syme.*
-
 #### Introduction
 
 ##### Description of the lab

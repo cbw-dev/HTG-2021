@@ -2,7 +2,7 @@
 
 #### Mathieu Bourgey
 
-<img src="./img/faculty/MISSINGHEADSHOT.PNG" width="200" alt="Photo of Mathieu Bourgey">
+<img src="./img/faculty/mathieu-bourgey.png" width="200" alt="Photo of Mathieu Bourgey">
 
 >Bioinformatics Manager <br>
 Canadian Center for Computational Genomic <br>
@@ -17,7 +17,7 @@ in Genetics from University Pierre-et-Marie-Currie (Paris VI).
 
 #### Jared Simpson
 
-<img src="./img/faculty/MISSINGHEADSHOT.PNG" width="200" alt="Photo of Jared Simpson">
+<img src="./img/faculty/jared-simpson.png" width="200" alt="Photo of Jared Simpson">
 
 >Principal Investigator, Ontario Institute for Cancer Research <br>
 Assistant Prof. Department of Computer Science, University of Toronto <br>
@@ -31,7 +31,7 @@ the ABYSS, SGA and nanopolish software packages.
 
 #### Robert Syme
 
-<img src="./img/faculty/MISSINGHEADSHOT.PNG" width="200" alt="Photo of Robert Syme">
+<img src="./img/faculty/robert-syme.png" width="200" alt="Photo of Robert Syme">
 
 >Bioinformatics Specialist <br>
 Canadian Center for Computational Genomics <br>
@@ -45,7 +45,7 @@ genomics, and holds a PhD in bioinformatics from Curtin University.
 
 #### Daniel Poppleton
 
-<img src="./img/faculty/MISSINGHEADSHOT.PNG" width="200" alt="Photo of Daniel Poppleton">
+<img src="./img/faculty/daniel-poppleton.png" width="200" alt="Photo of Daniel Poppleton">
 
 >Bioinformatics Consultant <br>
 Canadian Center for Computational Genomic <br>
@@ -60,13 +60,13 @@ raw data with the team.
 
 #### BF Francis Ouellette
 
-<img src="./img/faculty/MISSINGHEADSHOT.PNG" width="200" alt="Photo of BF Francis Ouellette">
+<img src="./img/faculty/francis-ouellette.png" width="200" alt="Photo of BF Francis Ouellette">
 
 >Scientific Director <br>
 Canadian Bioinformatics Workshops (CBW) <br>
 Montreal, QC, CA
 >
-> francis@bioinformatics.ca
+> --- francis@bioinformatics.ca
 
 Francis was one of the co-founders of the CBW in 1998. His teams over
 the years have been involved in the development of DNA, RNA and
@@ -77,13 +77,13 @@ both positions at McGill University.
 
 #### Rachade Hmamouchi
 
-<img src="./img/faculty/MISSINGHEADSHOT.PNG" width="200" alt="Photo of Rachade Hmamouchi">
+<img src="./img/faculty/rachade-hmamouchi.png" width="200" alt="Photo of Rachade Hmamouchi">
 
 >Program Manager <br>
 Canadian Bioinformatics Workshops (CBW) <br>
 Montreal, QC, CA
 >
-> rachade@bioinformatics.ca
+> --- rachade@bioinformatics.ca
 
 As a Program Manager, Rachade is leading the organization of current
 workshop series as well as the development of new ones. She
